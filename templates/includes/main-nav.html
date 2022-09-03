@@ -16,10 +16,10 @@
                 Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="games-link">
-                <a href="" class="dropdown-item">PlayStation</a>
-                <a href="" class="dropdown-item">XBox</a>
-                <a href="" class="dropdown-item">Nintendo</a>
-                <a href="" class="dropdown-item">PC Classics</a>
+                <a href="{% url 'games' %}?category=playstation" class="dropdown-item">PlayStation</a>
+                <a href="{% url 'games' %}?category=xbox" class="dropdown-item">Xbox</a>
+                <a href="{% url 'games' %}?category=nintendo" class="dropdown-item">Nintendo</a>
+                <a href="{% url 'games' %}?category=pc" class="dropdown-item">PC Classics</a>
             </div>
         </li>
 
@@ -28,7 +28,7 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">Clearance</a>
+                <a href="{% url 'games' %}?category=clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
     </ul>
