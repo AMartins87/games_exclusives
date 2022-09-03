@@ -1,0 +1,262 @@
+[
+    {
+        "pk": 1,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg001",
+            "name": "Crash Bandicoot",
+            "description": "Crash Bandicoot is a platform game in which the player controls the titular character Crash, who is tasked with traversing 32 levels to defeat Doctor Neo Cortex and rescue Tawna. The majority of the game takes place from a third-person perspective in which Crash moves into the screen.",
+            "price": 49.99,
+            "category": 1,
+            "image_url": "https://static.wikia.nocookie.net/crashban/images/f/fa/Pal.png/revision/latest?cb=20220510144035",
+            "image": "crash_bandicoot.webp"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg002",
+            "name": "God of War",
+            "description": "God of War is an action-adventure hack and slash video game. First released on March 22, 2005, for the PlayStation 2, it is the first installment in the series of the same name and the third chronologically. Loosely based on Greek mythology, it is set in ancient Greece with vengeance as its central motif.",
+            "price": 28.99,
+            "category": 1,
+            "image_url": "https://assets-prd.ignimgs.com/2022/01/07/god-of-war-1-button-1641590922128.jpg",
+            "image": "god_of_war.jpg"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg003",
+            "name": "Uncharted: Drake's Fortune",
+            "description": "It is the first game in the Uncharted series, and was released in November 2007 for PlayStation 3. The game follows Nathan Drake, the supposed descendant of explorer Sir Francis Drake, as he searches for the lost treasure of El Dorado with journalist Elena Fisher and mentor Victor Sullivan",
+            "price": 15.99,
+            "category": 1,
+            "image_url": "https://m.media-amazon.com/images/I/A1Er5NlA3eL._AC_SX466_.jpg",
+            "image": "uncharted.jpg"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg004",
+            "name": "Gran Turismo",
+            "description": "originally released as Gran Turismo: The Real Driving Simulator in Japan and Europe, is a 1997 racing simulation video game. It features 140 cars and 11 race tracks. ",
+            "price": 99.99,
+            "category": 1,
+            "image_url": "https://www.gran-turismo.com/images/c/i1xYzE2C9BPwg.jpg",
+            "image": "gran_turismo.jpg"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg005",
+            "name": "Halo: Combat Evolved",
+            "description": "Halo: Combat Evolved is a 2001 first-person shooter game. Halo is set in the twenty-sixth century, with the player assuming the role of the Master Chief, a cybernetically enhanced supersoldier. The Chief is accompanied by Cortana, an artificial intelligence. Players battle aliens as they attempt to uncover the secrets of the eponymous Halo, a ring-shaped artificial world. ",
+            "price": 25.99,
+            "category": 2,
+            "image_url": "https://m.media-amazon.com/images/I/71ZrUAqWYCL._AC_SY741_.jpg",
+            "image": "halo.png"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg006",
+            "name": "Forza Motorsport", 
+            "description": "Forza Motorsport is a 2005 simulation racing video game. The word Forza is Italian for strength. Players compete in events around the globe using real licensed cars on a variety of real world and fictional courses. It features an arcade mode, meant more for quickplay of races, and a career mode, which is focused on long-term play.",
+            "price": 35.99,
+            "category": 2,
+            "image_url": "https://m.media-amazon.com/images/I/51QFYHXAT9L._AC_.jpg",
+            "image": "forza_motorsport.jpg"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg007",
+            "name": "Gears of War",
+            "description": "Gears of War is a media franchise best known for its third-person shooter video games, which has been supplemented by spin-off video game titles, a DC comic book series, seven novels, a board game adaptation and various merchandise. The original trilogy focuses on the conflict between humanity and the subterranean reptilian hominids known as the Locust Horde on the world of Sera. The first installment, titled Gears of War, was released on November 7, 2006. ",
+            "price": 59.99,
+            "category": 2,
+            "image_url": "https://m.media-amazon.com/images/M/MV5BZjhhNWQ0YzQtMTk5Ni00OTE4LTlkYzQtYTZhMTNiYmE5OWQzXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg",
+            "image": "gears_of_war.jpg"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg008",
+            "name": "Ooblets",
+            "description": "Ooblets is a beautiful blend of Stardew Valley and Pokemon, where you grow and collect the titular Ooblets. You'll compete in dance battles, get to know the people of the town and beyond.",
+            "price": 66.99,
+            "category": 2,
+            "image_url": "https://images.purexbox.com/16dfbd964376b/ooblets-cover.cover_large.jpg",
+            "image": "ooblets.webp"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg009",
+            "name": "Super Mario 3D World + Bowsers Fury",
+            "description": "Join Mario, Luigi, Princess Peach and Toad on a quest to save the Sprixie Kingdom in Super Mario 3D World + Bowser's Fury, pouncing onto Nintendo Switch! Bowser's kidnapped the Sprixie Princess, and it's up to our heroes to rescue her!",
+            "price": 49.99,
+            "category": 3,
+            "image_url": "https://media.4rgos.it/i/Argos/7918865_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
+            "image": "super_mario_3d_bowser.png"
+        }
+    },
+    {
+        "pk": 10,
+       "model": "games.game",
+        "fields": {
+            "sku": "eg0010",
+            "name": "Luigi's Mansion 3",
+            "description": "Luigi embarks on a dream vacation with Mario and friends upon receiving an invitation to a luxurious hotel. However, his dream quickly becomes a nightmare when King Boo reveals everything had been a ploy to capture Mario and friends. With the assistance of Professor E. Gadd once again, the reluctant and cowardly hero Luigi traverses up and down treacherous floors of the now-ominous hotel on a quest to save them.",
+            "price": 43.99,
+            "category": 3,
+            "image_url": "https://media.4rgos.it/i/Argos/1345001_R_Z001A?w=750&h=440&qlt=70",
+            "image": "luigi_mansion.jpg"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0011",
+            "name": "The Legend of Zelda: Skyward Sword",
+            "description": "Depicting the earliest story in The Legend of Zelda timeline, Link must travel between a world above the clouds and the great unknown below in search of his childhood friend, Zelda. Armed with his trusty sword and shield, Link will face off against powerful foes, solve tricky puzzles and soar through the skies atop a huge bird called a Loftwing on this epic adventure.",
+            "price": 29.99,
+            "category": 3,
+            "image_url": "https://m.media-amazon.com/images/I/8176VSvYCDS._AC_SY500_.jpg",
+            "image": "zelda.jpg"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0012",
+            "name": "The Goonies II",
+            "description": "The Goonies II is an adventure game developed and published by Konami for the Nintendo Entertainment System. It was released on March 18, 1987 in Japan, November 1987 in North America, and on December 19, 1988 in Europe. It is a sequel to a prior Goonies video game released on the Family Computer in Japan, which was only available in North America on Vs. System arcade units.",
+            "price": 14.99,
+            "category": 3,
+            "image_url": "https://i0.wp.com/www.nintendotimes.com/wp-content/uploads/2017/11/feat-goonies-2.jpg?fit=1200%2C668&ssl=1",
+            "image": "goonies_2.jpg"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0013",
+            "name": "Arkanoid",
+            "description": "Arkanoid is a 1986 block breaker arcade game. ontrolling a paddle-like craft known as the Vaus, the player is tasked with clearing a formation of colorful blocks by deflecting a ball towards it without letting the ball leave the bottom edge of the playfield. Some blocks contain power-ups that have various effects, such as increasing the length of the Vaus, creating several additional balls, or turning the Vaus into a laser cannon. Other blocks may be indestructible or require multiple hits to break.",
+            "price": 9.99,
+            "category": 4,
+            "image_url": "https://cdn.ebaumsworld.com/mediaFiles/picture/2559883/86701462.jpg",
+            "image": "arkanoid.jpg"
+        }
+    },
+    {
+        "pk": 14,
+       "model": "games.game",
+        "fields": {
+            "sku": "eg0014",
+            "name": "Gobliiins",
+            "description": "Gobliiins is a puzzle adventure video game series, consisting of four entries. The games mix elements of adventure and puzzle gaming. In essence, the player must find the solution to each area, consisting of one or more screens, in order to progress to the next. An original aspect of the series is that the player usually controls multiple goblins as player characters, each of whom has a unique set of abilities. ",
+            "price": 6.99,
+            "category": 4,
+            "image_url": "https://en.wikipedia.org/wiki/Gobliiins#/media/File:Gobliiins_Cover.jpg",
+            "image": "gobliiins.jpg"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0015",
+            "name": "The Legend of Kyrandia: Book One",
+            "description": "The Legend of Kyrandia: Book One is a 2D point-and-click adventure game, and the first game in the Fables & Fiends series. It was developedin August 1992. Players take on the role of a young prince who must end the tyrannical chaos of an evil court jester in his kingdom. The game makes use of a simple interface system that allows the player to interact with objects and people, while solving various puzzles using a variety of items and special abilities.",
+            "price": 3.99,
+            "category": 4,
+            "image_url": "https://cdn.nivoli.com/adventuregamers/images/screenshots/15842/k_box_cover.jpg",
+            "image": "book_of_kyrandia.jpg"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0016",
+            "name": "Prince of Persia",
+            "description": "Prince of Persia is a fantasy cinematic platformer. Taking place in medieval Persia, players control an unnamed protagonist who must venture through a series of dungeons to defeat the evil Grand Vizier Jaffar and save an imprisoned princess. ",
+            "price": 8.99,
+            "category": 4,
+            "image_url": "https://ia804602.us.archive.org/18/items/PrinceOfPersiaTheFirst/IMGs/1.png",
+            "image": "prince_of_persia.png"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0017",
+            "name": "Tropico",
+            "description": "Tropico is a construction and management simulation video game. The gamers see the player taking the role of El Presidente, who rules a fictional island country in the Caribbean named Tropico during the Cold War era and beyond. The game is tongue-in-cheek in its presentation of semi-democratic banana republics, using a great deal of humor while still referencing such topics as totalitarianism, electoral fraud, and the interventions of powerful companies (United Fruit is implied) and the Cold War superpowers (the United States and Soviet Union).",
+            "price": 2.99,
+            "category": 5,
+            "image_url": "https://static.wikia.nocookie.net/tropico/images/4/45/Tropico_Coverart.png/revision/latest?cb=20190225184724",
+            "image": "tropico.jpg"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0018",
+            "name": "Warcraft: Orcs & Humans",
+            "description": "Warcraft: Orcs & Humans is a real-time strategy game. The player takes the role of either the Human inhabitants of Azeroth, or the invading Orcs. In the single player campaign mode the player works through a series of missions, the objective of which varies, but usually involves building a small town, harvesting resources, building an army and then leading it to victory.",
+            "price": 17.99,
+            "category": 5,
+            "image_url": "https://www.mobygames.com/images/covers/l/157647-warcraft-orcs-humans-dos-front-cover.jpg",
+            "image": "warcraft.jpg"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0019",
+            "name": "The Settlers II",
+            "description": "The Settlers II, originally released as The Settlers II: Veni, Vidi, Vici, is a city-building game with real-time strategy elements. The game can be played in either single-player campaign mode or in free game mode; individual scenarios with predetermined rules set by the player, which can be played with or against either another player, the computer, or both another player and the computer.",
+            "price": 4.99,
+            "category": 5,
+            "image_url": "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw76833b4c/images/large/5be2b34288a7e3b8170265cb.jpg?sw=341&sh=450&sm=fit",
+            "image": "settlers_2.jpg"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "games.game",
+        "fields": {
+            "sku": "eg0020",
+            "name": "Wolfenstein 3D",
+            "description": "Wolfenstein 3D is a first-person shooter video game originally released on May 5, 1992, for DOS, it was inspired by the 1981 Muse Software video game Castle Wolfenstein, and is the third installment in the Wolfenstein series. In Wolfenstein 3D, the player assumes the role of Allied spy William B.J. Blazkowicz during World War II as he escapes from the Nazi German prison Castle Wolfenstein and carries out a series of crucial missions against the Nazis. The player traverses each of the game's levels to find an elevator to the next level or kill a final boss, fighting Nazi soldiers, dogs, and other enemies with knives and a variety of guns.",
+            "price": 5.99,
+            "category": 5,
+            "image_url": "https://classicreload.com/sites/default/files/wolfensein-3d.png",
+            "image": "wolfenstein_3d.png"
+        }
+    }
+]

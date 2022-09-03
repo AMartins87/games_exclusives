@@ -1,0 +1,42 @@
+[   
+    {
+        "pk":1,
+        "model":"games.category",
+        "fields":{
+            "name":"playstation",
+            "friendly_name":"PlayStation"
+        }
+    },
+    {
+        "pk":2,
+        "model":"games.category",
+        "fields":{
+            "name":"xbox",
+            "friendly_name":"Xbox"
+        }
+    },
+    {
+        "pk":3,
+        "model":"games.category",
+        "fields":{
+            "name":"nintendo",
+            "friendly_name":"Nintendo"
+        }
+    },
+    {
+        "pk":4,
+        "model":"games.category",
+        "fields":{
+            "name":"pc",
+            "friendly_name":"PC Classics"
+        }
+    },
+    {
+        "pk":5,
+        "model":"games.category",
+        "fields":{
+            "name":"clearance",
+            "friendly_name":"Clearance"
+        }
+    }
+]
