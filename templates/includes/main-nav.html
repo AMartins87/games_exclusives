@@ -5,8 +5,8 @@
                 All Games
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-games-link">
-                <a href="" class="dropdown-item">By Price</a>
-                <a href="" class="dropdown-item ">By Category</a>
+                <a href="{% url 'games' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'games' %}?sort=category&direction=asc"class="dropdown-item ">By Category</a>
                 <a href="{% url 'games' %}"  class="dropdown-item">All Games</a>
             </div>
         </li>
