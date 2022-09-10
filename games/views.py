@@ -14,7 +14,6 @@ def all_games(request):
     direction = None
 
     """ Sorting games by price and category """
-
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -22,7 +21,8 @@ def all_games(request):
             if sortkey == 'name':
                 sortkey = 'lower_name'
                 games = games.annotate(lower_name=Lower('name'))
-
+            if sortkey == 'category':
+                sortkey = 'category__name'
             if 'direction' in request.GET:
                 direction = request.GET['direction']
                 if direction == 'desc':
