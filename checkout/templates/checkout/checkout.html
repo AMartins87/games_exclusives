@@ -52,7 +52,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">${{ item.game.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">£{{ item.game.price | calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -66,7 +66,7 @@
                     <div class="col-3">
                         <p class="my-0">£{{ total | floatformat:2 }}</p>
                         <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>${{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
@@ -86,7 +86,7 @@
                         {{ order_form.postcode | as_crispy_field }}
                         {{ order_form.town_or_city | as_crispy_field }}
                         {{ order_form.street_address1 | as_crispy_field }}
-                        {{ order_form.street_address2 | as_crispy_field }}
+                        {{ order_form.street_address2 | as_crispy_field }}g
                         {{ order_form.county | as_crispy_field }}
                         <div class="form-check form-check-inline float-right mr-0">
 							{% if user.is_authenticated %}
