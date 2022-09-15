@@ -1,6 +1,3 @@
-"""
-Checkout app admin models
-"""
 from django.contrib import admin
 from .models import Order, OrderLineItem
 
