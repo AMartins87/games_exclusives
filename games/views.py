@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 from .models import Game, Category
+from .forms import GameForm
 
 
 def all_games(request):
@@ -66,3 +67,14 @@ def game_detail(request, game_id):
     }
 
     return render(request, 'games/game_detail.html', context)
+
+
+def add_game(request):
+    """ Add a game to the store """
+    form = GameForm()
+    template = 'games/add_game.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
