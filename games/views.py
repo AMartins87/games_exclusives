@@ -75,9 +75,9 @@ def add_game(request):
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            game = form.save()
             messages.success(request, 'Successfully added game!')
-            return redirect(reverse('add_game'))
+            return redirect(reverse('game_detail', args=[game.id]))
         else:
             messages.error(request, 'Failed to add game.'
                            'Please ensure the form is valid.')
@@ -115,3 +115,11 @@ def edit_game(request, game_id):
     }
 
     return render(request, template, context)
+
+
+def delete_game(request, game_id):
+    """ Delete a game from the store """
+    game = get_object_or_404(Game, pk=game_id)
+    game.delete()
+    messages.success(request, 'Game deleted!')
+    return redirect(reverse('games'))
