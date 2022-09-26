@@ -11,7 +11,7 @@ def all_games(request):
     """ A view to show all games, including sorting and search queries """
 
     games = Game.objects.all()
-    query = ""
+    query = None
     categories = None
     sort = None
     direction = None
@@ -43,10 +43,11 @@ def all_games(request):
                                "any search criteria!")
                 return redirect(reverse('games'))
 
-        queries = Q(name__icontains=query) | Q(description__icontains=query)
-        games = games.filter(queries)
+            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            games = games.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
+
     context = {
         'games': games,
         'search_term': query,
@@ -75,7 +76,7 @@ def add_game(request):
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Successfully added a game')
+            messages.success(request, 'Successfully added game!')
             return redirect(reverse('add_game'))
         else:
             messages.error(request, 'Failed to add game.'
