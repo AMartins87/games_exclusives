@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
+
 from .models import Game, Category
 from .forms import GameForm
 
@@ -70,7 +71,18 @@ def game_detail(request, game_id):
 
 def add_game(request):
     """ Add a game to the store """
-    form = GameForm()
+    if request.method == 'POST':
+        form = GameForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added a game')
+            return redirect(reverse('add_game'))
+        else:
+            messages.error(request, 'Failed to add game.'
+                           'Please ensure the form is valid.')
+    else:
+        form = GameForm()
+
     template = 'games/add_game.html'
     context = {
         'form': form,

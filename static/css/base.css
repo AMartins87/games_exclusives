@@ -181,12 +181,33 @@ div.social-media {
     text-align: center;
 }
 
-/* Contact */ 
+/* Contact link in a footer */ 
 
 div.contact {
     text-transform: uppercase;
     font-size: larger;
     font-weight: bolder;
+}
+
+/* Contact page */
+
+.form-group {
+    margin-top: 150px;
+}
+
+.py-3 {
+    position: relative;
+    margin-top: 150px;
+}
+
+.py-3.contact p {
+    display: grid;
+    text-align: center;
+}
+
+.py-3.contact input, textarea {
+    border: 1px solid #ced4da;
+    font-family: monospace;
 }
 
 /* -------------------------------- Media Queries */
