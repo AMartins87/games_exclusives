@@ -90,3 +90,28 @@ def add_game(request):
     }
 
     return render(request, template, context)
+
+
+def edit_game(request, game_id):
+    """ Edit a game in the store """
+    game = get_object_or_404(Game, pk=game_id)
+    if request.method == 'POST':
+        form = GameForm(request.POST, request.FILES, instance=game)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated game!')
+            return redirect(reverse('game_detail', args=[game.id]))
+        else:
+            messages.error(request, 'Failed to update game.'
+                           'Please ensure the form is valid.')
+    else:
+        form = GameForm(instance=game)
+        messages.info(request, f'You are editing {game.name}')
+
+    template = 'games/edit_game.html'
+    context = {
+        'form': form,
+        'game': game,
+    }
+
+    return render(request, template, context)
