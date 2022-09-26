@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
@@ -70,8 +71,13 @@ def game_detail(request, game_id):
     return render(request, 'games/game_detail.html', context)
 
 
+@login_required
 def add_game(request):
     """ Add a game to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES)
         if form.is_valid():
@@ -92,8 +98,13 @@ def add_game(request):
     return render(request, template, context)
 
 
+@login_required
 def edit_game(request, game_id):
     """ Edit a game in the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     game = get_object_or_404(Game, pk=game_id)
     if request.method == 'POST':
         form = GameForm(request.POST, request.FILES, instance=game)
@@ -117,8 +128,13 @@ def edit_game(request, game_id):
     return render(request, template, context)
 
 
+@login_required
 def delete_game(request, game_id):
     """ Delete a game from the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry, only store owners can do that.')
+        return redirect(reverse('home'))
+
     game = get_object_or_404(Game, pk=game_id)
     game.delete()
     messages.success(request, 'Game deleted!')
