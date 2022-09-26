@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %} Contact us {% endblock %}
+
+{% block content %}
+
+<h2 class="my-4">Contact Us</h2>
+<!-- Wrapper container -->
+<div class="container py-3 contact">
+    <p class="text-center">
+        Have you got a question? Suggestion? Would you like to leave a compliment?
+    </p>
+    <!-- Contact form -->
+    <div class="form-group">
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            {% comment %}
+
+            {% endcomment %}
+            <!-- Send comment button -->
+            <div class="d-grid">
+                <button class="btn btn-dark">Send</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+{% endblock %}

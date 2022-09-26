@@ -15,7 +15,6 @@ def all_games(request):
     sort = None
     direction = None
 
-    """ Sorting games by price and category """
     if request.GET:
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
