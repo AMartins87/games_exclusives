@@ -177,21 +177,6 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* Footer Mailchimp social media */ 
-
-/* div.social-media {
-    font-size: large;
-    text-align: center;
-} */
-
-/* Contact link in a footer */ 
-
-/* div.contact {
-    text-transform: uppercase;
-    font-size: larger;
-    font-weight: bolder;
-}
-
 
 /*................................................Mailchimp */
 
@@ -213,7 +198,7 @@ input[name='q']::placeholder {
 }
 
 .red-background-email {
-    background-color: #e85320;
+    background-color: #2678b4;
     padding: 20px;
 }
 
@@ -244,33 +229,11 @@ input[name='q']::placeholder {
     height: 50px;
 }
 
-.subscribe-button {
-    background-color: #e8a79d9c;
-    border: solid 2px #1c3a42;
-    border-radius: 5px;
-    color: #1c3a42;
-    height: 50px;
-}
-
-.border-allauth {
-    border: solid 2px #1c3a42;
-    border-radius: 5px;
-}
-
-#sign_up_image {
-    height: 300px;
-    border: solid white 2px;
-    overflow: hidden;
-    opacity: 0.75;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../media/no_imageplaceholder.jpg")
-}
-
 /* Footer*/
 
-footer .background {
-    background: #e85320;
+footer.background {
+    padding-top: 1rem;
+    background-color: #e85320;
     padding:10px 70px 0px;
 }	       
 
@@ -301,6 +264,11 @@ footer ul li{
    float: left;
 }
 
+.social li a {
+    letter-spacing: 25px;
+    font-size: x-large;
+ }
+ 
 .copyright , .links , .social {
    list-style: none;
 }
@@ -338,6 +306,20 @@ footer ul li{
     background-color: #dc3545;
     border-color: #dc3545;
     border-radius: 0;
+}
+
+/* Contact Form */
+
+#contact-container {
+    box-shadow: 0px 0px 8px 3px rgb(230, 57, 14);
+}
+
+.btn-danger {
+    background: #e85320;
+    text-transform: uppercase;
+    border-radius: 25px;
+    width: 10vw;
+    justify-content: center;
 }
 
 /* -------------------------------- Media Queries */

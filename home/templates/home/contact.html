@@ -1,34 +1,35 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
+{% load static %}
 
-{% block title %} Contact us {% endblock %}
+{% block page_header %}
+<div class="containe header-container">
+    <div class="row"></div>
+</div>
+
+{% endblock page_header %}
 
 {% block content %}
 
-<h2 class="my-4">Contact Us</h2>
-<!-- Wrapper container -->
 <div class="overlay"></div>
-<div class="container py-3 contact">
-    <p class="text-center">
-        Have you got a question? Suggestion? Would you like to leave a compliment?
-    </p>
-    <!-- Contact form -->
-    <div class="form-group">
-        <form method="POST">
-
-            {% csrf_token %}
-
-            {{form.as_p}}
-
-            {% comment %}
-
-            {% endcomment %}
-            
-            <!-- Send button -->
-            <div class="d-grid">
-                <button class="btn btn-dark">Send</button>
-            </div>
-        </form>
+<div class="container cart-container">
+    <div class="row justify-content-center align-items-center">
+        <div class="col">
+            <h3 class="text-center my-3 font-weight-bold">Contact us</h3>
+            <p class="lead text-center">Have you got a question? Suggestion? Would you like to leave a compliment?</p>
+            <hr>
+        </div>
     </div>
-
+    <div class="row justify-content-center align-items-center mt-3" id="contact-container">
+        <div class="col-md-5">
+            <div class="contact-form">
+                <form action="" method="POST" class="form my-3" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ contact_form|crispy }}
+                    <button type="submit" class="btn btn-danger text-center">Send</button>
+                </form>
+            </div>
+        </div>
+      
+    </div>
 </div>
-{% endblock %}
+{% endblock content %}
