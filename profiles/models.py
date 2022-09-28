@@ -4,7 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
-
+from games.models import Game
 
 class UserProfile(models.Model):
     """
@@ -40,3 +40,42 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
     instance.userprofile.save()
+
+
+class Favourites(models.Model):
+    """
+    Saves games in shopper's favourites
+    """
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+    )
+    games = models.ManyToManyField(
+        Game,
+        through='FavouritesItem',
+        related_name='game_favourites'
+    )
+
+    def __str__(self):
+        return f'Favourites ({self.user})'
+
+
+class FavouritesItem(models.Model):
+    """
+    Allows shopper to add games to their favourites
+    """
+    game = models.ForeignKey(
+        Game,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE
+    )
+    favourites = models.ForeignKey(
+        Favourites,
+        null=False,
+        blank=False,
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return self.game.name

@@ -1,10 +1,11 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
+from games.models import Game
 
-from .models import UserProfile
+from .models import UserProfile, Favourites
 from .forms import UserProfileForm
 
 
@@ -50,3 +51,70 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
+
+
+def favourites(request):
+    """
+    Renders favourites
+    """
+    favourites_items = []
+    favourites_count = 0
+    favourites = request.session.get('favourites', {})
+
+    try:
+        favourites = Favourites.objects.get(user=request.user)
+    except favourites.DoesNotExist:
+        pass
+    else:
+        favourites_items = favourites.games.all()
+
+    context = {
+        'favourites': favourites,
+        'favourites_items': favourites_items,
+        'favourites_count': favourites_count,
+    }
+    return render(request, 'profiles/favourites.html', context)
+
+
+@login_required
+def add_to_favourites(request, game_id):
+    """
+    Adds game to favourites
+    """
+    game = get_object_or_404(Game, pk=game_id)
+
+    # Create a wishlist for the user if they don't have one
+    favourites, _ = Favourites.objects.get_or_create(user=request.user)
+
+    # Add game to the wishlist
+    if game in favourites.games.all():
+        messages.error(
+            request,
+            game.name + ' is already in your favourites.'
+        )
+    else:
+        favourites.games.add(game)
+        messages.info(
+            request,
+            'Added ' + game.name + ' to your favourites.'
+        )
+
+    return redirect(request.META.get('HTTP_REFERER'))
+
+
+@login_required
+def remove_from_favourites(request, game_id):
+    """
+    Removes a game from the favourites
+    """
+    favourites = Favourites.objects.get(user=request.user)
+    game = get_object_or_404(Game, pk=game_id)
+
+    # Removes product from favourites
+    favourites.games.remove(game)
+    messages.info(
+        request,
+        game.name + ' was removed from your favourites.'
+    )
+
+    return redirect(request.META.get('HTTP_REFERER'))

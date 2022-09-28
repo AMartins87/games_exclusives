@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="containe header-container">
+    <div class="row">
+
+    </div>
+</div>
+
+{% endblock page_header %}
+
+{% block content %}
+
+<div class="overlay"></div>
+<div class="container cart-container">
+    <div class="row">
+        <div class="col col-12">
+            <h3 class="my-3 font-weight-bold text-center">Favourites ({{ favourites_count }})</h3>
+            <hr>
+        </div>
+    </div>
+    <div class="row mt-3">
+        {% for game in favourites.gamess.all %}
+        <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div class="card product-card h-100 border-0 justify-content-center align-items-center">
+                {% if game.image %}
+                <a href="{% url 'game_detail' game.id %}">
+                    <img class="card-img-top img-fluid" src="{{ game.image_url }}" alt="{{ game.name }}">
+                </a>
+                {% else %}
+                <a href="{% url 'game_detail' game.id %}">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}No-Image.png" alt="{{ game.name }}">
+                </a>
+                {% endif %}
+                <div class="card-body pb-0">
+                    <p class="mb-0">{{ game.name }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold">£{{ game.price }}</p>
+                    <small class="">
+                        <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
+                        <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
+                    </small>
+                </div>
+            </div>
+        </div>
+            {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-3">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-3">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-3">
+                    <hr>
+                </div>
+            {% endif %}
+            {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-3">
+                    <hr>
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+    <div class="btt-button shadow-sm rounded-0 mb-5 mr-3 font-weight-bold">
+        <a class="btt-link d-flex h-100">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="rgb(149, 8, 177)"
+                class="bi bi-arrow-up-square-fill" viewBox="0 0 16 16">
+                <path
+                    d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0z" />
+            </svg>
+        </a>
+    </div>
+</div>
+{% endblock content %}

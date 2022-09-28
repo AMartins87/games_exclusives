@@ -235,8 +235,8 @@ input[name='q']::placeholder {
     font-size: 30px;
 }
 
-.red-background-email {
-    background-color: #2678b4;
+.background-email {
+    background-color: #22F2CF;
     padding: 20px;
 }
 
