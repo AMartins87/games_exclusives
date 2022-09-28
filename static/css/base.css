@@ -18,7 +18,7 @@ body {
     font-size: large;
 }
 
-/* ...............................................Forms */
+/*...............................................Forms */
 
 .input-group>.form-control {
     letter-spacing: 1px;
@@ -33,7 +33,96 @@ body {
     letter-spacing: 2px;
 }
 
-/* ...............................................from Bulma */
+.text-danger {
+    font-size: medium;
+}
+
+/*...............................................Game Form */
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/*...............................................Contact Form */
+
+#contact-container {
+    box-shadow: 0px 0px 8px 3px rgb(230, 57, 14);
+}
+
+.btn-danger {
+    background: #e85320;
+    text-transform: uppercase;
+    border-radius: 25px;
+    width: 10vw;
+    justify-content: center;
+}
+
+
+/*...............................................Favourites */
+
+.favourites-link {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    border: none;
+    font-size: x-large;
+}
+
+
+#game-count,
+#favourites-count,
+#item-count {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0 6px;
+    vertical-align: top;
+    margin-left: -9px;
+}
+
+a.favourites {
+    text-decoration: blink;
+    float: left;
+}
+
+.fa-circle-right {
+    font-size: x-large;
+}
+
+a:hover {
+    font-style: oblique;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 25px;
+}
+
+i:hover {
+    color: white;
+}
+
+/*...............................................from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -130,7 +219,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ...............................................bootstrap toasts */
+/*...............................................Bootstrap toasts */
 
 .message-container {
     position: fixed;
@@ -147,7 +236,7 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* ...............................................from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+/*...............................................from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0; 
     height: 0; 
@@ -159,7 +248,7 @@ input[name='q']::placeholder {
     right: 36px;
 }
 
-/* ...............................................Convenience classes - colors copied from Bootstrap */
+/*...............................................Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
     border-bottom-color: #007bff !important;
 }
@@ -216,7 +305,12 @@ input[name='q']::placeholder {
     margin-bottom: 15px;
 }
 
-/*................................................Mailchimp */
+.img-fluid {
+    max-width: 75%;
+}
+
+
+/*...............................................Mailchimp */
 
 #mc_embed_signup_email {
     background: #fff;
@@ -267,7 +361,7 @@ input[name='q']::placeholder {
     height: 50px;
 }
 
-/* Footer*/
+/*...............................................Footer*/
 
 footer.background {
     padding-top: 1rem;
@@ -318,49 +412,7 @@ footer ul li{
    letter-spacing: 25px;
 }
 
-/* Game Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
-/* Contact Form */
-
-#contact-container {
-    box-shadow: 0px 0px 8px 3px rgb(230, 57, 14);
-}
-
-.btn-danger {
-    background: #e85320;
-    text-transform: uppercase;
-    border-radius: 25px;
-    width: 10vw;
-    justify-content: center;
-}
-
-/* -------------------------------- Media Queries */
+/*...............................................Media Queries */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -369,7 +421,7 @@ footer ul li{
   }
 }
 
-/* Allauth form formatting */
+/*...............................................Allauth form formatting */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -459,10 +511,6 @@ footer ul li{
     div.card-footer {
         padding: 40px 10px;
         font-size: 0.85rem;
-    }
-
-    .img-fluid {
-        max-width: 75%;
     }
 
     .delivery-text-header {
