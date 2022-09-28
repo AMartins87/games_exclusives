@@ -41,6 +41,18 @@
     </div>
 </li>
 <li class="list-inline-item">
+    <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
+        <div class="text-center">
+            <div>
+                <i class="fa-regular fa-heart"></i>
+                <span id="favourites-count" class="badge badge-danger">
+                    {{ favourites_count }}
+                </span>
+            </div> 
+        </div>
+    </a>
+</li>
+<li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
         <div class="text-center">
             <div><i class="fas fa-shopping-bag fa-lg"></i></div>

@@ -9,6 +9,7 @@ class ProfileAdmin(admin.ModelAdmin):
     list_filter = ('user',)
     search_fields = ('user', 'default_phone_number')
 
+
 admin.site.register(Favourites)
 
 admin.site.register(FavouritesItem)

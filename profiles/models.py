@@ -48,12 +48,9 @@ class Favourites(models.Model):
     Saves games in shopper's favourites
     """
     user = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-    )
+        User, on_delete=models.CASCADE)
     games = models.ManyToManyField(
-        Game,
-        through='FavouritesItem',
+        Game, through='FavouritesItem',
         related_name='game_favourites'
     )
 

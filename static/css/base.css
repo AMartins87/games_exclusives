@@ -33,7 +33,7 @@ body {
     letter-spacing: 2px;
 }
 
-.text-danger {
+.profile{
     font-size: medium;
 }
 
@@ -82,6 +82,10 @@ body {
 
 /*...............................................Favourites */
 
+.fa-regular, .fa-heart {
+    font-size: x-large;
+}
+
 .favourites-link {
     position: absolute;
     top: 50px;
@@ -112,14 +116,18 @@ a.favourites {
 
 a:hover {
     font-style: oblique;
-    background-color: black;
-    color: white;
-    padding: 5px;
-    border-radius: 25px;
+    text-decoration: none;
+}
+.card-body {
+    padding: 0.75rem;
 }
 
-i:hover {
-    color: white;
+.game-details {
+    font-size: smaller;
+}
+
+.fa-trash {
+    font-size: large;
 }
 
 /*...............................................from Bulma */

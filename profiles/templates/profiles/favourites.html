@@ -23,7 +23,7 @@
     <div class="row mt-3">
         {% for game in favourites.games.all %}
         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div class="card product-card h-100 border-0 justify-content-center align-items-center">
+            <div class="card h-100 border-0">
                 {% if game.image %}
                 <a href="{% url 'game_detail' game.id %}">
                     <img class="card-img-top img-fluid" src="{{ game.image_url }}" alt="{{ game.name }}">
@@ -34,10 +34,10 @@
                 </a>
                 {% endif %}
                 <div class="card-body pb-0">
-                    <p class="mb-0">{{ game.name }}</p>
-                    <p class="lead mb-0 text-left font-weight-bold">£{{ game.price }}</p>
+                    <p class="mb-1">{{ game.name }}</p>
+                    <p class="mb-1 text-left">£{{ game.price }}</p>
                     <small class="">
-                        <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
+                        <a href="{% url 'game_detail' game.id %}" class="game-details" title="View details">Details</a> &nbsp; |  &nbsp;
                         <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
                     </small>
                 </div>
