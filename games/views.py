@@ -64,6 +64,7 @@ def game_detail(request, game_id):
 
     game = get_object_or_404(Game, pk=game_id)
 
+
     context = {
         'game': game,
     }

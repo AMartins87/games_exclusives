@@ -224,6 +224,7 @@ a:hover {
 .btn-black {
     background: black;
     color: white;
+    border-radius: 25px;
     letter-spacing: 1.5px;
 }
 

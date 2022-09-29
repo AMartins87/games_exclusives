@@ -47,7 +47,7 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
-    'reviews',
+    'game_reviews',
 
     # Other
     'crispy_forms',
@@ -84,6 +84,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'basket.contexts.basket_contents',
                 'profiles.contexts.favourites_context',
+                'game_reviews.contexts.game_reviews',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',
