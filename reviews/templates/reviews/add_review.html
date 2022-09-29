@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'reviews/css/reviews.css' %}">
+{% endblock %}
+
+{% block page_header %}
+    <div class="navbar-offset"></div>
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col text-center">
+                    <h2 class="my-5 fw-bold">Add a Review</h2>
+                </div>
+            </div>
+            <div class="row my-5">
+                <div class="col-12 col-md-6">
+                    <a href="{% url 'game_detail' game.id %}" class="d-flex justify-content-end">
+                        {% if game.image %}
+                            <img class="w-75" src="{{ game.image.url }}" alt="{{ game.name }}">
+                        {% else %}
+                            <img class="w-75" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
+                        {% endif %}
+                    </a>
+                </div>
+                <div class="col-12 col-md-6">
+                    <form action="POST" action="{% url 'add_review' game.id %}" class="d-flex flex-column justify-content-center">
+                        {% csrf_token %}
+                        {{ form|crispy }}
+                        <p class="my-0"><strong>{{ game.name }}</strong></p>
+                        <div class="mt-5">
+                            <p><small>Rate this game:</small></p>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><i class="far fa-2x fa-star" data-rating="1"></i></li>
+                                <li class="list-inline-item"><i class="far fa-2x fa-star" data-rating="2"></i></li>
+                                <li class="list-inline-item"><i class="far fa-2x fa-star" data-rating="3"></i></li>
+                                <li class="list-inline-item"><i class="far fa-2x fa-star" data-rating="4"></i></li>
+                                <li class="list-inline-item"><i class="far fa-2x fa-star" data-rating="5"></i></li>
+                            </ul>
+                        </div>
+                        <div class="mt-5">
+                            <label for="review_area" class="form-label"><small>Write a review about this game:</small></label>
+                            <textarea class="form-control" id="review_area" rows="5"></textarea>
+                        </div>
+                        <a role="submit" href="" class="btn btn-brown mt-5"><small><i class="fas fa-pen-alt"></i> Submit a Review</small></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

@@ -58,7 +58,6 @@ def favourites(request):
     Renders favourites
     """
     favourites_items = []
-    favourites_count = 0
     favourites = request.session.get('favourites', {})
 
     try:
@@ -71,7 +70,6 @@ def favourites(request):
     context = {
         'favourites': favourites,
         'favourites_items': favourites_items,
-        'favourites_count': favourites_count,
     }
     return render(request, 'profiles/favourites.html', context)
 
@@ -83,10 +81,10 @@ def add_to_favourites(request, game_id):
     """
     game = get_object_or_404(Game, pk=game_id)
 
-    # Create a wishlist for the user if they don't have one
+    # Creates favourites list for the user if they don't have one
     favourites, _ = Favourites.objects.get_or_create(user=request.user)
 
-    # Add game to the wishlist
+    # Adds game to shopper's favourite's list
     if game in favourites.games.all():
         messages.error(
             request,
@@ -96,7 +94,7 @@ def add_to_favourites(request, game_id):
         favourites.games.add(game)
         messages.info(
             request,
-            'Added ' + game.name + ' to your favourites.'
+            'You added ' + game.name + ' to your favourites.'
         )
 
     return redirect(request.META.get('HTTP_REFERER'))
@@ -110,7 +108,7 @@ def remove_from_favourites(request, game_id):
     favourites = Favourites.objects.get(user=request.user)
     game = get_object_or_404(Game, pk=game_id)
 
-    # Removes product from favourites
+    # Removes game from shopper's favourites
     favourites.games.remove(game)
     messages.info(
         request,

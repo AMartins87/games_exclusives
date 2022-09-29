@@ -38,7 +38,13 @@
         <title>Games Exlusives{% block extra_title %}{% endblock %}</title>
     </head>
     <body>
-        <header class="container-fluid fixed-top">
+        <header class="container-fluid fixed-top p-0">
+            <div id="delivery-banner" class="row text-center">
+                <!-- <div class="overlay"></div> -->
+                <div class="col bg-warning text-black">
+                    <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
+                </div>            
+            </div>
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
@@ -86,9 +92,6 @@
                                 <div class="text-center">
                                     <div>
                                         <i class="fa-regular fa-heart"></i>
-                                        <span id="favourites-count" class="badge badge-danger">
-                                            {{ favourites_count }}
-                                        </span>
                                     </div> 
                                 </div>
                             </a>
@@ -119,13 +122,10 @@
                     {% include 'includes/main-nav.html' %}
                 </nav>
             </div>
-            <div id="delivery-banner" class="row text-center">
-                <div class="col bg-black text-white">
-                    <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>                
-                </div>            
-            </div>
         </header>
-    
+
+        
+        <!-- Toast messages -->
         {% if messages %}
             <div class="message-container">
                 {% for message in messages %}
@@ -153,7 +153,7 @@
         <div class="container-fluid bg-white p-1">
             <div class="row text-center background-email">
               <div class="col-12 text-black">
-                <!-- mc_embed_signup -->
+                <!-- MailChimp embed signup -->
                 <div class="text-center pt-4 p-2" id="mc_embed_signup_email">
                   <form
                     action=""

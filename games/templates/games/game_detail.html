@@ -45,12 +45,15 @@
                         </a>
                     </p>
                     {% endif %}
+                    {% if game.rating %}
+                            <small class="text-muted d-block"><span class="material-icons">star_rate<i class="fas fa-star mr-1"></i></span>{{ game.rating }} / 5</small>
+                            <small class="text-muted d-block"><i class="fas fa-star"></i> {{ game.rating }} / 5</small>
+                        {% else %}
+                            <small class="text-muted">No Rating</small>
+                        {% endif %}
 
-                    <!-- {% if game.rating %}
-                        <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ game.rating }} / 5</small>
-                    {% else %}
-                        <small class="text-muted">No Rating</small>
-                    {% endif %} -->
+                            <a href="{% url 'game_reviews' game.id %}" class="">See all reviews</a>
+                    
                     {% if request.user.is_superuser %}
                         <small class="ml-3">
                             <a href="{% url 'edit_game' game.id %}">Edit</a> | 

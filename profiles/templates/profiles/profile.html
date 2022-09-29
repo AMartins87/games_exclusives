@@ -58,7 +58,7 @@
                                         <ul class="list-unstyled">
                                             {% for item in order.lineitems.all %}
                                                 <li class="small">
-                                                    {{ item.product.name }} x{{ item.quantity }}
+                                                    {{ item.game.name }} x{{ item.quantity }}
                                                 </li>
                                             {% endfor %}
                                         </ul>
@@ -71,6 +71,7 @@
                     </table>
                     <a href="{% url 'favourites' %}" class="text-danger profile">Favourites <i class="fa-regular fa-circle-right"></i></a>
                         <br>
+                    <a href=""class="text-danger profile">Reviews<i class="fa-regular fa-circle-right"></i></a>
                 </div>
             </div>
         </div>

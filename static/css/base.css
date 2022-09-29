@@ -2,8 +2,15 @@
 
 html {
     height: 100%;
+    scroll-behavior: smooth;
 }
 
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+/* 
 body {
     background: url('/media/homepage_background_image.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -12,10 +19,56 @@ body {
     font-family: 'FontAwesome';
     font-size: small;
     letter-spacing: 1.5px;
-}
+} */
 
 .navbar-nav {
     font-size: large;
+}
+
+.hero-container {
+	background: url('/media/homepage_background.jpg') no-repeat center center;
+	background-size: contain;
+	height: 75vh;
+	position: relative;
+    margin-top: 20px;
+	max-width: 100%;
+}
+
+.hero-info {
+    text-shadow: white 1px 0 10px;
+    text-align: center;
+    position: relative;
+    display: grid;
+    top: 0;
+    font-family: FontAwesome;
+    font-size: 35px;
+}
+
+.hero-text {
+    top: 0;
+}
+
+.shop-now-btn {
+    position: absolute;
+    margin: 0;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 75%;
+    background-color: white;
+    border-radius: 25px;
+    width: 15vw;
+    box-shadow: yellow 2px 0 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.uppercap {
+    font-size: xxx-large;
+    color: #032c9f;
 }
 
 /*...............................................Forms */
@@ -128,6 +181,21 @@ a:hover {
 
 .fa-trash {
     font-size: large;
+}
+
+/*...............................................Color coding */ 
+.red {
+    color: #e85320;
+}
+
+.blue {
+    color:#032c9f;
+}
+
+/*...............................................Reviews */ 
+
+.border-red {
+    border: #e85320; 2px solid 0 !important;
 }
 
 /*...............................................from Bulma */
@@ -297,7 +365,7 @@ input[name='q']::placeholder {
 
 /*...............................................Games page */ 
 
-.h-100 {
+.games-card {
     height: 80%!important;
 }
 
@@ -313,11 +381,22 @@ input[name='q']::placeholder {
     margin-bottom: 15px;
 }
 
-.img-fluid {
-    max-width: 75%;
+#sort-selector {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
+.p-1 {
+    margin-top: 10vh;
+}
 
+.col-12 {
+    margin-top: 4vh;
+}
+
+.h-100 {
+    margin-bottom: -4vh;
+}
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
@@ -424,10 +503,26 @@ footer ul li{
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
+
+@media (max-width: 1165px) {
+    .shop-now-btn {
+        bottom: 65%;
+        font-size: large;
+    }
+
+    .hero-container  {
+        background: url('/media/homepage_background_sc.jpg') no-repeat center center;
+    }
+}
+
+@media (min-width: 992px) {
+    #large-screen {
+        display: none;
+    }
 
 /*...............................................Allauth form formatting */
 
