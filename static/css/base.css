@@ -27,7 +27,7 @@ body {
 
 .hero-container {
 	background: url('/media/homepage_background.jpg') no-repeat center center;
-	background-size: contain;
+	background-size: cover;
 	height: 75vh;
 	position: relative;
     margin-top: 20px;
@@ -187,7 +187,6 @@ a:hover {
     background: #e85320;
     text-transform: uppercase;
     border-radius: 25px;
-    width: 10vw;
     justify-content: center;
 }
 
@@ -313,23 +312,29 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/*...............................................Scroll arrow (from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/) */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
+/*...............................................Scroll arrow in a circle */
+
+.btt-button {
+    display: inline-block;
+    margin: 15px;
+   
+} 
+
+a.btt-link i {
+    font-size: xxx-large;
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+    text-decoration: none;
+    height: 150px;
+    width: 150px;
 }
 
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
     background: #fff;
-    /* clear: left; */
+    clear: left;
     font: 14px 'Rubik Dirt', cursive;
     border: solid 2px black;
 }
@@ -349,6 +354,7 @@ input[name='q']::placeholder {
     justify-content: center;
     margin: auto;
     text-align: center;
+    width: 100%;
 }
 
 .subscribe-icon {
@@ -415,6 +421,10 @@ footer ul li{
 
 /*...............................................Games page */ 
 
+.games {
+    margin-bottom: 5vh;
+}
+
 .games-card {
     height: 80%!important;
 }
@@ -436,9 +446,9 @@ footer ul li{
     margin-bottom: 10px;
 }
 
-.p-1 {
+/* .p-1 {
     margin-top: 10vh;
-}
+} */
 
 .col-12 {
     margin-top: 4vh;
@@ -457,21 +467,73 @@ footer ul li{
     }
 }
 
-@media (max-width: 1165px) {
-    .shop-now-btn {
-        font-size: large;
+@media (max-width: 991px) {
+    #large-screen {
+        display: none;
     }
 
     .hero-container  {
         background: url('/media/homepage_background_sc.jpg') no-repeat center center;
     }
-}
 
-@media (min-width: 992px) {
-    #large-screen {
-        display: none;
+    .hero-info {
+        font-size: x-large;
     }
 
+    .w-100 {
+        margin: 5px;
+    }
+    .header-container {
+        max-width: 75%;
+        margin-top: 15vh;
+    }
+    
+    #contact-container {
+        margin-bottom: 5vh
+    }
+
+@media (max-width: 716px ) {
+
+    /* scroll up arrow for smaller screens */
+    a.btt-link i {
+        font-size: xx-large;
+    }
+
+    .hero-info {
+        font-size: x-large;
+    }
+
+    .uppercap {
+        font-size: xx-large;
+    }
+
+@media (max-width: 540px) {
+
+    .hero-container  {
+        background: url('/media/homepage_background_image_small_screens.jpg') no-repeat center center;
+        background-size: contain;
+    
+    }
+
+    .hero-info {
+        color: white;
+        font-size: medium;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 25px;
+        border: 3px solid none;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background-color: rgb(0 211 178);
+        border-radius: 50px;
+    }
+
+    .uppercap {
+        font-size: large;
+    }
+}
 /*...............................................Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -523,7 +585,7 @@ footer ul li{
 }
 
 /* .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: #17a2b8;
 } */
 
 /* fixed top navbar only on medium and up */
