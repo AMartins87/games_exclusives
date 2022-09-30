@@ -73,10 +73,11 @@
                     </div>
                 </form>
             </div>
+            <!-- Account, favourites, basket -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                        <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-user-ninja"></i></div>
@@ -97,13 +98,22 @@
                         </div>
                     </li>
                     <li class="list-inline-item">
-                        <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
-                            <div class="text-center">
+                        {% if request.user.is_authenticated %}
+                            <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fa-regular fa-heart"></i>
+                                    </div>
+                                </div>
+                            </a>
+                        {% else %}
+                        {% csrf_token %}
+                            <a class="text-black nav-link" href="{% url 'account_login' %}" ><div class="text-center">
                                 <div>
                                     <i class="fa-regular fa-heart"></i>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        {% endif %}
                     </li>
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
