@@ -124,15 +124,6 @@ body {
     box-shadow: 0px 0px 8px 3px rgb(230, 57, 14);
 }
 
-.btn-danger {
-    background: #e85320;
-    text-transform: uppercase;
-    border-radius: 25px;
-    width: 10vw;
-    justify-content: center;
-}
-
-
 /*...............................................Favourites */
 
 .fa-regular, .fa-heart {
@@ -183,36 +174,33 @@ a:hover {
     font-size: large;
 }
 
-/*...............................................Color coding */ 
-.red {
-    color: #e85320;
-}
-
-.blue {
-    color:#032c9f;
-}
-
-/*...............................................Reviews */ 
-
-.border-red {
-    border: #e85320; 2px solid 0 !important;
-}
-
-/*...............................................from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
+/*...............................................Buttons  */ 
+.btn-dark {
+    color: #fff;
+    font-weight: bold;
     text-transform: uppercase;
+    background-color: black;
+    border-color: black;
+    border-radius: 25px;
 }
 
-.main-logo-link {
-    width: fit-content;
+.btn-danger {
+    background: #e85320;
+    text-transform: uppercase;
+    border-radius: 25px;
+    width: 10vw;
+    justify-content: center;
+}
+
+.btn-info {
+    border-radius: 25px;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+    border-radius: 25px;
 }
 
 .shop-now-button {
@@ -228,10 +216,10 @@ a:hover {
     letter-spacing: 1.5px;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+.btn-back {
+    color:#032c9f; 
+    border-radius: 25px;
+    letter-spacing: 1px;
 }
 
 .btn-outline-black:hover,
@@ -249,6 +237,42 @@ a:hover {
 .btn-black:focus {
     background: #222;
     color: white;
+}
+
+/*...............................................Color coding */ 
+.red {
+    color: #e85320;
+}
+
+.blue-text {
+    color:#032c9f;
+}
+
+/*...............................................Reviews */ 
+
+.border-red {
+    border: #e85320 2px solid 0 !important;
+}
+
+.modal-title {
+    text-transform: uppercase;
+}
+
+/*...............................................from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
 }
 
 .text-black {
@@ -364,45 +388,11 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/*...............................................Games page */ 
-
-.games-card {
-    height: 80%!important;
-}
-
-.games-logo-font {
-    margin-top: 30px;
-}
-
-.games-card-body {
-    padding: 10px
-}
-
-#games-display {
-    margin-bottom: 15px;
-}
-
-#sort-selector {
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-.p-1 {
-    margin-top: 10vh;
-}
-
-.col-12 {
-    margin-top: 4vh;
-}
-
-.h-100 {
-    margin-bottom: -4vh;
-}
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
     background: #fff;
-    clear: left;
+    /* clear: left; */
     font: 14px 'Rubik Dirt', cursive;
     border: solid 2px #1c3a42;
 }
@@ -411,10 +401,6 @@ input[name='q']::placeholder {
     width: 100%;
     border-radius: 25px;
     border: solid 1px black;
-}
-
-.email-text {
-    font-size: 30px;
 }
 
 .background-email {
@@ -430,16 +416,6 @@ input[name='q']::placeholder {
 
 .subscribe-icon {
     font-size: 50px;
-}
-
-.btn-dark {
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: black;
-    border-color: black;
-    border-radius: 25px;
-    width: 10vw;
 }
 
 .input-email {
@@ -500,6 +476,41 @@ footer ul li{
    letter-spacing: 25px;
 }
 
+/*...............................................Games page */ 
+
+.games-card {
+    height: 80%!important;
+}
+
+.games-logo-font {
+    margin-top: 30px;
+}
+
+.games-card-body {
+    padding: 10px
+}
+
+#games-display {
+    margin-bottom: 15px;
+}
+
+#sort-selector {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.p-1 {
+    margin-top: 10vh;
+}
+
+.col-12 {
+    margin-top: 4vh;
+}
+
+.h-100 {
+    margin-bottom: -4vh;
+}
+
 /*...............................................Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -531,10 +542,10 @@ footer ul li{
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
+    
 
 .allauth-form-inner-content input {
     border-color: #000;
-    border-radius: 0;
 }
 
 .allauth-form-inner-content label:not([for='id_remember']) {
@@ -575,9 +586,9 @@ footer ul li{
     border-color: #222;
 }
 
-.allauth-form-inner-content a {
+/* .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
-}
+} */
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
@@ -662,4 +673,3 @@ footer ul li{
         font-size: large;
     }
 }
-

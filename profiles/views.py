@@ -63,7 +63,8 @@ def favourites(request):
     try:
         favourites = Favourites.objects.get(user=request.user)
     except favourites.DoesNotExist:
-        pass
+        favourites = UserFavourites.objects.create(user=request.user)
+
     else:
         favourites_items = favourites.games.all()
 

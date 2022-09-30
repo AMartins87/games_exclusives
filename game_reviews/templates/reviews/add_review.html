@@ -16,13 +16,13 @@
 
     <!-- Title section -->
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-8 text-center">
             <hr>
             <h2 class="logo-font mb-4">Game Review</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-8 text-center">
             <h5 class="text-muted">{{ game }}</h5>
             <hr>
         </div>
@@ -31,7 +31,7 @@
 
     <!-- Adds Game Review Form -->
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-8 text-center">
             <form method="POST" action="{% url 'add_review' game.id %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
@@ -45,9 +45,9 @@
 
                 <!-- Submit or cancel -->
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'game_detail' game.id %}">Back to
+                    <a class="btn btn-back" href="{% url 'game_detail' game.id %}"><i class="fa-solid fa-circle-arrow-left"></i> Back to
                         game</a>
-                    <button class="btn btn-black rounded-0" type="submit">Add game review</button>
+                    <button class="btn btn-dark" type="submit">Add game review</button>
                 </div>
             </form>
         </div>

@@ -1,10 +1,9 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from games.models import Game
 from .models import GameReview
-
 from .forms import GameReviewForm
 
 
@@ -30,7 +29,7 @@ def add_review(request, game_id):
     else:
         form = GameReviewForm()
 
-    template = 'game_reviews/add_review.html'
+    template = 'reviews/add_review.html'
     context = {
         'form': form,
         'game': game
@@ -62,7 +61,7 @@ def edit_review(request, game_id, review_id):
     else:
         form = GameReviewForm(instance=review)
 
-    template = 'game_reviews/edit_review.html'
+    template = 'reviews/edit_review.html'
     context = {
         'form': form,
         'game': game,
@@ -75,10 +74,9 @@ def edit_review(request, game_id, review_id):
 @login_required
 def delete_review(request, game_id, review_id):
     """ Delete review and rating from the game """
-
-    game = Game.objects.get(pk=game_id)
-    review = GameReview.objects.get(pk=review_id)
-
+    
+    game = get_object_or_404(Game, pk=game_id)
+    review = get_object_or_404(GameReview, pk=review_id)
     review.delete()
 
     messages.success(request, 'You successfully deleted your game review!')
