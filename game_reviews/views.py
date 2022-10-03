@@ -9,7 +9,7 @@ from .forms import GameReviewForm
 
 @login_required
 def add_review(request, game_id):
-    """ Add a review and rating to the game """
+    """ Add game review """
 
     game = Game.objects.get(pk=game_id)
 
@@ -20,7 +20,7 @@ def add_review(request, game_id):
             review.reviewer = request.user
             review.game = game
             review.save()
-            messages.success(request, 'You uccessfully added'
+            messages.success(request, 'You successfully added'
                              'your game review !')
             return redirect(reverse('game_detail', args=[game.id]))
         else:
@@ -40,7 +40,7 @@ def add_review(request, game_id):
 
 @login_required
 def edit_review(request, game_id, review_id):
-    """ Edit a review and rating to the game """
+    """ Edit game review """
 
     game = Game.objects.get(pk=game_id)
     review = GameReview.objects.get(pk=review_id)
@@ -73,8 +73,8 @@ def edit_review(request, game_id, review_id):
 
 @login_required
 def delete_review(request, game_id, review_id):
-    """ Delete review and rating from the game """
-    
+    """ Delete game review """
+
     game = get_object_or_404(Game, pk=game_id)
     review = get_object_or_404(GameReview, pk=review_id)
     review.delete()

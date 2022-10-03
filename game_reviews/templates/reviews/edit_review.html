@@ -15,22 +15,22 @@
 <div class="container">
 
     <!-- Title section -->
-    <div class="row">
-        <div class="col-12 col-md-6">
+    <div class="row header">
+        <div class="col-12 col-md-6 text-center">
             <hr>
-            <h2 class="logo-font mb-4">Game Review</h2>
+            <h2 class="col text-center mt-3">Game Review</h2>
         </div>
     </div>
     <div class="row">
-        <div class="col-12 col-md-6">
-            <h5 class="text-muted">{{ game }}</h5>
-            <hr>
+        <div class="col-12 col-md-6 text-center">
+            <h5 class="col text-center mt-3">{{ game }}</h5>
+            <hr class="mb-1">
         </div>
     </div>
 
     <!-- Add Game Review Form -->
     <div class="row">
-        <div class="col-12 col-md-6">
+        <div class="col-12 col-md-6 text-center">
             <form method="POST" action="{% url 'edit_review' game.id review.id %}" class="form mb-2"
                 enctype="multipart/form-data">
 
@@ -45,9 +45,9 @@
 
                 <!-- Submit or cancel review -->
                 <div class="text-right">
-                    <a class="btn btn-outline-black rounded-0" href="{% url 'game_detail' game.id %}">Back to
+                    <a class="btn btn-outline-black" href="{% url 'game_detail' game.id %}">Back to
                         Game</a>
-                    <button class="btn btn-black rounded-0" type="submit">Update Game Review</button>
+                    <button class="btn btn-black" type="submit">Update Game Review</button>
                 </div>
             </form>
         </div>

@@ -9,6 +9,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Electrolize', sans-serif;
 }
 
 .navbar-nav {
@@ -26,7 +27,6 @@ body {
 
 .logo-font {
     text-transform: uppercase;
-    font-family: 'Electrolize', sans-serif;
     letter-spacing: 1.5px;
 }
 
@@ -59,7 +59,6 @@ body {
     position: relative;
     display: grid;
     top: 0;
-    font-family: 'Electrolize', sans-serif;
     font-size: 35px;
 }
 
@@ -194,9 +193,8 @@ body {
 }
 
 .description {
-    font-family: 'FontAwesome';
     letter-spacing: 1.5px;
-    font-weight: 100;
+    font-weight: bold;
 }
 
 .favourites-link {
@@ -217,7 +215,6 @@ body {
 }
 
 .game-title, .review-title {
-    font-family: 'FontAwesome';
     letter-spacing: 1px;
 }
 
@@ -237,12 +234,10 @@ body {
 
 .modal-header {
     text-transform: uppercase;
-    font-family: 'FontAwesome';
     letter-spacing: 1px;
 }
 
 .modal-body {
-    font-family: 'FontAwesome';
     font-size: medium;
     color: red;
     letter-spacing: 1px;

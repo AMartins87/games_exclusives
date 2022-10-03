@@ -7,7 +7,6 @@ class GameReviewAdmin(admin.ModelAdmin):
     """ List display for games in admin page """
     list_display = (
         'game',
-        'rating',
         'reviewer',
         'date',
     )
