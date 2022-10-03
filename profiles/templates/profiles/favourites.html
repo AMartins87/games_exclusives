@@ -35,7 +35,7 @@
                         </a>
                         {% endif %}
 
-                        <p class="mb-0">{{ game.name }}</p>
+                        <h6 class="mb-0 game-title">{{ game.name }}</h6>
 
                         <p class="lead mb-0 text-left">£{{ game.price }}</p>
                         {% if game.category %}
@@ -46,12 +46,11 @@
                         </p>
                         {% endif %}
                         <small>
-                            <a href="{% url 'game_detail' game.id %}" class="game-details" title="View details">Details</a> &nbsp; |  &nbsp;
+                            <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
                             <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
                         </small>
                     </div>
                 {% endfor %}  
-       
         </div>
     </div>
 {% endblock content %}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 html {
     height: 100%;
@@ -20,13 +20,18 @@ body {
 }
 
 .main-logo-link, .nav-link {
-    color: black;
     width: fit-content;
+    color: black;
 }
 
 .logo-font {
     text-transform: uppercase;
-    font-family: 'FontAwesome';
+    font-family: 'Electrolize', sans-serif;
+    letter-spacing: 1.5px;
+}
+
+.red {
+    color: #e85320;
 }
 
 .overlay {
@@ -38,7 +43,6 @@ body {
 	background: white;
 	z-index: -1;
 }
-
 
 .hero-container {
 	background: url('/media/homepage_background.jpg') no-repeat center center;
@@ -55,7 +59,7 @@ body {
     position: relative;
     display: grid;
     top: 0;
-    font-family: FontAwesome;
+    font-family: 'Electrolize', sans-serif;
     font-size: 35px;
 }
 
@@ -90,6 +94,10 @@ body {
 .btn-info, .btn-black ,
 .btn-outline-black, .btn-back {
     border-radius: 25px;
+}
+
+.btn-fav i {
+    color: red;
 }
 
 .btn-dark {
@@ -173,10 +181,22 @@ body {
 
 /*...............................................All Games page */
 
+.game-card:hover {
+    transition: all, .3s ease-in-out;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 /*...............................................Game Detail page */
 .game-image {
     display: flex;
     justify-content: center;
+}
+
+.description {
+    font-family: 'FontAwesome';
+    letter-spacing: 1.5px;
+    font-weight: 100;
 }
 
 .favourites-link {
@@ -193,18 +213,42 @@ body {
 
 #games-display {
     margin-bottom: 5vh;
-    padding: 5px;
+    padding: 10px;
 }
 
-.game-details {
-    font-size: smaller;
+.game-title, .review-title {
+    font-family: 'FontAwesome';
+    letter-spacing: 1px;
 }
 
 .fa-trash {
     font-size: large;
 }
 
-/*...............................................Footer*/
+.favourites-link {
+    color: red;
+}
+
+/*...............................................Reviews */
+
+.review-container {
+    margin-top: 10px !important;
+}
+
+.modal-header {
+    text-transform: uppercase;
+    font-family: 'FontAwesome';
+    letter-spacing: 1px;
+}
+
+.modal-body {
+    font-family: 'FontAwesome';
+    font-size: medium;
+    color: red;
+    letter-spacing: 1px;
+}
+
+/*...............................................Footer */
 
 body > footer {
     position: sticky;
@@ -456,6 +500,7 @@ a.btt-link i {
 
     .logo-font {
         font-size: large;
+        letter-spacing: 1.5px;
     }
 
     .dropdown-item {
