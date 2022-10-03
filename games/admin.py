@@ -23,5 +23,5 @@ class CategoryAdmin(admin.ModelAdmin):
     )
 
 
-admin.site.register(Game)
-admin.site.register(Category)
+admin.site.register(Game, GameAdmin)
+admin.site.register(Category, CategoryAdmin)

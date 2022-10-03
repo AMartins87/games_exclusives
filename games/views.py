@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q
+from django.db.models import Q, Avg
 from django.db.models.functions import Lower
 
 from .models import Game, Category
 from .forms import GameForm
+from game_reviews.models import GameReview
+from game_reviews.forms import GameReviewForm
+from profiles.models import UserProfile, Favourites, FavouritesItem
 
 
 def all_games(request):
@@ -16,6 +19,8 @@ def all_games(request):
     categories = None
     sort = None
     direction = None
+    reviews = GameReview.objects.all()
+    game_reviews_count = []
 
     if request.GET:
         if 'sort' in request.GET:
@@ -30,6 +35,7 @@ def all_games(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
+        
             games = games.order_by(sortkey)
 
         if 'category' in request.GET:
@@ -49,11 +55,19 @@ def all_games(request):
 
     current_sorting = f'{sort}_{direction}'
 
+    favourites = None
+
+    for game in games:
+        reviews = GameReview.objects.all().filter(game=game)
+        game_reviews_count.append(len(reviews))
+
     context = {
         'games': games,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'reviews': reviews,
+        'favourites': favourites,
     }
 
     return render(request, 'games/games.html', context)
@@ -70,7 +84,6 @@ def game_detail(request, game_id):
     }
 
     return render(request, 'games/game_detail.html', context)
-
 
 @login_required
 def add_game(request):

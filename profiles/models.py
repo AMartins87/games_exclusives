@@ -58,13 +58,15 @@ class Favourites(models.Model):
     def __str__(self):
         return f'Favourites ({self.user})'
 
-class UserFavourites (models.Model):
-    '''Model to store user wishlist items'''
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    gamess = models.ManyToManyField(Game, blank=True)
+# class UserFavourites (models.Model):
+#     """
+#     Model to store user favourite items
+#     """
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     games = models.ManyToManyField(Game, blank=True)
 
-    def __str__(self):
-        return self.user.username
+#     def __str__(self):
+#         return self.user.username
 
 
 class FavouritesItem(models.Model):

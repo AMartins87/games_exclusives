@@ -10,20 +10,35 @@ body {
     margin: 0;
     padding: 0;
 }
-/* 
-body {
-    background: url('/media/homepage_background_image.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: black;
-    font-family: 'FontAwesome';
-    font-size: small;
-    letter-spacing: 1.5px;
-} */
 
 .navbar-nav {
     font-size: large;
 }
+
+.header {
+    top: 20vh;
+}
+
+.main-logo-link, .nav-link {
+    color: black;
+    width: fit-content;
+}
+
+.logo-font {
+    text-transform: uppercase;
+    font-family: 'FontAwesome';
+}
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 
 .hero-container {
 	background: url('/media/homepage_background.jpg') no-repeat center center;
@@ -48,6 +63,12 @@ body {
     top: 0;
 }
 
+.uppercap {
+    font-size: xxx-large;
+    color: #032c9f;
+}
+
+/*...............................................Buttons  */ 
 .shop-now-btn {
     position: absolute;
     margin: 0;
@@ -56,7 +77,6 @@ body {
     left: 50%;
     bottom: 25%;
     background-color: white;
-    border-radius: 25px;
     box-shadow: yellow 2px 0 10px;
     padding-left: 20px;
     padding-right: 20px;
@@ -65,9 +85,59 @@ body {
     text-transform: uppercase;
 }
 
-.uppercap {
-    font-size: xxx-large;
-    color: #032c9f;
+.shop-now-btn, .btn-warning,
+.btn-dark, .btn-danger,
+.btn-info, .btn-black ,
+.btn-outline-black, .btn-back {
+    border-radius: 25px;
+}
+
+.btn-dark {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: black;
+    border-color: black;
+}
+
+.btn-danger {
+    background: #e85320;
+    text-transform: uppercase;
+    justify-content: center;
+}
+
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+    letter-spacing: 1.5px;
+}
+
+.btn-back {
+    color:#032c9f; 
+    letter-spacing: 1px;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
+}
+
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #222;
+    color: white;
 }
 
 /*...............................................Forms */
@@ -89,80 +159,41 @@ body {
     font-size: medium;
 }
 
-/*...............................................Game Form */
-
-.btn-file {
-    position: relative;
-    overflow: hidden;
-}
-
-.btn-file input[type="file"] {
-    position: absolute;
-    top: 0;
-    right: 0;
-    min-width: 100%;
-    min-height: 100%;
-    opacity: 0;
-    cursor: pointer;
-}
-
-.custom-checkbox .custom-control-label::before {
-    border-radius: 0;
-    border-color: #dc3545;
-}
-
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-    background-color: #dc3545;
-    border-color: #dc3545;
-    border-radius: 0;
-}
-
 /*...............................................Contact Form */
 
 #contact-container {
     box-shadow: 0px 0px 8px 3px rgb(230, 57, 14);
 }
 
-/*...............................................Favourites */
+/*...............................................Profile page */
 
-.fa-regular, .fa-heart {
-    font-size: x-large;
+.profile {
+    text-transform: uppercase;
+}
+
+/*...............................................All Games page */
+
+/*...............................................Game Detail page */
+.game-image {
+    display: flex;
+    justify-content: center;
 }
 
 .favourites-link {
-    position: absolute;
-    top: 50px;
-    right: 80px;
     border: none;
     font-size: x-large;
+    float: right;
 }
 
-
-#game-count,
-#favourites-count,
-#item-count {
-    font-size: 12px;
-    font-weight: bold;
-    padding: 0 6px;
-    vertical-align: top;
-    margin-left: -9px;
+.quantity {
+    align-items: center;
 }
 
-a.favourites {
-    text-decoration: blink;
-    float: left;
-}
+/*...............................................Favourites page */
 
-.fa-circle-right {
-    font-size: x-large;
-}
-
-a:hover {
-    font-style: oblique;
-    text-decoration: none;
-}
-.card-body {
-    padding: 0.75rem;
+#games-display {
+    margin-bottom: 5vh;
+    padding: 5px;
 }
 
 .game-details {
@@ -173,204 +204,16 @@ a:hover {
     font-size: large;
 }
 
-/*...............................................Buttons  */ 
-.btn-dark {
-    color: #fff;
-    font-weight: bold;
-    text-transform: uppercase;
-    background-color: black;
-    border-color: black;
-    border-radius: 25px;
-}
-
-.btn-danger {
-    background: #e85320;
-    text-transform: uppercase;
-    border-radius: 25px;
-    justify-content: center;
-}
-
-.btn-info {
-    border-radius: 25px;
-}
-
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
-    border-radius: 25px;
-}
-
-.btn-black {
-    background: black;
-    color: white;
-    border-radius: 25px;
-    letter-spacing: 1.5px;
-}
-
-.btn-back {
-    color:#032c9f; 
-    border-radius: 25px;
-    letter-spacing: 1px;
-}
-
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
-}
-
-.shop-now-btn:hover,
-.shop-now-btn:active,
-.shop-now-btn:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
-}
-
-/*...............................................Color coding */ 
-.red {
-    color: #e85320;
-}
-
-.blue-text {
-    color:#032c9f;
-}
-
-/*...............................................Reviews */ 
-
-.border-red {
-    border: #e85320 2px solid 0 !important;
-}
-
-.modal-title {
-    text-transform: uppercase;
-}
-
-/*...............................................from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
-}
-
-.logo-font {
-    text-transform: uppercase;
-}
-
-.main-logo-link {
-    width: fit-content;
-}
-
-.text-black {
-    color: #000 !important;
-}
-
-.border-black {
-    border: 1px solid black !important;
-}
-
-.bg-black {
-    background: #000 !important;
-}
-
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
-}
-
-a.category-badge > span.badge:hover {
-    background: #212529 !important;
-    color: #fff !important;
-}
-
-.btt-button {
-    height: 42px;
-    width: 42px;
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
-}
-
-input[name='q']::placeholder {
-    color: #aab7c4;
-}
-
-/*...............................................Scroll arrow in a circle */
-
-.btt-button {
-    display: inline-block;
-    margin: 15px;
-   
-} 
-
-a.btt-link i {
-    font-size: xxx-large;
-    display: table-cell;
-    vertical-align: middle; 
-    text-align: center;
-    text-decoration: none;
-    height: 150px;
-    width: 150px;
-}
-
-/*...............................................Mailchimp */
-
-#mc_embed_signup_email {
-    background: #fff;
-    clear: left;
-    font: 14px 'Rubik Dirt', cursive;
-    border: solid 2px black;
-}
-
-#mce-EMAIL {
-    width: 100%;
-    border-radius: 25px;
-    border: solid 1px black;
-}
-
-.background-email {
-    background-color: #22F2CF;
-    padding: 20px;
-}
-
-.text-center {
-    justify-content: center;
-    margin: auto;
-    text-align: center;
-    width: 100%;
-}
-
-.subscribe-icon {
-    font-size: 50px;
-}
-
-.input-email {
-    border: solid 2px white;
-    border-radius: 5px;
-    float: right;
-    height: 50px;
-}
-
 /*...............................................Footer*/
 
+body > footer {
+    position: sticky;
+    top: 100vh;
+    clear: right;
+  }
+
 footer.background {
+    width: 100%;
     padding-top: 1rem;
     background-color: #e85320;
     padding:10px 70px 0px;
@@ -419,121 +262,119 @@ footer ul li{
    letter-spacing: 25px;
 }
 
-/*...............................................Games page */ 
+/*...............................................Mailchimp */
 
-.games {
-    margin-bottom: 5vh;
+#mc_embed_signup_email {
+    background: #fff;
+    clear: left;
+    font: 14px 'Rubik Dirt', cursive;
+    border: solid 2px black;
 }
 
-.games-card {
-    height: 80%!important;
+#mce-EMAIL {
+    width: 100%;
+    border-radius: 25px;
+    border: solid 1px black;
 }
 
-.games-logo-font {
-    margin-top: 30px;
+.background-email {
+    background-color: #22F2CF;
+    padding: 20px;
 }
 
-.games-card-body {
-    padding: 10px
+.text-center {
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    width: 100%;
 }
 
-#games-display {
-    margin-bottom: 15px;
+.subscribe-icon {
+    font-size: 50px;
 }
 
-#sort-selector {
-    margin-top: 10px;
-    margin-bottom: 10px;
+.input-email {
+    border: solid 2px white;
+    border-radius: 5px;
+    float: right;
+    height: 50px;
 }
 
-/* .p-1 {
-    margin-top: 10vh;
-} */
+/*...............................................Scroll arrow in a circle */
 
-.col-12 {
-    margin-top: 4vh;
+.btt-button {
+    display: inline-block;
+    margin: 15px;
+   
+} 
+
+a.btt-link i {
+    font-size: xxx-large;
+    display: table-cell;
+    vertical-align: middle; 
+    text-align: center;
+    text-decoration: none;
+    height: 150px;
+    width: 150px;
 }
 
-.h-100 {
-    margin-bottom: -4vh;
+/*...............................................Bootstrap toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
 }
 
-/*...............................................Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
+.custom-toast {
+    overflow: visible;
 }
 
-@media (max-width: 991px) {
-    #large-screen {
-        display: none;
-    }
-
-    .hero-container  {
-        background: url('/media/homepage_background_sc.jpg') no-repeat center center;
-    }
-
-    .hero-info {
-        font-size: x-large;
-    }
-
-    .w-100 {
-        margin: 5px;
-    }
-    .header-container {
-        max-width: 75%;
-        margin-top: 15vh;
-    }
-    
-    #contact-container {
-        margin-bottom: 5vh
-    }
-
-@media (max-width: 716px ) {
-
-    /* scroll up arrow for smaller screens */
-    a.btt-link i {
-        font-size: xx-large;
-    }
-
-    .hero-info {
-        font-size: x-large;
-    }
-
-    .uppercap {
-        font-size: xx-large;
-    }
-
-@media (max-width: 540px) {
-
-    .hero-container  {
-        background: url('/media/homepage_background_image_small_screens.jpg') no-repeat center center;
-        background-size: contain;
-    
-    }
-
-    .hero-info {
-        color: white;
-        font-size: medium;
-        text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        padding: 25px;
-        border: 3px solid none;
-        transform: translate(-50%, -50%);
-        z-index: 2;
-        background-color: rgb(0 211 178);
-        border-radius: 50px;
-    }
-
-    .uppercap {
-        font-size: large;
-    }
+.toast-capper {
+    height: 2px;
 }
+
+
+/*...............................................Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /*...............................................Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -599,7 +440,7 @@ footer ul li{
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 165px;
     }
 }
 
@@ -624,11 +465,6 @@ footer ul li{
     div.card-footer {
         padding: 40px 10px;
         font-size: 0.85rem;
-    }
-
-    .delivery-text-header {
-        font-size: x-large;
-        margin-top: 15px;
     }
 
     footer.background {
@@ -672,59 +508,23 @@ footer ul li{
     }
 }
 
-/*...............................................Bootstrap toasts */
+/*...............................................Media Queries */
 
-.message-container {
-    position: fixed;
-    top: 72px;
-    right: 15px;
-    z-index: 99999999999;
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
 }
 
-.custom-toast {
-    overflow: visible;
+@media (min-width: 991px) {
+    #large-screen {
+        display: none;
+    }
 }
 
-.toast-capper {
-    height: 2px;
-}
-
-
-/*...............................................Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
-
-.bag-notification-wrapper {
-    height: 100px;
-    overflow-x: hidden;
-    overflow-y: auto;
+@media (max-width: 991px) {
+    .hero-container  {
+        background: url('/media/homepage_background_sc.jpg') no-repeat center center;
+    }
 }
