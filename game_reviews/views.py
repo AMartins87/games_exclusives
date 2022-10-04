@@ -10,7 +10,6 @@ from .forms import GameReviewForm
 @login_required
 def add_review(request, game_id):
     """ Add game review """
-
     game = Game.objects.get(pk=game_id)
 
     if request.method == 'POST':
@@ -20,12 +19,12 @@ def add_review(request, game_id):
             review.reviewer = request.user
             review.game = game
             review.save()
-            messages.success(request, 'You successfully added'
-                             'your game review !')
+            messages.info(request, 'You successfully added'
+                          ' your game review !')
             return redirect(reverse('game_detail', args=[game.id]))
         else:
-            messages.error(request, 'Failed to add review. \
-                                     Please ensure the form is valid.')
+            messages.error(request, 'Failed to add review.'
+                           'Please ensure the form is valid.')
     else:
         form = GameReviewForm()
 
@@ -52,12 +51,12 @@ def edit_review(request, game_id, review_id):
             review.reviewer = request.user
             review.game = game
             review.save()
-            messages.success(request, 'You successfully updated'
-                             'your game review!')
+            messages.info(request, 'You successfully updated'
+                          ' your game review!')
             return redirect(reverse('game_detail', args=[game.id]))
         else:
-            messages.error(request, 'Failed update review. \
-                           Please ensure the form is valid.')
+            messages.error(request, 'Failed update review.'
+                           'Please ensure the form is valid.')
     else:
         form = GameReviewForm(instance=review)
 
@@ -79,5 +78,5 @@ def delete_review(request, game_id, review_id):
     review = get_object_or_404(GameReview, pk=review_id)
     review.delete()
 
-    messages.success(request, 'You successfully deleted your game review!')
+    messages.info(request, 'You successfully deleted your game review!')
     return redirect(reverse('game_detail', args=[game.id]))

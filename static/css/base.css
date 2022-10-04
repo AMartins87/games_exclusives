@@ -71,7 +71,7 @@ body {
     color: #032c9f;
 }
 
-/*...............................................Buttons  */ 
+/*...............................................Buttons, anchors, icons  */ 
 .shop-now-btn {
     position: absolute;
     margin: 0;
@@ -147,6 +147,27 @@ body {
     color: white;
 }
 
+.scroll-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+a:hover {
+    color: #e85320;
+    text-decoration: none;
+}
+
+/*...............................................Scroll arrow in a circle */
+
+.scroll-link {
+    position: fixed;
+    font-size: xxx-large;
+    bottom: 10px;
+    right: 10px;
+}
+   
+
 /*...............................................Forms */
 
 .input-group>.form-control {
@@ -181,9 +202,8 @@ body {
 /*...............................................All Games page */
 
 .game-card:hover {
-    transition: all, .3s ease-in-out;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+   
+    
 }
 
 /*...............................................Game Detail page */
@@ -301,12 +321,17 @@ footer ul li{
    letter-spacing: 25px;
 }
 
+.social i:hover {
+    transition: all, .3s ease-in-out;
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
     background: #fff;
     clear: left;
-    font: 14px 'Rubik Dirt', cursive;
     border: solid 2px black;
 }
 
@@ -339,24 +364,6 @@ footer ul li{
     height: 50px;
 }
 
-/*...............................................Scroll arrow in a circle */
-
-.btt-button {
-    display: inline-block;
-    margin: 15px;
-   
-} 
-
-a.btt-link i {
-    font-size: xxx-large;
-    display: table-cell;
-    vertical-align: middle; 
-    text-align: center;
-    text-decoration: none;
-    height: 150px;
-    width: 150px;
-}
-
 /*...............................................Bootstrap toasts */
 
 .message-container {
@@ -374,39 +381,7 @@ a.btt-link i {
     height: 2px;
 }
 
-
 /*...............................................Convenience classes - colors copied from Bootstrap */
-.arrow-primary {
-    border-bottom-color: #007bff !important;
-}
-
-.arrow-secondary {
-    border-bottom-color: #6c757d !important;
-}
-
-.arrow-success {
-    border-bottom-color: #28a745 !important;
-}
-
-.arrow-danger {
-    border-bottom-color: #dc3545 !important;
-}
-
-.arrow-warning {
-    border-bottom-color: #ffc107 !important;
-}
-
-.arrow-info {
-    border-bottom-color: #17a2b8 !important;
-}
-
-.arrow-light {
-    border-bottom-color: #f8f9fa !important;
-}
-
-.arrow-dark {
-    border-bottom-color: #343a40 !important;
-}
 
 .bag-notification-wrapper {
     height: 100px;
@@ -567,4 +542,10 @@ a.btt-link i {
     .hero-container  {
         background: url('/media/homepage_background_sc.jpg') no-repeat center center;
     }
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
