@@ -59,7 +59,8 @@ body {
     position: relative;
     display: grid;
     top: 0;
-    font-size: 35px;
+    font-size: 45px;
+    text-transform: uppercase;
 }
 
 .hero-text {
@@ -69,6 +70,12 @@ body {
 .uppercap {
     font-size: xxx-large;
     color: #032c9f;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
 }
 
 /*...............................................Buttons, anchors, icons  */ 
@@ -263,13 +270,15 @@ a:hover {
     letter-spacing: 1px;
 }
 
+/*...............................................Order confirmation page */
+
 /*...............................................Footer */
 
 body > footer {
     position: sticky;
     top: 100vh;
     clear: right;
-  }
+}
 
 footer.background {
     width: 100%;
@@ -325,6 +334,11 @@ footer ul li{
     transition: all, .3s ease-in-out;
     -webkit-transform: scale(1.5);
     transform: scale(1.5);
+}
+
+.links a:hover {
+    font-size: 120%;
+    font-weight: bold;
 }
 
 /*...............................................Mailchimp */
@@ -389,6 +403,13 @@ footer ul li{
     overflow-y: auto;
 }
 
+.order-confirmation-wrapper {
+    width: 100%;
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 /*...............................................Allauth form formatting */
 
 .allauth-form-inner-content p {
@@ -443,7 +464,23 @@ footer ul li{
 	color: #17a2b8;
 } */
 
-/* fixed top navbar only on medium and up */
+/*...............................................Media Queries */
+
+/* Extra large screens ≥1200px */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* Large ≥1200px */
+@media (min-width: 991px) {
+    #large-screen {
+        display: none;
+    }
+}
+
+/* Fixed top navbar only on medium screens and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -457,6 +494,77 @@ footer ul li{
         padding-top: 165px;
     }
 }
+
+/* Medium screens ≥991px */
+@media (max-width: 991px) {
+
+    .hero-container  {
+        background: url('/media/homepage_background_sc.jpg') no-repeat center center;
+    }
+    
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .logo-font {
+        font-size: large;
+        letter-spacing: 1.5px;
+    }
+
+    .dropdown-item {
+        font-size: small;
+    }
+
+    div.card-footer {
+        padding: 40px 10px;
+        font-size: 0.85rem;
+    }
+
+    footer.background {
+        padding: 10px 10px;
+    }
+
+    .btn-dark {
+        width: 50%;
+    }
+
+    .games-card-body {
+        font-size: medium;
+    }
+
+    .lead {
+        font-size: 1.1rem;
+    }
+
+    .copyright span, .links span, .social span {
+        font-size: small;
+        letter-spacing: 2px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .copyright li p {
+        font-size: small;
+    }
+
+    .links li a {
+        letter-spacing: 1px;
+        font-size: small;
+    }
+
+    .social li a {
+        font-size: large;
+    }
+}
+
+@media (max-width: 767px) {
+    .order-confirmation-wrapper p {
+        font-size: 0.8rem;
+    }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -494,10 +602,6 @@ footer ul li{
         font-size: medium;
     }
 
-    .h-100 {
-        height: 75%!important;
-    }
-
     .lead {
         font-size: 1.1rem;
     }
@@ -521,31 +625,4 @@ footer ul li{
     .social li a {
         font-size: large;
     }
-}
-
-/*...............................................Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-@media (min-width: 991px) {
-    #large-screen {
-        display: none;
-    }
-}
-
-@media (max-width: 991px) {
-    .hero-container  {
-        background: url('/media/homepage_background_sc.jpg') no-repeat center center;
-    }
-}
-
-.btt-link,
-.update-link,
-.remove-item {
-    cursor: pointer;
 }

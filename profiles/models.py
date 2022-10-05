@@ -37,7 +37,6 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
     """
     Create or update the user profile
     """
-    
     if created:
         UserProfile.objects.create(user=instance)
     # Existing users: just save the profile
@@ -55,18 +54,9 @@ class Favourites(models.Model):
         related_name='game_favourites'
     )
 
+    print('Favourites')
     def __str__(self):
         return f'Favourites ({self.user})'
-
-# class UserFavourites (models.Model):
-#     """
-#     Model to store user favourite items
-#     """
-#     user = models.OneToOneField(User, on_delete=models.CASCADE)
-#     games = models.ManyToManyField(Game, blank=True)
-
-#     def __str__(self):
-#         return self.user.username
 
 
 class FavouritesItem(models.Model):
