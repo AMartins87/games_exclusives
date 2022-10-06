@@ -33,7 +33,7 @@ def add_review(request, game_id):
                     username=request.user.username)
                 review.game = game
                 review.save()
-                messages.success(request, 'YOu successfully added review!')
+                messages.success(request, 'You successfully added review!')
                 return redirect(reverse(
                     'game_detail', kwargs={"game_id": game.id}))
             else:
