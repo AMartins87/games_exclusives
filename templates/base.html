@@ -29,6 +29,9 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
         crossorigin="anonymous"></script>
@@ -73,76 +76,70 @@
                 </form>
             </div>
             <!-- Account, favourites, basket -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 acccount-nav">
-                <ul class="list-inline text-center text-lg-right my-0">
-                    <!-- Account dropdown menu -->
-                    <li class="list-inline-item dropdown acccount-nav">
-                        <a href="#" class="nav-link text-uppercase dropdown" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="text-center">
-                                <div><i class="fa-solid fa-user-ninja"></i></div>
-                                <p class="my-0 text-uppercase">Account</p>
+            <div class="row main-nav p-1 m-1">
+                <!-- Account dropdown menu -->
+                <button class="btn btn-link dropdown text-uppercase list-inline-item nav-link" type="button" data-toggle="dropdown" aria-expanded="false">
+                    <div><i class="fa-solid fa-user-ninja"></i></div>
+                  Account
+                </button>
+                <div class="dropdown-menu">
+                    {% if request.user.is_authenticated %}
+                    {% if request.user.is_superuser %}
+                    <a href="'admin/ '"class="dropdown-item">Admin dashboard</a>
+                    <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
+                    {% endif %}
+                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                    {% else %}
+                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                    {% endif %}
+                </div>
+                <!-- Favourites page link with heart icon -->
+                <li class="list-inline-item">
+                    {% if request.user.is_authenticated %}
+                    <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
+                        <div class="text-center">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <p class="my-0 text-uppercase">Favourites</p>
                             </div>
-                        </a>
-                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                            {% if request.user.is_authenticated %}
-                            {% if request.user.is_superuser %}
-                            <a href="'admin/'">Admin dashboard</a>
-                            <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
-                            
-                            {% endif %}
-                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                            {% else %}
-                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                            {% endif %}
                         </div>
-                    </li>
-                    <!-- Favourites page link with heart icon -->
-                    <li class="list-inline-item">
-                        {% if request.user.is_authenticated %}
-                            <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
-                                <div class="text-center">
-                                    <div>
-                                        <i class="fa-regular fa-heart"></i>
-                                        <p class="my-0 text-uppercase">Favourites</p>
-                                    </div>
-                                </div>
-                            </a>
-                        {% else %}
-                        {% csrf_token %}
-                            <a class="text-black nav-link" href="{% url 'account_login' %}" ><div class="text-center">
-                                <div>
-                                    <i class="fa-regular fa-heart"></i>
-                                    <p class="my-0 text-uppercase">Favourites</p>
-                                </div>
-                            </a>
-                        {% endif %}
-                    </li>
-                    <!-- Basket link with basket icon -->
-                    <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                            href="{% url 'view_basket' %}">
-                            <div class="text-center">
-                                <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
-                                <p class="my-0">
-                                    {% if grand_total %}
-                                    £{{ grand_total|floatformat:2 }}
-                                    {% else %}
-                                    £0.00
-                                    {% endif %}
-                                </p>
+                    </a>
+                    {% else %}
+                    {% csrf_token %}
+                    <a class="text-black nav-link" href="{% url 'account_login' %}">
+                        <div class="text-center">
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                                <p class="my-0 text-uppercase">Favourites</p>
                             </div>
-                        </a>
-                    </li>
-                </ul>
+                    </a>
+                    {% endif %}
+                </li>
+                <!-- Basket link with basket icon -->
+                <li class="list-inline-item">
+                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        href="{% url 'view_basket' %}">
+                        <div class="text-center">
+                            <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
+                            <p class="my-0">
+                                {% if grand_total %}
+                                £{{ grand_total|floatformat:2 }}
+                                {% else %}
+                                £0.00
+                                {% endif %}
+                            </p>
+                        </div>
+                    </a>
+                </li>
             </div>
         </div>
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><i class="fa-solid fa-bars"></i></span>
                 </button>
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}

@@ -20,6 +20,14 @@ h1, h2, h3, h4 {
     font-size: large;
 }
 
+.btn-link {
+    color: black;
+}
+
+.btn-link:hover {
+    color: #e85320;
+}
+
 .main-logo-link, .nav-link {
     width: fit-content;
     color: black;
@@ -512,11 +520,6 @@ footer ul li{
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-
-/* .allauth-form-inner-content a {
-	color: #17a2b8;
-} */
-
 /*...............................................Media Queries */
 
 /* Extra large screens ≥1200px */
@@ -527,21 +530,33 @@ footer ul li{
 }
 
 /* Large ≥1200px */
-@media (min-width: 991px) {
+@media (min-width: 992px) {
     #large-screen {
         display: none;
     }
 }
 
+/* Account navigation bar on screens 1084px and below */
+@media (max-width: 1084px) {
+    .main-nav {
+        font-size: smaller;
+    }
+
+    .btn-link {
+        font-size: small;
+    }
+}
+
 /* Fixed top navbar */
 @media (min-width: 992px) {
-    .account-nav {
+
+    /* .account-nav {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
-    }
+    } */
 
     .header-container {
         padding-top: 165px;
@@ -632,6 +647,11 @@ footer ul li{
 }
 
 @media (max-width: 576px) {
+
+    .hero-container  {
+        background: url('/media/homepage_background_image_small_screens.jpg') no-repeat center center;
+    }
+
     .nav-link {
         font-size: small;
     }
