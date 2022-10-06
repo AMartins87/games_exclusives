@@ -88,16 +88,16 @@
                         </div>
                        
                     </div>
-                        <div class="col-lg-7s">
+                        <div class="col-lg-7 m-3">
                             <!-- Button link which returns shopper to all games -->
-                            <a href="{% url 'games' %}" class="btn btn-outline-black w-25 my-3">
+                            <a href="{% url 'games' %}" class="btn btn-outline-black my-3">
                                 <span class="icon">
                                     <i class="fas fa-chevron-left"></i>
                                 </span>
                                 <span class="text-uppercase">Keep Shopping</span>
                             </a>
                             <!-- Button link for adding games into basket -->
-                            <input type="submit" class="btn btn-dark text-uppercase w-25" value="Add to Basket">
+                            <input type="submit" class="btn btn-dark text-uppercase" value="Add to Basket">
                         </div>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
@@ -141,7 +141,7 @@
                 
                 <!-- Checks for relevant reviews -->
                 {% if game.name in review.game.name %}
-                <div class="col-md-6 my-4">
+                <div class="col-md-6 my-4 m-3">
                     <div class="card">
                         <div class="card-header">
 

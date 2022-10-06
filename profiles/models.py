@@ -45,7 +45,7 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 
 class Favourites(models.Model):
     """
-    Saves games in shopper's favourites
+    Saves games in shopper account favourites
     """
     user = models.OneToOneField(
         User, on_delete=models.CASCADE)
@@ -54,7 +54,6 @@ class Favourites(models.Model):
         related_name='game_favourites'
     )
 
-    print('Favourites')
     def __str__(self):
         return f'Favourites ({self.user})'
 

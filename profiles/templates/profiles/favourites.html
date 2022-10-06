@@ -27,11 +27,11 @@
                     <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
                         {% if game.image %}
                         <a href="{% url 'game_detail' game.id %}">
-                            <img class="img-fluid rounded" src="{{ game.image.url }}" alt="{{ game.name }}">
+                            <img class="card-img-top img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                         </a>
                         {% else %}
                         <a href="{% url 'game_detail' game.id %}">
-                            <img class="img-fluid rounded" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
+                            <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
                         </a>
                         {% endif %}
 

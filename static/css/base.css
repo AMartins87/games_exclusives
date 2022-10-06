@@ -16,10 +16,6 @@ body {
     font-size: large;
 }
 
-.header {
-    top: 20vh;
-}
-
 .main-logo-link, .nav-link {
     width: fit-content;
     color: black;
@@ -140,7 +136,7 @@ body {
 .btn-outline-black:hover,
 .btn-outline-black:active,
 .btn-outline-black:focus {
-    background: black;
+    background: rgb(134, 7, 7);
     color: white !important;
 }
 
@@ -149,9 +145,12 @@ body {
 .shop-now-btn:focus,
 .btn-black:hover,
 .btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+.btn-black:focus,
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: black;
+    color: white !important;
 }
 
 .scroll-link,
@@ -341,6 +340,58 @@ footer ul li{
     font-weight: bold;
 }
 
+/*...............................................Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: black;
+}
+    
+
+.allauth-form-inner-content input {
+    border-color: #000;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+    display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 25px;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	background: rgb(134, 7, 7);
+    color: white !important;
+    border-color: rgb(134, 7, 7);
+}
+
+/* .allauth-form-inner-content a {
+	color: #17a2b8;
+} */
+
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
@@ -413,8 +464,8 @@ footer ul li{
 /*...............................................Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: #6c757d; /* text-secondary */
+    margin-top: 1.5rem;
+    color: black;
 }
     
 
@@ -447,18 +498,9 @@ footer ul li{
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: 0;
-
-    /* standard bootstrap btn transitions */
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #fff;
-    background-color: #222;
-    border-color: #222;
-}
 
 /* .allauth-form-inner-content a {
 	color: #17a2b8;
@@ -480,7 +522,7 @@ footer ul li{
     }
 }
 
-/* Fixed top navbar only on medium screens and up */
+/* Fixed top navbar */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
         position: fixed;
@@ -506,13 +548,15 @@ footer ul li{
         padding-top: 116px;
     }
 
-    body {
-        height: calc(100vh - 116px);
-    }
+
 
     .logo-font {
         font-size: large;
         letter-spacing: 1.5px;
+    }
+
+    .account-nav {
+        font-size: smaller;
     }
 
     .dropdown-item {
@@ -566,14 +610,32 @@ footer ul li{
         font-size: 0.8rem;
     }
 
+    .scroll-link {
+        height: auto;
+        font-size: xx-large;
+    }
+
+    .nav-link {
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 576px) {
+    .nav-link {
+        font-size: small;
+    }
+
+    .games {
+        margin-right: 0;
+    }
+
+
+}
+
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
         padding-top: 116px;
-    }
-
-    body {
-        height: calc(100vh - 116px);
     }
 
     .logo-font {

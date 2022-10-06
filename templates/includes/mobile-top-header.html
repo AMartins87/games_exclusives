@@ -1,5 +1,5 @@
 <li class="list-inline-item">
-    <a class="text-black nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <a class="text-black nav-link d-block d-lg-none text-uppercase" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fas fa-search fa-lg"></i></div>
             <p class="my-0">Search</p>
@@ -26,15 +26,16 @@
             <div class="text-center">
                 <div>
                     <i class="fa-regular fa-heart"></i>
-                    <p class="my-0">Favourites</p>
+                    <p class="my-0 text-uppercase">Favourites</p>
                 </div>
             </div>
         </a>
     {% else %}
     {% csrf_token %}
-        <a class="text-black nav-link" href="{% url 'account_login' %}" ><div class="text-center">
+        <a class="text-black nav-link text-uppercase" href="{% url 'account_login' %}" ><div class="text-center">
             <div>
                 <i class="fa-regular fa-heart"></i>
+                <p class="my-0 text-uppercase">Favourites</p>
             </div>
         </a>
     {% endif %}
@@ -43,7 +44,7 @@
     <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <div class="text-center">
             <div><i class="fa-solid fa-user-ninja"></i></div>
-            <p class="my-0">My Account</p>
+            <p class="my-0 text-uppercase">Account</p>
         </div>
     </a>
     <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -62,7 +63,7 @@
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
         <div class="text-center">
-            <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+            <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
             <p class="my-0">
                 {% if grand_total %}
                     £{{ grand_total|floatformat:2 }}

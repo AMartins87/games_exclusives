@@ -43,18 +43,19 @@
 </head>
 
 <body>
-    <header class="container-fluid fixed-top p-0">
+    <header class="container-fluid fixed-top p-0 bg-white">
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-warning text-black">
                 <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
             </div>
         </div>
-        <div class="row bg-white pt-lg-auto d-none d-lg-flex">
+        <div class="row pt-lg-2 d-none d-lg-flex topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="logo-font text-black my-0"><strong class="red">Games</strong> Exclusives</h2>
                 </a>
             </div>
+            <!-- Search banner -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'games' %}">
                     <div class="input-group w-100">
@@ -71,14 +72,14 @@
                 </form>
             </div>
             <!-- Account, favourites, basket -->
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 acccount-nav">
                 <ul class="list-inline text-center text-lg-right my-0">
-                    <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                    <!-- Account dropdown menu -->
+                    <li class="list-inline-item dropdown acccount-nav">
+                        <a href="#" class="nav-link text-uppercase dropdown" id="dropdownUser" data-bs-toggle="dropdown" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-user-ninja"></i></div>
-                                <p class="my-0">My Account</p>
+                                <p class="my-0 text-uppercase">Account</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -94,13 +95,14 @@
                             {% endif %}
                         </div>
                     </li>
+                    <!-- Favourites page link with heart icon -->
                     <li class="list-inline-item">
                         {% if request.user.is_authenticated %}
                             <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
                                 <div class="text-center">
                                     <div>
                                         <i class="fa-regular fa-heart"></i>
-                                        <p class="my-0">Favourites</p>
+                                        <p class="my-0 text-uppercase">Favourites</p>
                                     </div>
                                 </div>
                             </a>
@@ -109,15 +111,17 @@
                             <a class="text-black nav-link" href="{% url 'account_login' %}" ><div class="text-center">
                                 <div>
                                     <i class="fa-regular fa-heart"></i>
+                                    <p class="my-0 text-uppercase">Favourites</p>
                                 </div>
                             </a>
                         {% endif %}
                     </li>
+                    <!-- Basket link with basket icon -->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_basket' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
                                 <p class="my-0">
                                     {% if grand_total %}
                                     £{{ grand_total|floatformat:2 }}
