@@ -20,6 +20,20 @@
     color: #aab7c4;
 }
 
+body > footer {
+    position: sticky;
+    top: 100vh;
+    clear: right;
+}
+
+footer.background {
+    width: 100%;
+    padding-top: 1rem;
+    background-color: #e85320;
+    padding:10px 70px 0px;
+}	       
+
+/* 
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -28,4 +42,8 @@
 	position: fixed;
 	background: white;
 	z-index: -1;
-}
+} */
+
+/* .btn-outline-black, .btn-back {
+	font-size: medium;
+} */

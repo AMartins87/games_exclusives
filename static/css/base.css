@@ -640,6 +640,12 @@ footer ul li{
         margin-right: 0;
     }
 
+    .shop-now-btn, .btn-warning,
+    .btn-dark, .btn-danger,
+    .btn-info, .btn-black ,
+    .btn-outline-black, .btn-back {
+        font-size: medium;
+    }
 
 }
 

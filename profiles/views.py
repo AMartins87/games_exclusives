@@ -12,7 +12,7 @@ from .forms import UserProfileForm
 
 @login_required
 def profile(request):
-    """ Display the user's profile. """
+    """ Displays the user's profile """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -67,6 +67,9 @@ def favourites(request):
         favourites = Favourites.objects.create(user=request.user)
     else:
         favourites_items = favourites.games.all()
+
+    if not favourites_items:
+        messages.info(request, 'Your favourites list is empty!')
 
     context = {
         'favourites': favourites,

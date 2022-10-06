@@ -23,34 +23,50 @@
         </div>
         <div class="row">
             
-                {% for game in favourites.games.all %}
-                    <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
-                        {% if game.image %}
-                        <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
-                        </a>
-                        {% else %}
-                        <a href="{% url 'game_detail' game.id %}">
-                            <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
-                        </a>
-                        {% endif %}
+            {% if not favourites_items in favourites.games.all %}
+            <div class="row mt-3 text-center">
+                <p class="lead text-center">You haven't saved anything to your favourites list!</p>
+            </div>
+            
+                <div class="text-center p-3 m-3">
+                    <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg"> 
+                        <span class="text-uppercase">Browse Games</span>
+                        <span class="icon">
+                            <i class="fa-solid fa-circle-chevron-right"></i>
+                        </span>
+                    </a>
+                </div>
+         
+            {% endif %}
 
-                        <h6 class="mb-0 game-title">{{ game.name }}</h6>
+            {% for game in favourites.games.all %}
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
+                    {% if game.image %}
+                    <a href="{% url 'game_detail' game.id %}">
+                        <img class="card-img-top img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
+                    </a>
+                    {% else %}
+                    <a href="{% url 'game_detail' game.id %}">
+                        <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
+                    </a>
+                    {% endif %}
 
-                        <p class="lead mb-0 text-left">£{{ game.price }}</p>
-                        {% if game.category %}
-                        <p class="small mt-1 mb-0">
-                            <a class="text-muted" href="{% url 'games' %}?category={{ game.category.name }}">
-                                <i class="fas fa-tag mr-1"></i>{{ game.category.friendly_name }}
-                            </a>
-                        </p>
-                        {% endif %}
-                        <small>
-                            <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
-                            <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
-                        </small>
-                    </div>
-                {% endfor %}  
+                    <h6 class="mb-0 game-title">{{ game.name }}</h6>
+
+                    <p class="lead mb-0 text-left">£{{ game.price }}</p>
+                    {% if game.category %}
+                    <p class="small mt-1 mb-0">
+                        <a class="text-muted" href="{% url 'games' %}?category={{ game.category.name }}">
+                            <i class="fas fa-tag mr-1"></i>{{ game.category.friendly_name }}
+                        </a>
+                    </p>
+                    {% endif %}
+                    <small>
+                        <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
+                        <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
+                    </small>
+                </div>
+            {% endfor %}  
         </div>
     </div>
 {% endblock content %}
