@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
+from django.core.exceptions import ObjectDoesNotExist
 
 from django.contrib.auth.decorators import login_required
 from checkout.models import Order
@@ -62,9 +63,8 @@ def favourites(request):
 
     try:
         favourites = Favourites.objects.get(user=request.user)
-    except favourites.DoesNotExist:
-        favourites = UserFavourites.objects.create(user=request.user)
-
+    except ObjectDoesNotExist:
+        favourites = Favourites.objects.create(user=request.user)
     else:
         favourites_items = favourites.games.all()
 

@@ -52,6 +52,17 @@
                     </a>
                 </p>
                 {% endif %}
+
+                <!-- If user logged in as admin, Edit game and Delete game links will show here -->
+                {% if request.user.is_superuser %}
+                <div class="row-lg-7">
+                    <small class="ml-3">
+                        <a href="{% url 'edit_game' game.id %}">Edit</a> |
+                        <a class="text-danger" href="{% url 'delete_game' game.id %}"></i> Delete
+                        </a>
+                    </small>
+                </div>
+                {% endif %}
                 <!-- Game description -->
                 <p class="mt-4 description"><strong>Description</strong></p>
                 <p>{{ game.description }}</p>
@@ -88,7 +99,7 @@
                         </div>
                        
                     </div>
-                        <div class="col-lg-7 m-3">
+                        <div class="col-lg-7 m-3 p-3">
                             <!-- Button link which returns shopper to all games -->
                             <a href="{% url 'games' %}" class="btn btn-outline-black my-3">
                                 <span class="icon">
@@ -102,14 +113,6 @@
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </form>
-                <!-- If user logged in as admin, Edit game and Delete game links will show here -->
-                {% if request.user.is_superuser %}
-                <small class="ml-3">
-                    <a href="{% url 'edit_game' game.id %}">Edit</a> |
-                    <a class="text-danger" href="{% url 'delete_game' game.id %}"></i> Delete
-                    </a>
-                </small>
-                {% endif %}
             </div>
         </div>
     </div>

@@ -19,3 +19,13 @@
 #id_default_country option:first-child {
     color: #aab7c4;
 }
+
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}

@@ -1,12 +1,12 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item d-block d-md-none">
-            <a class="nav-link font-weight-bold ml-4 mr-lg-5" href="{% url 'home' %}" id="home-link">
+        <li class="nav-item dropdown">
+            <a class="nav-link ml-4 mr-lg-5" href="{% url 'home' %}">
                 Home
             </a>
         </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link ml-4 mr-lg-5" href="#" id="all-games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <li class="main-nav-item dropdown">
+            <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Games
             </a>
             <div class="dropdown-menu bg-light border-0" aria-labelledby="all-games-link">
@@ -16,7 +16,7 @@
             </div>
         </li>
         <li class="nav-item dropdown">
-            <a class="nav-link ml-4 mr-lg-5" href="#" id="games-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Games
             </a>
             <div class="dropdown-menu bg-light border-0" aria-labelledby="games-link">
