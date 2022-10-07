@@ -1,5 +1,6 @@
 asgiref==3.5.2
 backports.zoneinfo==0.2.1
+cloudinary==1.30.0
 Contacts==1.0
 dj-database-url==1.0.0
 Django==3.2.14
