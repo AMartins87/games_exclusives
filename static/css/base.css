@@ -755,13 +755,14 @@ footer ul li{
         font-size: medium;
     }
 
-    .mob-nav {
+    /* .mob-nav {
         width: 75%;
         display: inline;
-    }
+    } */
 
     .navbar-expand-lg {
         padding: inherit;
+        margin: 9px;
     }
 
     .dropdown-item {
