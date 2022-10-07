@@ -300,12 +300,10 @@ footer ul li{
   display: block;
   text-transform: uppercase;
   font-size: 20px;
-  letter-spacing: 3px;
 }
 
 .copyright li p , .links li a , .social li a {
    color:#FFF;
-   letter-spacing: 2px;
    text-decoration: none;
    font-size: 15px;
 }
@@ -588,7 +586,6 @@ footer ul li{
 
     .copyright span, .links span, .social span {
         font-size: small;
-        letter-spacing: 2px;
         padding-bottom: 5px;
         margin-bottom: 10px;
     }
@@ -598,13 +595,32 @@ footer ul li{
     }
 
     .links li a {
-        letter-spacing: 1px;
         font-size: small;
+        padding: 10px;
+        margin: 10px;
     }
 
     .social li a {
         font-size: large;
+        padding: 15px 15px;
     }
+
+    .copyright {
+        display: none;
+    }
+
+    .social {
+        margin-top: 10px;
+    }
+    
+    .links, .social {
+        float: none;
+    }
+
+    footer ul li {
+        display: contents;
+    }
+    
 }
 
 @media (max-width: 767px) {
@@ -625,11 +641,56 @@ footer ul li{
 @media (max-width: 576px) {
 
     .hero-container  {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665166102/media/background_image_small.jpg') no-repeat center center;
+        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665167349/media/background_image_small.jpg') no-repeat center center;
+    }
+
+    .hero-info {
+        font-size: 3vh;
+    }
+
+    .uppercap {
+        font-size: 5vh;
     }
 
     .nav-link {
         font-size: small;
+    }
+
+    .subscribe-icon {
+        font-size: large;
+    }
+
+    .subscription-header {
+        font-size: smaller;
+    }
+
+    .subscribe {
+        font-size: medium;
+    }
+
+    .input-email {
+        height: 30px;
+    }
+
+    .btn-dark {
+        font-size: smaller;
+    }
+
+    .footer-background {
+        text-align: center;
+    }
+
+    .footer {
+        text-align: center;
+    }
+    
+    .copyright, .links, .social {
+        padding: 0;
+    }
+
+    .socia li {
+        display: inline;
+        padding: 5px;
     }
 
     .games {
@@ -645,7 +706,7 @@ footer ul li{
 
 }
 
-@media (max--width:460px) {
+@media (max-width:460px) {
     .header {
         margin-top: 10vh;
     }
@@ -664,7 +725,6 @@ footer ul li{
 
     .logo-font {
         font-size: large;
-        letter-spacing: 1.5px;
     }
 
     .dropdown-item {
@@ -694,7 +754,6 @@ footer ul li{
 
     .copyright span, .links span, .social span {
         font-size: small;
-        letter-spacing: 2px;
         padding-bottom: 5px;
         margin-bottom: 10px;
     }
@@ -704,7 +763,6 @@ footer ul li{
     }
 
     .links li a {
-        letter-spacing: 1px;
         font-size: small;
     }
 
