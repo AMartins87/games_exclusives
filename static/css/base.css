@@ -583,43 +583,6 @@ footer ul li{
     .lead {
         font-size: 1.1rem;
     }
-
-    .copyright span, .links span, .social span {
-        font-size: small;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-
-    .copyright li p {
-        font-size: small;
-    }
-
-    .links li a {
-        font-size: small;
-        padding: 10px;
-        margin: 10px;
-    }
-
-    .social li a {
-        font-size: large;
-        padding: 15px 15px;
-    }
-
-    .copyright {
-        display: none;
-    }
-
-    .social {
-        margin-top: 10px;
-    }
-    
-    .links, .social {
-        float: none;
-    }
-
-    footer ul li {
-        display: contents;
-    }
     
 }
 
@@ -683,6 +646,43 @@ footer ul li{
     .footer {
         text-align: center;
     }
+
+    .copyright {
+        display: none;
+    }
+
+    .copyright span, .links span, .social span {
+        font-size: small;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .copyright li p {
+        font-size: small;
+    }
+
+    .links li a {
+        font-size: small;
+        padding: 10px;
+        margin: 10px;
+    }
+
+    .social li a {
+        font-size: large;
+        padding: 15px 15px;
+    }
+
+    .social {
+        margin-top: 10px;
+    }
+    
+    .links, .social {
+        float: none;
+    }
+
+    footer ul li {
+        display: contents;
+    }
     
     .copyright, .links, .social {
         padding: 0;
@@ -707,13 +707,25 @@ footer ul li{
 }
 
 @media (max-width:460px) {
-    .header {
+    /* .header {
         margin-top: 10vh;
-    }
+    } */
 
     .nav-link {
-        display: inline;
+        display: inline-block;
         font-size: xx-small;
+    }
+
+    .btn-file {
+        width: 75vw;
+    }
+
+    .delivery-banner {
+        font-size: medium;
+    }
+
+    .mob-nav {
+        width: 88%;
     }
 }
 

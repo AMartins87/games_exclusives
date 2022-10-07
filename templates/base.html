@@ -47,9 +47,9 @@
 <body>
     <header class="container-fluid fixed-top p-0 bg-white">
         <!-- Free delivery banner -->
-        <div class="row text-center">
+        <div id="delivery-banner" class="row text-center">
             <div class="col bg-warning text-black">
-                <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+                <h4 class="logo-font my-1 delivery-banner">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
             </div>
         </div>
         <!-- Website name with embedded home link -->
@@ -105,7 +105,7 @@
                     <!-- Favourites page link with heart icon -->
                     <li class="list-inline-item">
                         {% if request.user.is_authenticated %}
-                            <a class="text-black nav-link d-block d-lg-none" href="{% url 'favourites' %}" title="Favourites">
+                            <a class="text-black nav-link d-block text-uppercase" href="{% url 'favourites' %}" title="Favourites">
                                 <div class="text-center">
                                     <div>
                                         <i class="fa-regular fa-heart"></i>
@@ -142,7 +142,7 @@
                 </ul>
             </div>
         </div>
-        <div class="row bg-white">
+        <div class="row bg-white mob-nav">
             <nav class="navbar navbar-expand-lg w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav"
                     aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
