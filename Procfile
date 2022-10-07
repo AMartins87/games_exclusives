@@ -1,1 +1,1 @@
-web: gunicorn games_exclusives.wsgi:application
+web: gunicorn games_exclusives.wsgi
