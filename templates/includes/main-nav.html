@@ -1,15 +1,10 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
-        <li class="nav-item dropdown">
-            <a class="nav-link ml-4 mr-lg-5" href="{% url 'home' %}">
-                Home
-            </a>
-        </li>
         <li class="main-nav-item dropdown">
             <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Games
             </a>
-            <div class="dropdown-menu bg-light border-0" aria-labelledby="all-games-link">
+            <div class="dropdown-menu bg-white border-0" aria-labelledby="all-games-link">
                 <a href="{% url 'games' %}?sort=category&direction=asc"class="dropdown-item ml-4 ml-lg-0">By Category</a>
                 <a href="{% url 'games' %}?sort=price&direction=asc" class="dropdown-item ml-4 ml-lg-0">By Price</a>
                 <a href="{% url 'games' %}"  class="dropdown-item ml-4 ml-lg-0">All Games</a>
@@ -19,7 +14,7 @@
             <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Games
             </a>
-            <div class="dropdown-menu bg-light border-0" aria-labelledby="games-link">
+            <div class="dropdown-menu bg-white border-0" aria-labelledby="games-link">
                 <a href="{% url 'games' %}?category=playstation" class="dropdown-item">PlayStation</a>
                 <a href="{% url 'games' %}?category=xbox" class="dropdown-item">Xbox</a>
                 <a href="{% url 'games' %}?category=nintendo" class="dropdown-item">Nintendo</a>
@@ -31,7 +26,7 @@
             <a class="nav-link ml-4 mr-lg-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
-            <div class="dropdown-menu bg-light border-0" aria-labelledby="specials-link">
+            <div class="dropdown-menu bg-white border-0" aria-labelledby="specials-link">
                 <a href="{% url 'games' %}?category=clearance" class="dropdown-item">Clearance</a>
             </div>
         </li>
