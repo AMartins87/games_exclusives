@@ -35,7 +35,6 @@ h1, h2, h3, h4 {
 
 .logo-font {
     text-transform: uppercase;
-    letter-spacing: 1.5px;
 }
 
 .red {
@@ -137,12 +136,10 @@ h1, h2, h3, h4 {
 .btn-black {
     background: black;
     color: white;
-    letter-spacing: 1.5px;
 }
 
 .btn-back {
     color:#032c9f; 
-    letter-spacing: 1px;
 }
 
 .btn-outline-black:hover,
@@ -188,10 +185,6 @@ a:hover {
 
 /*...............................................Forms */
 
-.input-group>.form-control {
-    letter-spacing: 1px;
-}
-
 .form-group {
     margin-top: 1rem;
 }
@@ -203,10 +196,6 @@ a:hover {
 .form-control {
     padding: 0.25rem 0.55rem;
 
-}
-
-#profile-update-form .form-control {
-    letter-spacing: 2px;
 }
 
 .profile{
@@ -238,7 +227,6 @@ a:hover {
 }
 
 .description {
-    letter-spacing: 1.5px;
     font-weight: bold;
 }
 
@@ -259,10 +247,6 @@ a:hover {
     padding: 10px;
 }
 
-.game-title, .review-title {
-    letter-spacing: 1px;
-}
-
 .fa-trash {
     font-size: large;
 }
@@ -279,13 +263,11 @@ a:hover {
 
 .modal-header {
     text-transform: uppercase;
-    letter-spacing: 1px;
 }
 
 .modal-body {
     font-size: medium;
     color: red;
-    letter-spacing: 1px;
 }
 
 /*...............................................Order confirmation page */
@@ -648,10 +630,6 @@ footer ul li{
 
 @media (max-width: 576px) {
 
-    .hero-container  {
-        background: url('/media/homepage_background_image_small_screens.jpg') no-repeat center center;
-    }
-
     .nav-link {
         font-size: small;
     }
@@ -667,6 +645,17 @@ footer ul li{
         font-size: medium;
     }
 
+}
+
+@media (max--width:460px) {
+    .header {
+        margin-top: 10vh;
+    }
+
+    .nav-link {
+        display: inline;
+        font-size: xx-small;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -694,7 +683,7 @@ footer ul li{
     }
 
     .btn-dark {
-        width: 50%;
+        width: auto;
     }
 
     .games-card-body {

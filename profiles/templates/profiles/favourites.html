@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block page_header %}
-<div class="containe header-container">
+<div class="container header-container">
     <div class="row">
 
     </div>
@@ -22,23 +22,16 @@
             </div>
         </div>
         <div class="row">
-            
-            {% if not favourites_items in favourites.games.all %}
-            <div class="row mt-3 text-center">
-                <p class="lead text-center">You haven't saved anything to your favourites list!</p>
+            <!-- Browse games button -->
+            <div class="text-center p-3 m-3">
+                <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg"> 
+                    <span class="text-uppercase">Browse Games</span>
+                    <span class="icon">
+                        <i class="fa-solid fa-circle-chevron-right"></i>
+                    </span>
+                </a>
             </div>
-            
-                <div class="text-center p-3 m-3">
-                    <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg"> 
-                        <span class="text-uppercase">Browse Games</span>
-                        <span class="icon">
-                            <i class="fa-solid fa-circle-chevron-right"></i>
-                        </span>
-                    </a>
-                </div>
-         
-            {% endif %}
-
+            <!-- Saved favourite games -->
             {% for game in favourites.games.all %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
                     {% if game.image %}
@@ -50,9 +43,7 @@
                         <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
                     </a>
                     {% endif %}
-
                     <h6 class="mb-0 game-title">{{ game.name }}</h6>
-
                     <p class="lead mb-0 text-left">£{{ game.price }}</p>
                     {% if game.category %}
                     <p class="small mt-1 mb-0">

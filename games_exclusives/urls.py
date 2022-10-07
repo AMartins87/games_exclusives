@@ -30,5 +30,6 @@ urlpatterns = [
     path('profile/', include('profiles.urls')),
     path('game_reviews/', include('game_reviews.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
 # Handler path to handler views
 HANDLER404 = 'games_exclusives.views.handler404'

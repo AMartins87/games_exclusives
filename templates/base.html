@@ -44,9 +44,9 @@
 
     <title>Games Exlusives{% block extra_title %}{% endblock %}</title>
 </head>
-
 <body>
     <header class="container-fluid fixed-top p-0 bg-white">
+        <!-- Free delivery banner -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-warning text-black">
                 <h4 class="logo-font my-1">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
@@ -59,7 +59,7 @@
                     <h2 class="logo-font text-black my-0"><strong class="red">Games</strong> Exclusives</h2>
                 </a>
             </div>
-            <!-- Search banner -->
+            <!-- Search window -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'games' %}">
                     <div class="input-group w-100">
@@ -76,63 +76,70 @@
                 </form>
             </div>
             <!-- Account, favourites, basket -->
-            <div class="row main-nav p-1 m-1">
-                <!-- Account dropdown menu -->
-                <button class="btn btn-link dropdown text-uppercase list-inline-item nav-link" type="button" data-toggle="dropdown" aria-expanded="false">
-                    <div><i class="fa-solid fa-user-ninja"></i></div>
-                  Account
-                </button>
-                <div class="dropdown-menu">
-                    {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
-                    <a href="'admin/ '"class="dropdown-item">Admin dashboard</a>
-                    <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
-                    {% endif %}
-                    <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-                    {% else %}
-                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-                    {% endif %}
-                </div>
-                <!-- Favourites page link with heart icon -->
-                <li class="list-inline-item">
-                    {% if request.user.is_authenticated %}
-                    <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
-                        <div class="text-center">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <p class="my-0 text-uppercase">Favourites</p>
+            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 acccount-nav dropdown show">
+                <ul class="list-inline text-center text-lg-right my-0">
+                    <!-- Account dropdown menu -->
+                    <li class="list-inline-item dropdown acccount-nav">
+                        <a href="#" class="nav-link text-uppercase dropdown" id="dropdownUser" 
+                            data-toggle="dropdown" aria-expanded="false">
+                            <div class="text-center">
+                                <div><i class="fa-solid fa-user-ninja"></i></div>
+                                <p class="my-0 text-uppercase">Account</p>
                             </div>
+                        </a>
+                        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            {% if request.user.is_authenticated %}
+                            {% if request.user.is_superuser %}
+                            <a href="'admin/'">Admin dashboard</a>
+                            <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
+                            
+                            {% endif %}
+                            <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
+                            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                            {% else %}
+                            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                            {% endif %}
                         </div>
-                    </a>
-                    {% else %}
-                    {% csrf_token %}
-                    <a class="text-black nav-link" href="{% url 'account_login' %}">
-                        <div class="text-center">
-                            <div>
-                                <i class="fa-regular fa-heart"></i>
-                                <p class="my-0 text-uppercase">Favourites</p>
+                    </li>
+                    <!-- Favourites page link with heart icon -->
+                    <li class="list-inline-item">
+                        {% if request.user.is_authenticated %}
+                            <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fa-regular fa-heart"></i>
+                                        <p class="my-0 text-uppercase">Favourites</p>
+                                    </div>
+                                </div>
+                            </a>
+                        {% else %}
+                        {% csrf_token %}
+                            <a class="text-black nav-link" href="{% url 'account_login' %}" ><div class="text-center">
+                                <div>
+                                    <i class="fa-regular fa-heart"></i>
+                                    <p class="my-0 text-uppercase">Favourites</p>
+                                </div>
+                            </a>
+                        {% endif %}
+                    </li>
+                    <!-- Basket link with basket icon -->
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                            href="{% url 'view_basket' %}">
+                            <div class="text-center">
+                                <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                    £{{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                    £0.00
+                                    {% endif %}
+                                </p>
                             </div>
-                    </a>
-                    {% endif %}
-                </li>
-                <!-- Basket link with basket icon -->
-                <li class="list-inline-item">
-                    <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                        href="{% url 'view_basket' %}">
-                        <div class="text-center">
-                            <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
-                            <p class="my-0">
-                                {% if grand_total %}
-                                £{{ grand_total|floatformat:2 }}
-                                {% else %}
-                                £0.00
-                                {% endif %}
-                            </p>
-                        </div>
-                    </a>
-                </li>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
         <div class="row bg-white">
@@ -146,6 +153,8 @@
             </nav>
         </div>
     </header>
+
+
 
 
     <!-- Toast messages -->
