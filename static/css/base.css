@@ -552,10 +552,6 @@ footer ul li{
         padding-top: 116px;
     }
 
-    .hero-container {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665160542/media/homepage_background_sc.jpg') no-repeat center center;
-    }
-
     .logo-font {
         font-size: large;
         letter-spacing: 1.5px;
@@ -629,7 +625,7 @@ footer ul li{
 @media (max-width: 576px) {
 
     .hero-container  {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/e_improve,w_300,h_600,c_thumb,g_auto/v1665160542/media/homepage_background_sc.jpg') no-repeat center center;
+        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665166102/media/background_image_small.jpg') no-repeat center center;
     }
 
     .nav-link {
