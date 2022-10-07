@@ -90,7 +90,7 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                             {% if request.user.is_superuser %}
-                            <a href="'admin/'" class="dropdown-item">Admin dashboard</a>
+                            <a href="'admin/'">Admin dashboard</a>
                             <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
                             
                             {% endif %}
