@@ -18,3 +18,13 @@
    heroku config:set DISABLE_COLLECTSTATIC=1 -a, --app games-exclusives
    heroku git:remote -a games-exclusives
    git push heroku main
+   --> error
+   touch runtime.txt && echo "python-3.9.14" > runtime.txt
+   git add . && git commit -m "Add runtime.txt for heroku deployment"
+   git push
+   git push origin main
+   heroku stack:set heroku-20 -a games-exclusives
+   git push heroku main
+   remove secret key from settings and replace with os.environ.get('SECRET_KEY', '')
+   add secret key in settings on heroku
+   set DEBUG to DEBUG = 'DEVELOPMENT' in os.environ
