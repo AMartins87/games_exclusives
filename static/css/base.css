@@ -173,6 +173,10 @@ a:hover {
     text-decoration: none;
 }
 
+.navbar-toggler-icon {
+    color: black;
+}
+
 /*...............................................Scroll arrow in a circle */
 
 .scroll-link {
@@ -509,10 +513,9 @@ footer ul li{
     }
 }
 
-/* Large ≥1200px */
-@media (min-width: 992px) {
-    #large-screen {
-        display: none;
+@media (max-width:1200px) {
+    .account-nav {
+        font-size: small;
     }
 }
 
@@ -524,22 +527,6 @@ footer ul li{
 
     .btn-link {
         font-size: small;
-    }
-}
-
-/* Fixed top navbar */
-@media (min-width: 992px) {
-
-    /* .account-nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    } */
-
-    .header-container {
-        padding-top: 165px;
     }
 }
 
@@ -583,7 +570,49 @@ footer ul li{
     .lead {
         font-size: 1.1rem;
     }
-    
+
+    .btn-dark {
+        width: auto;
+    }
+
+    .copyright span, .links span, .social span {
+        font-size: small;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+
+    .copyright li p {
+        font-size: small;
+    }
+
+    .links li a {
+        font-size: small;
+    }
+
+    .social li a {
+        font-size: large;
+    }
+}
+
+/* Hides favourites from base.html as it becomes */
+/* part of mobile top nav on smaller screens */
+@media (min-width: 992px) {
+    #large-screen {
+        display: none;
+    }
+
+    .header-container {
+        padding-top: 165px;
+    }
+
+    /* Fixed top navbar */
+    /* .account-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    } */
 }
 
 @media (max-width: 767px) {
@@ -602,7 +631,6 @@ footer ul li{
 }
 
 @media (max-width: 576px) {
-
     .hero-container  {
         background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665167349/media/background_image_small.jpg') no-repeat center center;
     }
@@ -623,11 +651,11 @@ footer ul li{
         font-size: large;
     }
 
-    .subscription-header {
+    .subscribe-header {
         font-size: smaller;
     }
 
-    .subscribe {
+    .subscribe-icon {
         font-size: medium;
     }
 
@@ -635,7 +663,11 @@ footer ul li{
         height: 30px;
     }
 
-    .btn-dark {
+    .shop-now-btn, .btn-warning,
+    .btn-dark, .btn-danger,
+    .btn-info, .btn-black,
+    .btn-outline-black,
+    .btn-back {
         font-size: smaller;
     }
 
@@ -703,7 +735,6 @@ footer ul li{
     .btn-outline-black, .btn-back {
         font-size: medium;
     }
-
 }
 
 @media (max-width:460px) {
@@ -725,60 +756,27 @@ footer ul li{
     }
 
     .mob-nav {
-        width: 88%;
-    }
-}
-
-/* pad the top a bit when navbar is collapsed on mobile */
-@media (max-width: 991px) {
-    .header-container {
-        padding-top: 116px;
+        width: 75%;
+        display: inline;
     }
 
-    .logo-font {
-        font-size: large;
+    .navbar-expand-lg {
+        padding: inherit;
     }
 
     .dropdown-item {
-        font-size: small;
-    }
-
-    div.card-footer {
-        padding: 40px 10px;
-        font-size: 0.85rem;
-    }
-
-    footer.background {
-        padding: 10px 10px;
-    }
-
-    .btn-dark {
-        width: auto;
-    }
-
-    .games-card-body {
-        font-size: medium;
+        font-size: smaller;
     }
 
     .lead {
-        font-size: 1.1rem;
+        font-size: smaller;
     }
 
-    .copyright span, .links span, .social span {
+    .shop-now-btn, .btn-warning,
+    .btn-dark, .btn-danger,
+    .btn-info, .btn-black,
+    .btn-outline-black,
+    .btn-back {
         font-size: small;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-
-    .copyright li p {
-        font-size: small;
-    }
-
-    .links li a {
-        font-size: small;
-    }
-
-    .social li a {
-        font-size: large;
     }
 }
