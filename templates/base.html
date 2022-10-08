@@ -49,14 +49,14 @@
         <!-- Free delivery banner -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-warning text-black">
-                <h4 class="logo-font my-1 delivery-banner">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
+                <h4 class="my-1 delivery-banner text-uppercase">Free delivery on orders over £{{ free_delivery_threshold }}!</h4>
             </div>
         </div>
         <!-- Website name with embedded home link -->
         <div class="row pt-lg-2 d-none d-lg-flex topnav">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong class="red">Games</strong> Exclusives</h2>
+                    <h2 class="logo-font text-black my-0 text-uppercase"><strong class="red">Games</strong> Exclusives</h2>
                 </a>
             </div>
             <!-- Search window -->
@@ -125,7 +125,7 @@
                     </li>
                     <!-- Basket link with basket icon -->
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+                        <a class="{% if grand_total %}text-black {% else %}text-black{% endif %} nav-link"
                             href="{% url 'view_basket' %}">
                             <div class="text-center">
                                 <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
@@ -186,7 +186,7 @@
     <footer class="background">
         <div class="footer-container">
             <div class="row footer">
-                <div class="col-lg-5 col-md-5 col-sm-4 col-xs-12">
+                <div class="col-lg-5 col-md-5 col-sm-4">
                     <ul class="copyright">
                         <span>Hello Gamers</span>
                         <li>
@@ -195,7 +195,7 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <ul class="links">
                         <span><strong>Quick Links</strong></span>
                         <li>
@@ -211,23 +211,23 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <div class="col-lg-3 col-md-3 col-sm-4">
                     <ul class="social">
                         <span><strong>Follow Us</strong></span>
-                        <li class="social">
+                        <li class="social justify-content-center ">
                             <a href="https://www.facebook.com/" target="_blank" rel="noopener"
-                                aria-label="Click here to go to our facebook page"><i class="fab fa-facebook"></i></a>
+                                aria-label="Click here to visit our facebook page"><i class="fab fa-facebook"></i></a>
                         </li>
 
-                        <li>
+                        <li class="social justify-content-center">
                             <a href="https://www.instagram.com/" target="_blank" rel="noopener"
-                                aria-label="Click here to go to our instagram page"><i
+                                aria-label="Click here to visit our instagram page"><i
                                     class="fab fa-instagram"></i></a></a>
                         </li>
 
-                        <li>
+                        <li class="social justify-content-center">
                             <a href="https://twitter.com/home" target="_blank" rel="noopener"
-                                aria-label="Click here to go to our twitter page"><i class="fab fa-twitter"></i></a></a>
+                                aria-label="Click here to visit our twitter page"><i class="fab fa-twitter"></i></a></a>
                         </li>
 
                     </ul>

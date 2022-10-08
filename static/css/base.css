@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 html {
-    height: 100%;
+
     scroll-behavior: smooth;
 }
 
 body {
-    height: 100%;
+    height: calc(100vh - 164px);
     margin: 0;
     padding: 0;
     font-family: 'Electrolize', sans-serif;
@@ -14,10 +14,6 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: bold;
-}
-
-.navbar-nav {
-    font-size: large;
 }
 
 .btn-link {
@@ -31,10 +27,6 @@ h1, h2, h3, h4 {
 .main-logo-link, .nav-link {
     width: fit-content;
     color: black;
-}
-
-.logo-font {
-    text-transform: uppercase;
 }
 
 .red {
@@ -52,7 +44,7 @@ h1, h2, h3, h4 {
 }
 
 .hero-container {
-	background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665160542/media/homepage_background.jpg') no-repeat center center;
+	background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665242517/media/homepage_background.jpg') no-repeat center center;
 	background-size: cover;
 	height: 75vh;
 	position: relative;
@@ -506,191 +498,41 @@ footer ul li{
 
 /*...............................................Media Queries */
 
-/* Extra large screens ≥1200px */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-@media (max-width:1200px) {
-    .account-nav {
-        font-size: small;
-    }
-}
-
-/* Account navigation bar on screens 1084px and below */
-@media (max-width: 1084px) {
-    .main-nav {
-        font-size: smaller;
-    }
-
-    .btn-link {
-        font-size: small;
-    }
-}
-
-/* Medium screens ≥991px */
-@media (max-width: 991px) {
-   
-    .header-container {
-        padding-top: 116px;
-    }
-
-    .logo-font {
-        font-size: large;
-        letter-spacing: 1.5px;
-    }
-
-    .account-nav {
-        font-size: smaller;
-    }
-
-    .dropdown-item {
-        font-size: small;
-    }
-
-    div.card-footer {
-        padding: 40px 10px;
-        font-size: 0.85rem;
-    }
-
-    footer.background {
-        padding: 10px 10px;
-    }
-
-    .btn-dark {
-        width: 50%;
-    }
-
-    .games-card-body {
-        font-size: medium;
-    }
-
-    .lead {
-        font-size: 1.1rem;
-    }
-
-    .btn-dark {
-        width: auto;
-    }
-
-    .copyright span, .links span, .social span {
-        font-size: small;
-        padding-bottom: 5px;
-        margin-bottom: 10px;
-    }
-
-    .copyright li p {
-        font-size: small;
-    }
-
-    .links li a {
-        font-size: small;
-    }
-
-    .social li a {
-        font-size: large;
-    }
-}
-
+/* Extra large screens ≥1200px up to 992px */
 /* Hides favourites from base.html as it becomes */
 /* part of mobile top nav on smaller screens */
 @media (min-width: 992px) {
     #large-screen {
         display: none;
     }
-
-    .header-container {
-        padding-top: 165px;
-    }
-
-    /* Fixed top navbar */
-    /* .account-nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    } */
 }
-
-@media (max-width: 767px) {
-    .order-confirmation-wrapper p {
-        font-size: 0.8rem;
-    }
-
-    .scroll-link {
-        height: auto;
-        font-size: xx-large;
-    }
-
-    .nav-link {
-        font-size: smaller;
-    }
-}
-
+    
 @media (max-width: 576px) {
     .hero-container  {
         background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665167349/media/background_image_small.jpg') no-repeat center center;
     }
 
-    .hero-info {
-        font-size: 3vh;
+    /* Footer styling*/
+    .copyright {
+        display: none;
     }
+    footer.background {
+        padding: 10px 0;
 
-    .uppercap {
-        font-size: 5vh;
-    }
-
-    .nav-link {
-        font-size: small;
-    }
-
-    .subscribe-icon {
-        font-size: large;
-    }
-
-    .subscribe-header {
-        font-size: smaller;
-    }
-
-    .subscribe-icon {
-        font-size: medium;
-    }
-
-    .input-email {
-        height: 30px;
-    }
-
-    .shop-now-btn, .btn-warning,
-    .btn-dark, .btn-danger,
-    .btn-info, .btn-black,
-    .btn-outline-black,
-    .btn-back {
-        font-size: smaller;
-    }
-
-    .footer-background {
-        text-align: center;
     }
 
     .footer {
         text-align: center;
     }
 
-    .copyright {
-        display: none;
+    footer ul li {
+        display: contents;
     }
 
-    .copyright span, .links span, .social span {
+    .links span, .social span {
         font-size: small;
         padding-bottom: 5px;
         margin-bottom: 10px;
-    }
-
-    .copyright li p {
-        font-size: small;
     }
 
     .links li a {
@@ -707,77 +549,58 @@ footer ul li{
     .social {
         margin-top: 10px;
     }
-    
-    .links, .social {
-        float: none;
-    }
 
-    footer ul li {
-        display: contents;
-    }
-    
-    .copyright, .links, .social {
-        padding: 0;
-    }
-
-    .socia li {
+    .social li {
         display: inline;
+        float: none;
         padding: 5px;
     }
 
-    .games {
-        margin-right: 0;
+    .links, .social {
+        float: none;
+        padding: 0;
     }
-
-    .shop-now-btn, .btn-warning,
-    .btn-dark, .btn-danger,
-    .btn-info, .btn-black ,
-    .btn-outline-black, .btn-back {
-        font-size: medium;
-    }
+    /* End of footer styling*/
 }
 
-@media (max-width:460px) {
-    /* .header {
-        margin-top: 10vh;
-    } */
+@media (max-width:456px) {
 
-    .nav-link {
-        display: inline-block;
-        font-size: xx-small;
-    }
-
-    .btn-file {
-        width: 75vw;
+    body {
+        height: calc(100vh - 116px);
     }
 
     .delivery-banner {
-        font-size: medium;
+        font-size: 0.9rem;
     }
 
-    /* .mob-nav {
-        width: 75%;
-        display: inline;
-    } */
-
-    .navbar-expand-lg {
-        padding: inherit;
-        margin: 9px;
+    .nav-link {
+        padding: 0.15rem;
+        font-size: 0.65rem;
     }
 
-    .dropdown-item {
-        font-size: smaller;
-    }
-
-    .lead {
-        font-size: smaller;
+    .navbar-toggler-icon {
+        font-size: 1rem;
     }
 
     .shop-now-btn, .btn-warning,
     .btn-dark, .btn-danger,
     .btn-info, .btn-black,
     .btn-outline-black,
-    .btn-back {
+    .btn-back, .btn-fav {
         font-size: small;
+    }
+
+    a, .profile {
+        font-size: small;
+    }
+
+    .scroll-link {
+        font-size: x-large;
+        bottom: 20px;
+        right: 0;
+    }
+
+    div.card-footer {
+        padding: 10px 5px;
     }
 }

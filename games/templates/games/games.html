@@ -61,7 +61,7 @@
                             </div>
                             <div class="card-footer bg-white pt-0 border-0 text-left">
                                 <div class="row">
-                                    <div class="col">
+                                    <div class="col game-view">
                                         <p class="lead mb-0 text-left">£{{ game.price }}</p>
                                         {% if game.category %}
                                         <p class="small mt-1 mb-0">
@@ -70,31 +70,38 @@
                                             </a>
                                         </p>
                                         {% endif %}
-                                        {% if user.is_authenticated %}
-                                        <form class="form" action="{% url 'add_to_favourites' game.id %}" method="POST">
-                                            {% csrf_token %}
-                                            <button type="submit" class="btn btn-fav mt-3"
+                                        <!-- Add to favourites icon and text -->
+                                        <div class="d-inline ">
+                                            <!-- If shopper is logged in, it will take them to their favourites list page -->
+                                            {% if user.is_authenticated %}
+                                            <form class="form" action="{% url 'add_to_favourites' game.id %}" method="POST">
+                                                {% csrf_token %}
+                                                <button type="submit" class="btn btn-fav mt-3"
+                                                    data-toggle="tooltip" data-placement="top" title="Add to favourites">
+                                                    <small><i class="fas fa-heart fa-lg"></i></small>
+                                                    <strong>Add to favourites</strong>
+                                                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                                </button>
+                                            </form>
+                                            <!-- If shopper is not logged in, it will take them to login page -->
+                                            {% else %}
+                                            <a href="{% url 'account_login' %}" class="btn btn-fav mt-3"
                                                 data-toggle="tooltip" data-placement="top" title="Add to favourites">
                                                 <small><i class="fas fa-heart fa-lg"></i></small>
                                                 <strong>Add to favourites</strong>
-                                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                            </button>
-                                        </form>
-                                        {% else %}
-                                        <a href="{% url 'account_login' %}" class="btn btn-fav mt-3"
-                                            data-toggle="tooltip" data-placement="top" title="Add to favourites">
-                                            <small><i class="fas fa-heart fa-lg"></i></small>
-                                            <strong>Add to favourites</strong>
-                                        </a>
-                                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
-                                        {% endif %}
-                                        
-                                        {% if request.user.is_superuser %}
-                                            <small class="ml-3">
-                                                <a href="{% url 'edit_game' game.id %}">Edit</a> | 
-                                                <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
-                                            </small>
-                                        {% endif %}
+                                            </a>
+                                            <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                            {% endif %}
+                                        </div>
+                                        <div>
+                                            <!-- If logged in as admin, Edit and Delete links will show -->
+                                            {% if request.user.is_superuser %}
+                                                <small class="ml-3">
+                                                    <a href="{% url 'edit_game' game.id %}">Edit</a> | 
+                                                    <a class="text-danger" href="{% url 'delete_game' game.id %}">Delete</a>
+                                                </small>
+                                            {% endif %}
+                                        </div>  
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +131,7 @@
             </div>
         </div>
     </div>
-    
+    <!-- Scroll up arrow for ease of navigation -->
     <div class="scroll-up">
         <a class="scroll-link d-flex p-3 m-3 h-50">
             <i class="fa-solid fa-circle-arrow-up text-dark mx-auto my-auto"></i>
