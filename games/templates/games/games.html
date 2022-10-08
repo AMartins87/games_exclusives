@@ -48,11 +48,11 @@
                             <div class="card game-card border-0">
                                 {% if game.image %}
                                 <a href="{% url 'game_detail' game.id %}" class="text-center">
-                                    <img class="card-img-top img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
+                                    <img class="card-img-top img-fluid game-img" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                                 </a>
                                 {% else %}
                                 <a href="{% url 'game_detail' game.id %}" class="text-center">
-                                    <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
+                                    <img class="card-img-top img-fluid game-img" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
                                 </a>
                                 {% endif %}
                                 <div class="games-card-body pb-0 bg-white">
