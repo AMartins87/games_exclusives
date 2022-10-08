@@ -2,9 +2,9 @@
 
 Games Exclusives is an e-commerce website built using Django, Python, HTML, CSS and JavaScript as part of the Code Institute Diploma in Full Stack Software Development.
 
-Purpose of this e-commerce store is to sell game versions which are only exclusive to only one type of game console or are only developed for a PC. 
+Purpose of this e-commerce store is to sell game versions which are only exclusive to only one type of game console or were developed only for a PC. 
 
-Live project can be found [here](https://games_exclusives.herokuapp.com/).
+Live project can be found [here](https://games-exclusives.herokuapp.com/).
 
 ![Am I Responsive](media/wireframes/air_main_image.JPG)
 
@@ -19,16 +19,17 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 ***Shopper Expectations***
 Ability to view and purchase games
 Easy to search and filter by category, name and price
+Can save a game into favourites
 Can access their account and view order history, favourite games and change personal information
 Can contact the owner via simple contact form
-Can leave rating or review
-Can save a game into favourites
+Can leave, edit and delete their review
 
 ***Website Expectations***
-Has links to Facebook and Instagram
+Has links to Facebook, Instagram and Twitter
 
 ***Web Admin Expectations***
 Can update, add or remove products
+Can delete shopper's reviews
 
 # **User Stories**
 
@@ -42,14 +43,15 @@ Documentation like README, TESTING md files and preview of my business Facebook 
 # **FEATURES**
 ## **Home Page**
 - Top Navbar
-    - My Account
+    - Account
         - Register | Login (if user is not logged in)
-        - Product Management | My Profile | Logout (if logged in as an admin)
+        - Game Management | My Profile | Logout (if logged in as an admin)
         - My Profile | Logout (if logged in as a standard user)
-
+    - Favourites
     - Basket
 
 - Main Navbar (on every page for ease of navigation)
+    - Home 
     - All Games
     - Games
     - Special Offers

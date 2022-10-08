@@ -116,27 +116,30 @@
             </div>
         </div>
     </div>
+    
+
+
     <!-- Review section -->
     <div class="row mt-n4">
         <div class="col-12 col-lg-8 offset-lg-2 text-center mb-5">
        
-            <!-- Title -->
+            <!-- Reviews header -->
             <hr class="mb-1">
             <h3 class="review-title">Reviews</h3>
 
             <!-- Add review link if user logged in -->
             {% if user.is_authenticated %}
-            <a href="{% url 'add_review' game.id %}">Add Review</a>
+            <a href="{% url 'add_review' game.id %}" class="text-uppercase">Add review</a>
             {% else %}
-            <a href="{% url 'account_login' %}" class="btn btn-dark text-light-link border-0 mt-3"
+            <a href="{% url 'account_login' %}" class="text-uppercase"
                 data-toggle="tooltip" data-placement="top" title="Add review">
                 <small><i class="fa-regular fa-face-smile"></i></small>
-                <strong>Add review</strong>
+                Add review
             </a>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             {% endif %}
 
-            <!-- Existing reviews -->
+            <!-- Existing review cards -->
             <div class="row">
 
                 <!-- Iterates through reviews and displays them in cards -->
@@ -144,7 +147,7 @@
                 
                 <!-- Checks for relevant reviews -->
                 {% if game.name in review.game.name %}
-                <div class="col-md-6 my-4 m-3">
+                <div class="col-sm-6 my-4">
                     <div class="card">
                         <div class="card-header">
 
@@ -152,7 +155,12 @@
                             <h5 class="card-title">"{{ review.title }}"</h5>
             
                             <!-- Edit and delete if user is review author -->
-                            {% if user == review.reviewer %}
+                            {% if request.user.is_superuser %}
+                            <small class="ml-3">
+                                <a href="#" class="text-danger" data-toggle="modal"
+                                    data-target="#deleteReview{{ review.id }}Modal">Delete</a>
+                            </small>
+                            {% elif request.user == review.user %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_review' game.id review.id %}">Edit</a> |
                                 <a href="#" class="text-danger" data-toggle="modal"
@@ -166,8 +174,8 @@
                             <p class="card-text">{{ review.review }}</p>
                         </div>
 
-                        <!-- Displays author and date of review -->
-                        <div class="card-footer text-muted">
+                        <!-- Displays reviewer's username/name and date of review -->
+                        <div class="card-footer text-black">
 
                             {{ review.reviewer }} -
                             {{ review.date|date:"d M, Y" }}
