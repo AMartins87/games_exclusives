@@ -505,12 +505,46 @@ footer ul li{
     #large-screen {
         display: none;
     }
+
+
 }
     
 @media (max-width: 576px) {
     .hero-container  {
         background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665167349/media/background_image_small.jpg') no-repeat center center;
     }
+
+    /* Main page hero text and button */
+    .hero-info {
+        font-size: 3vh;
+    }
+
+    .uppercap {
+        font-size: 4vh;
+        text-shadow: 1px 1px 2px yellow;
+    }
+
+    /* Mailchimp styling */
+    .background-email {
+        padding: 5px;
+    }
+
+    .subscribe-icon {
+        font-size: 1.5rem;
+    }
+
+    .subscribe-header {
+        font-size: 1rem;
+    }
+
+    .mce {
+        font-size: 0.9rem;
+    }
+    .input-email {
+        height: 35px;
+        font-size: 0.9rem;
+    }
+    /* End of Mailchimp styling */
 
     /* Footer styling*/
     .copyright {
