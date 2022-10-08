@@ -210,6 +210,9 @@ a:hover {
 }
 
 /*...............................................All Games page */
+.game-name {
+    font-weight: 600;
+}
 
 .game-card:hover {
    
@@ -508,10 +511,34 @@ footer ul li{
 
 
 }
+
+@media (max-width:768px) {
+    .mob-nav {
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
     
 @media (max-width: 576px) {
     .hero-container  {
         background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665167349/media/background_image_small.jpg') no-repeat center center;
+    }
+
+    .navbar {
+        margin-right: 35px;
+    }   
+
+    .delivery-banner {
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.25rem;
+        font-size: 0.85rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.9rem; 
     }
 
     /* Main page hero text and button */
@@ -522,6 +549,12 @@ footer ul li{
     .uppercap {
         font-size: 4vh;
         text-shadow: 1px 1px 2px yellow;
+    }
+
+    .scroll-link {
+        font-size: x-large;
+        bottom: 20px;
+        right: 0;
     }
 
     /* Mailchimp styling */
@@ -544,7 +577,6 @@ footer ul li{
         height: 35px;
         font-size: 0.9rem;
     }
-    /* End of Mailchimp styling */
 
     /* Footer styling*/
     .copyright {
@@ -564,7 +596,7 @@ footer ul li{
     }
 
     .links span, .social span {
-        font-size: small;
+        font-size: 0.9rem;
         padding-bottom: 5px;
         margin-bottom: 10px;
     }
@@ -594,7 +626,29 @@ footer ul li{
         float: none;
         padding: 0;
     }
-    /* End of footer styling*/
+
+    /* Games page */ 
+    .lead, .btn-fav {
+        font-size: 0.9rem;
+    }
+
+    .btn-fav {
+        padding: 0;
+    }
+
+    .games-header {
+        margin-top: 13vh!important;
+    }
+
+    .game-name {
+        font-size: 1rem;
+    }
+
+    .img-fluid {
+        max-width: 90%;
+        padding-bottom: 10px;
+    }
+    
 }
 
 @media (max-width:456px) {
@@ -607,27 +661,47 @@ footer ul li{
         font-size: 0.9rem;
     }
 
+    /* Footer - social link icons and quick links */
+    .social li a {
+        padding: 10px 10px;
+    }
+
+    .links li a {
+        padding: 5px;
+    }
+
+    /* Menu, account, favourites, basket */ 
+    .navbar {
+        margin-right: 10px;
+    } 
+
     .nav-link {
         padding: 0.15rem;
         font-size: 0.65rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.7rem; 
     }
 
     .navbar-toggler-icon {
         font-size: 1rem;
     }
 
+    /* Buttons */ 
     .shop-now-btn, .btn-warning,
     .btn-dark, .btn-danger,
     .btn-info, .btn-black,
     .btn-outline-black,
     .btn-back, .btn-fav {
-        font-size: small;
+        font-size: 0.9rem;
     }
 
+    /* Profile page */ 
     a, .profile {
         font-size: small;
     }
-
+     /* Scroll arrow */ 
     .scroll-link {
         font-size: x-large;
         bottom: 20px;
@@ -636,5 +710,14 @@ footer ul li{
 
     div.card-footer {
         padding: 10px 5px;
+    }
+    
+    /* Games */ 
+    .games-header {
+        margin-top: 10vh!important;
+    }
+
+    .game-name {
+        font-size: 0.9rem;
     }
 }
