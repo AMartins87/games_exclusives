@@ -116,9 +116,6 @@
             </div>
         </div>
     </div>
-    
-
-
     <!-- Review section -->
     <div class="row mt-n4">
         <div class="col-12 col-lg-8 offset-lg-2 text-center mb-5">
@@ -151,16 +148,11 @@
                     <div class="card">
                         <div class="card-header">
 
-                            <!-- Title -->
+                            <!-- Review title -->
                             <h5 class="card-title">"{{ review.title }}"</h5>
             
-                            <!-- Edit and delete if user is review author -->
-                            {% if request.user.is_superuser %}
-                            <small class="ml-3">
-                                <a href="#" class="text-danger" data-toggle="modal"
-                                    data-target="#deleteReview{{ review.id }}Modal">Delete</a>
-                            </small>
-                            {% elif request.user == review.user %}
+                            <!-- Edit and delete if user is reviewer -->
+                            {% if user == review.reviewer %}
                             <small class="ml-3">
                                 <a href="{% url 'edit_review' game.id review.id %}">Edit</a> |
                                 <a href="#" class="text-danger" data-toggle="modal"
@@ -176,14 +168,11 @@
 
                         <!-- Displays reviewer's username/name and date of review -->
                         <div class="card-footer text-black">
-
                             {{ review.reviewer }} -
                             {{ review.date|date:"d M, Y" }}
-
                         </div>
                     </div>
                 </div>
-        
                 <!-- Delete review modal -->
                 <div class="modal fade" id="deleteReview{{ review.id }}Modal" tabindex="-1"
                     aria-labelledby="deleteReview{{ review.id }}ModalLabel" aria-hidden="true">
@@ -204,16 +193,14 @@
                         </div>
                     </div>
                 </div>
-
                 {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
-    
 {% endblock %}
 
-    {% block postloadjs %}
-    {{ block.super }}
-    {% include 'games/includes/quantity_input_script.html' %}
-    {% endblock %}
+{% block postloadjs %}
+{{ block.super }}
+{% include 'games/includes/quantity_input_script.html' %}
+{% endblock %}
