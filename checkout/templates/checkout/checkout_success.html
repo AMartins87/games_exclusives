@@ -19,7 +19,7 @@
         <div class="row header">
             <div class="col text-center mt-5 mb-3">
                 <hr>
-                <h2 class="logo-font mb-4">Thank You</h2>
+                <h2 class="logo-font mb-4 text-uppercase">Thank You</h2>
                 <hr class="mb-1">
                 <p class="text-black text-left">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
@@ -186,7 +186,7 @@
         <div class="row">
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
-                    <a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
+                    <a href="{% url 'profile' %}" class="btn btn-black my-2">
                         <span class="icon mr-2">
                             <i class="fas fa-angle-left"></i>
                         </span>

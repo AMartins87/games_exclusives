@@ -108,14 +108,12 @@ h1, h2, h3, h4 {
 .btn-dark {
     color: #fff;
     font-weight: bold;
-    text-transform: uppercase;
     background-color: black;
     border-color: black;
 }
 
 .btn-danger {
     background: #e85320;
-    text-transform: uppercase;
     justify-content: center;
 }
 
@@ -131,7 +129,7 @@ h1, h2, h3, h4 {
 }
 
 .btn-back {
-    color:#032c9f; 
+    color: black;
 }
 
 .btn-outline-black:hover,
@@ -502,6 +500,7 @@ footer ul li{
 /*...............................................Media Queries */
 
 /* Extra large screens ≥1200px up to 992px */
+
 /* Hides favourites from base.html as it becomes */
 /* part of mobile top nav on smaller screens */
 @media (min-width: 992px) {
@@ -509,13 +508,40 @@ footer ul li{
         display: none;
     }
 
+    .nav-link {
+        font-size: 0.85rem;
+    }
 
+    .nav-item {
+        font-size: 1rem;
+    }
+
+    .header, .container-header {
+        margin-top:  20vh!important;
+    }
+
+}
+
+@media (min-width: 1092px) {
+    .nav-link {
+        font-size:1rem;
+    }
+}
+
+@media (max-width:992px) {
+    .header, .games-header, .container-header {
+        margin-top:  13vh!important;
+    }
 }
 
 @media (max-width:768px) {
     .mob-nav {
         margin-left: 5px;
         margin-right: 5px;
+    }
+
+    .games-header {
+        margin-top: 13vh!important;
     }
 }
     
@@ -636,10 +662,6 @@ footer ul li{
         padding: 0;
     }
 
-    .games-header {
-        margin-top: 13vh!important;
-    }
-
     .game-name {
         font-size: 1rem;
     }
@@ -647,8 +669,7 @@ footer ul li{
     .img-fluid {
         max-width: 90%;
         padding-bottom: 10px;
-    }
-    
+    } 
 }
 
 @media (max-width:456px) {
@@ -659,6 +680,10 @@ footer ul li{
 
     .delivery-banner {
         font-size: 0.9rem;
+    }
+
+    .header {
+        margin-top: 10vh!important;
     }
 
     /* Footer - social link icons and quick links */
@@ -672,7 +697,7 @@ footer ul li{
 
     /* Menu, account, favourites, basket */ 
     .navbar {
-        margin-right: 10px;
+        margin-right: 1px;
     } 
 
     .nav-link {
@@ -686,6 +711,10 @@ footer ul li{
 
     .navbar-toggler-icon {
         font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: 0;
     }
 
     /* Buttons */ 
