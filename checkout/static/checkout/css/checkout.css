@@ -28,6 +28,8 @@
 .fieldset-label {
   position: relative;
   right: .5rem;
+  font-weight: bold;
+  font-size: inherit;
 }
 
 #payment-form .form-control,
@@ -63,4 +65,8 @@ select option[value=""] {
   justify-content: center;
   margin: 0;
   height: 100%;
+}
+
+.checkout-txt {
+  font-size: 0.9rem;
 }

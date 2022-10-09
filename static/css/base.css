@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 
 html {
-
     scroll-behavior: smooth;
 }
 
@@ -520,6 +519,10 @@ footer ul li{
         margin-top:  20vh!important;
     }
 
+    .games-header {
+        margin-top: 25vh!important;
+    }
+
 }
 
 @media (min-width: 1092px) {
@@ -529,7 +532,7 @@ footer ul li{
 }
 
 @media (max-width:992px) {
-    .header, .games-header, .container-header {
+    .header, .container-header {
         margin-top:  13vh!important;
     }
 
@@ -544,14 +547,14 @@ footer ul li{
         margin-right: 5px;
     }
 
-    .games-header {
+    .header {
         margin-top: 13vh!important;
     }
 }
 
 @media (max-width: 576px) {
     .hero-container  {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665259319/media/background_image_small.jpg') no-repeat center center;
+        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665333126/media/background_image_small.jpg') no-repeat center center;
     }
 
     .navbar {
@@ -746,7 +749,7 @@ footer ul li{
     }
     
     /* Games */ 
-    .games-header {
+    .header {
         margin-top: 10vh!important;
     }
 

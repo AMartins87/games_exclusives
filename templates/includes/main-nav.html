@@ -21,11 +21,11 @@
                 Games
             </a>
             <div class="dropdown-menu bg-white border-0" aria-labelledby="games-link">
-                <a href="{% url 'games' %}?category=playstation" class="dropdown-item">PlayStation</a>
-                <a href="{% url 'games' %}?category=xbox" class="dropdown-item">Xbox</a>
-                <a href="{% url 'games' %}?category=nintendo" class="dropdown-item">Nintendo</a>
-                <a href="{% url 'games' %}?category=pc" class="dropdown-item">PC Classics</a>
                 <a href="{% url 'games' %}"  class="dropdown-item ml-4 ml-lg-0">All Games</a>
+                <a href="{% url 'games' %}?category=playstation" class="dropdown-item ml-4 ml-lg-0">PlayStation</a>
+                <a href="{% url 'games' %}?category=xbox" class="dropdown-item ml-4 ml-lg-0">Xbox</a>
+                <a href="{% url 'games' %}?category=nintendo" class="dropdown-item ml-4 ml-lg-0">Nintendo</a>
+                <a href="{% url 'games' %}?category=pc" class="dropdown-item ml-4 ml-lg-0">PC Classics</a>
             </div>
         </li>
         <li class="nav-item dropdown">
@@ -33,7 +33,7 @@
                 Special Offers
             </a>
             <div class="dropdown-menu bg-white border-0" aria-labelledby="specials-link">
-                <a href="{% url 'games' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'games' %}?category=clearance" class="dropdown-item ml-4 ml-lg-0">Clearance</a>
             </div>
         </li>
     </ul>

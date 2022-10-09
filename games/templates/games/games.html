@@ -2,11 +2,11 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -15,7 +15,7 @@
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
-                <h3 class="logo-font mb-4">Games</h3>
+                <h3 class="logo-font mb-4 text-uppercase">Games</h3>
 
                 {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
