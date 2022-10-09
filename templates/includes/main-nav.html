@@ -1,14 +1,17 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="list-inline-item dropdown">
+            <!-- Home page link -->
             <a class="nav-link ml-4 mr-lg-5" href="{% url 'home' %}" aria-haspopup="true" aria-expanded="false">
                 Home
             </a>
         </li>
+        <!-- Dropdown menu -->
         <li class="main-nav-item dropdown">
             <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Games
             </a>
+            <!-- Choice to view games by their Category, Name, Price or the choice to view All Games -->
             <div class="dropdown-menu bg-white border-0" aria-labelledby="all-games-link">
                 <a href="{% url 'games' %}?sort=category&direction=asc"class="dropdown-item ml-4 ml-lg-0">By Category</a>
                 <a href="{% url 'games' %}?sort=name&direction=asc" class="dropdown-item ml-4 ml-lg-0">By Name</a>
@@ -20,6 +23,7 @@
             <a class="nav-link ml-4 mr-lg-5" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Games
             </a>
+            <!-- Dropdown menu where shopper can choose to view all games, or by their category only -->
             <div class="dropdown-menu bg-white border-0" aria-labelledby="games-link">
                 <a href="{% url 'games' %}"  class="dropdown-item ml-4 ml-lg-0">All Games</a>
                 <a href="{% url 'games' %}?category=playstation" class="dropdown-item ml-4 ml-lg-0">PlayStation</a>
@@ -28,10 +32,12 @@
                 <a href="{% url 'games' %}?category=pc" class="dropdown-item ml-4 ml-lg-0">PC Classics</a>
             </div>
         </li>
+        <!-- Special offers dropdown menu -->
         <li class="nav-item dropdown">
             <a class="nav-link ml-4 mr-lg-5" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Special Offers
             </a>
+            <!-- Clearance link -->
             <div class="dropdown-menu bg-white border-0" aria-labelledby="specials-link">
                 <a href="{% url 'games' %}?category=clearance" class="dropdown-item ml-4 ml-lg-0">Clearance</a>
             </div>

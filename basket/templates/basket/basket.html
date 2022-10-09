@@ -12,16 +12,19 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <!-- Shopping basket container -->
     <div class="container mb-2">
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
+                <!-- Shopping basket page title -->
                 <h2 class="logo-font mb-4 text-uppercase">Shopping Basket</h2>
                 <hr class="mb-1">
             </div>
         </div>
         <div class="row">
             <div class="col">
+                <!-- If anything in the basket, summary will show -->
                 {% if basket_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
@@ -37,16 +40,20 @@
                             {% for item in basket_items %}
                                 <tr>
                                     <td class="p-3 w-25">
+                                        <!-- Displays game image if image exists -->
                                         {% if item.game.image %}
                                         <img class="img-fluid rounded" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
+                                        <!-- If image doesn't exists, placeholder image is displayed instead -->
                                         {% else %}
                                         <img class="img-fluid rounded" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ item.game.name }}">
                                         {% endif %}
                                     </td>
+                                    <!-- Game name and SKU number -->
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.game.name }}</strong></p>
                                         <p class="my-0 small text-muted">SKU: {{ item.game.sku|upper }}</p>
                                     </td>
+                                    <!-- Game price -->
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.game.price }}</p>
                                     </td>
@@ -56,6 +63,7 @@
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
+                                                        <!-- Button to decrease quantity -->
                                                         <button class="decrement-qty btn btn-sm btn-warning rounded-0" 
                                                             data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
                                                             <span>
@@ -68,6 +76,7 @@
                                                         data-item_id="{{ item.item_id }}"
                                                         id="id_qty_{{ item.item_id }}">
                                                     <div class="input-group-append">
+                                                        <!-- Button to increase quantity -->
                                                         <button class="increment-qty btn btn-sm btn-black rounded-0"
                                                             data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
                                                             <span>
@@ -78,15 +87,19 @@
                                                 </div>
                                             </div>
                                         </form>
+                                        <!-- Link to update the basket or to delete game from the basket -->
                                         <a class="update-link text-info"><small>Update</small></a>
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
+                                    <!-- Subtotal -->
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.game.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
+                            <!-- Button to take shopper to all games page -->
                             <tr>
+                                <!-- Subtotal, delivery charges, total, if minimum not met, message saying how much more shopper needs to spend for free delivery -->
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
@@ -100,12 +113,14 @@
                             </tr>
                             <tr>
                                 <td colspan="5" class="text-right">
+                                    <!-- Button to take shopper to all games page -->
                                     <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
+                                    <!-- Button to take shopper to checkout page -->
                                     <a href="{% url 'checkout' %}" class="btn btn-black btn-lg">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
@@ -116,8 +131,10 @@
                             </tr>
                         </table>
                     </div>
+                <!-- If no games in the basket, button with all games page link will appear -->
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
+                    <!-- Button to take shopper to all games page -->
                     <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>

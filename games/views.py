@@ -20,7 +20,6 @@ def all_games(request):
     sort = None
     direction = None
     reviews = GameReview.objects.all()
-    game_reviews_count = []
 
     if request.GET:
         if 'sort' in request.GET:
@@ -59,7 +58,6 @@ def all_games(request):
 
     for game in games:
         reviews = GameReview.objects.all().filter(game=game)
-        game_reviews_count.append(len(reviews))
 
     context = {
         'games': games,

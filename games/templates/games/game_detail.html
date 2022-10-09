@@ -11,6 +11,7 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <!-- Game detail container -->
     <div class="container-fluid">
         <div class="row games-header">
             <div class="col-lg-5 game-image">
@@ -20,7 +21,7 @@
                     <a href="{{ game.image.url }}" target="_blank">
                         <img class="img-responsive" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                     </a>
-                    <!-- Otherwise placeholder image is displayed instead -->
+                    <!-- If image doesn't exists, placeholder image is displayed instead -->
                     {% else %}
                     <a href="">
                         <img class="img-responsive" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG"
@@ -179,15 +180,16 @@
                     <div class="modal-dialog">
                         <div class="modal-content text-black">
                             <div class="modal-header">
-                                <h5 class="modal-title">Delete review</h5>
+                                <h5 class="modal-title text-uppercase">Delete review</h5>
                             </div>
                             <div class="modal-body">
                                 <p>Are you sure? This action cannot be reversed</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-dark"
+                                <!-- Cancel and delete button -->
+                                <button type="button" class="btn btn-dark text-uppercase"
                                     data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-danger" href="{% url 'delete_review' game.id review.id %}"
+                                <a class="btn btn-danger text-uppercase" href="{% url 'delete_review' game.id review.id %}"
                                     id="{{ review.id }}">Delete</a>
                             </div>
                         </div>

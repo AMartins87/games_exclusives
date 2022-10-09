@@ -9,10 +9,12 @@
 
 {% block content %}
     <div class="overlay"></div>
+    <!-- Add game container -->
     <div class="container mb-2">
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
+                <!-- Add new game page titles -->
                 <h2 class="logo-font mb-4">Game Management</h2>
                 <h5 class="text-muted">Add a Game</h5>
                 <hr class="mb-1">
@@ -21,6 +23,7 @@
 
         <div class="row text-center">
             <div class="col-12 col-lg-6">
+                <!-- Add new game form -->
                 <form method="POST" action="{% url 'add_game' %}" class="form mb-2" enctype="multipart/form-data">
                     {% csrf_token %}
                     {% for field in form %}
@@ -31,6 +34,7 @@
                         {% endif %}
                     {% endfor %}
                     <div class="text-centre">
+                        <!-- Cancel and Add newg ame buttons -->
                         <a class="btn btn-outline-black text-uppercase" href="{% url 'games' %}">Cancel</a>
                         <button class="btn btn-dark text-uppercase" type="submit">Add New Game</button>
                     </div>
@@ -42,6 +46,7 @@
 
     {% block postloadjs %}
         {{ block.super }}
+        <!-- JS to replace/upload new image -->
         <script type="text/javascript">
             $('#new-image').change(function() {
                 var file = $('#new-image')[0].files[0];

@@ -1,16 +1,19 @@
 <div class="list-inline-item">
     <li class="list-inline-item">
         <a class="text-black nav-link d-block d-lg-none text-uppercase" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <!-- Search bar and icon -->
             <div class="text-center">
                 <div><i class="fas fa-search fa-lg"></i></div>
                 <p class="my-0">Search</p>
             </div>
         </a>
         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+            <!-- Search form -->
             <form class="form" method="GET" action="{% url 'games' %}">
                 <div class="input-group w-100">
                     <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search Games Exclusives">
                     <div class="input-group-append">
+                        <!-- Search form button in form of magnifying glass icon -->
                         <button class="form-control form-control btn btn-black border border-black rounded-0" type="submit">
                             <span class="icon">
                                 <i class="fas fa-search"></i>
@@ -21,7 +24,9 @@
             </form>
         </div>
     </li>
+    <!-- Favourites page link with icon -->
     <li class="list-inline-item" id="large-screen">
+        <!-- If shopper is logged in, it will take them to their favourites list page -->
         {% if request.user.is_authenticated %}
             <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
                 <div class="text-center">
@@ -32,6 +37,7 @@
                 </div>
             </a>
         {% else %}
+        <!-- If shopper is not logged in, it will redirect the shopper to login page -->
         {% csrf_token %}
             <a class="text-black nav-link d-block d-lg-none" href="{% url 'account_login' %}" ><div class="text-center">
                 <div>
@@ -41,6 +47,7 @@
             </a>
         {% endif %}
     </li>
+    <!-- Account dropdown menu -->
     <li class="list-inline-item dropdown">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <div class="text-center">
@@ -49,24 +56,29 @@
             </div>
         </a>
         <div class="dropdown-menu border-0" aria-labelledby="user-options">
+            <!-- If user logged in as admin - game management and admin dashboard link will be in the dropdown with Profile and Logout -->
             {% if request.user.is_authenticated %}
             {% if request.user.is_superuser %}
             <a href="'admin/'" class="dropdown-item">Admin dashboard</a>
             <a href="{% url 'add_game' %}" class="dropdown-item">Game Management</a>
             {% endif %}
+            <!-- If user logged in as shopper - only My Profile and Logout link will be in the dropdown -->
             <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
             <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
             {% else %}
-                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+            <!-- If user logged not logged in - only Register and Login links will be in the dropdown -->
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
             {% endif %}
         </div>
     </li>
+    <!-- Shopping basket link and icon --><!-- Shopping basket link and icon -->
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-black {% else %}text-black{% endif %} nav-link d-block d-lg-none" href="{% url 'view_basket' %}">
             <div class="text-center">
                 <div><i class="fa-solid fa-basket-shopping fa-lg"></i></div>
                 <p class="my-0">
+                    <!-- Total cost of games in a basket -->
                     {% if grand_total %}
                         £{{ grand_total|floatformat:2 }}
                     {% else %}

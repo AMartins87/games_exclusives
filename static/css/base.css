@@ -194,11 +194,6 @@ a:hover {
     font-size: medium;
 }
 
-/*...............................................Contact Form */
-
-#contact-container {
-}
-
 /*...............................................Profile page */
 
 .profile {
@@ -210,9 +205,9 @@ a:hover {
     font-weight: 600;
 }
 
-.game-card:hover {
-   
-    
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
 
 /*...............................................Game Detail page */

@@ -11,18 +11,24 @@
 
 {% block content %}
 <div class="overlay"></div>
+    <!-- Games page container -->
     <div class="container-fluid">
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
+                <!-- Games page title -->
                 <h3 class="logo-font mb-4 text-uppercase">Games</h3>
-
-                {% for c in current_categories %}
+                <!-- Category badges -->
+                <div class="col text-center">
+                    {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-info">{{ c.friendly_name }}</span>
+                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
                     </a>
-                {% endfor %}
-                <hr class="mb-1">
+                    {% endfor %}
+                    <hr class="mb-1">
+                </div>
+
+                
             </div>
         </div>
         <div class="row games">
@@ -30,14 +36,15 @@
                 <div class="row mt-1 mb-2 justify-content-end">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
+                            <!-- Category, Name, Price sorting -->
                             <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
-                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
-                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
-                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
-                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
                                 <option value="category_asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)</option>
                                 <option value="category_desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category (Z-A)</option>
+                                <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                                <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                                <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
+                                <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
                             </select>
                         </div>
                     </div>
@@ -46,19 +53,23 @@
                     {% for game in games %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card game-card border-0">
+                                <!-- Displays game image if image exists -->
                                 {% if game.image %}
                                 <a href="{% url 'game_detail' game.id %}" class="text-center">
                                     <img class="card-img-top img-fluid game-img" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                                 </a>
+                                <!-- If image doesn't exists, placeholder image is displayed instead -->
                                 {% else %}
                                 <a href="{% url 'game_detail' game.id %}" class="text-center">
                                     <img class="card-img-top img-fluid game-img" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
                                 </a>
                                 {% endif %}
+                                <!-- Game name, price -->
                                 <div class="games-card-body pb-0 bg-white">
                                     <p class="ml-3 mb-0 game-name">{{ game.name }}</p>
                                 </div>
                                 <p class="lead ml-3 mb-0 text-left">£{{ game.price }}</p>
+                                <!-- Game category-->
                                 {% if game.category %}
                                 <p class="small ml-3 mb-0">
                                     <a class="text-muted" href="{% url 'games' %}?category={{ game.category.name }}">
@@ -87,7 +98,7 @@
                                 </a>
                                 <input type="hidden" name="redirect_url" value="{{ request.path }}">
                                 {% endif %}
-                                    <!-- If logged in as admin, Edit and Delete links will show -->
+                                <!-- If logged in as admin, Edit and Delete links will show -->
                                 <div class="float-right">
                                     {% if request.user.is_superuser %}
                                         <small class="float-right">
@@ -135,12 +146,13 @@
 
 {% block postloadjs %}
     {{ block.super }}
+    <!-- Scroll up arrow JS -->
     <script type="text/javascript">
         $('.scroll-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
-    
+    <!-- Sorting function JS -->
     <script type="text/javascript">
         $('#sort-selector').change(function() {
             var selector = $(this);

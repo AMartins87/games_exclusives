@@ -13,10 +13,12 @@
 {% block content %}
 
     <div class="overlay"></div>
+    <!-- Favourites page container -->
     <div class="container mb-2">
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
+                <!-- Favourites  page title -->
                 <h2 class="logo-font text-uppercase mb-4">Favourites</h2>
                 <hr class="mb-1">
             </div>
@@ -34,17 +36,21 @@
             <!-- Saved favourite games -->
             {% for game in favourites.games.all %}
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
+                    <!-- Displays game image if image exists -->
                     {% if game.image %}
                     <a href="{% url 'game_detail' game.id %}">
                         <img class="card-img-top img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                     </a>
+                    <!-- If image doesn't exists, placeholder image is displayed instead -->
                     {% else %}
                     <a href="{% url 'game_detail' game.id %}">
                         <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
                     </a>
+                    <!-- Game name, price -->
                     {% endif %}
                     <h6 class="mb-0 game-title">{{ game.name }}</h6>
                     <p class="lead mb-0 text-left">£{{ game.price }}</p>
+                    <!-- Game category -->
                     {% if game.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'games' %}?category={{ game.category.name }}">
@@ -52,6 +58,7 @@
                         </a>
                     </p>
                     {% endif %}
+                    <!-- View game details link and delete from favourites button link -->
                     <small>
                         <a href="{% url 'game_detail' game.id %}" title="View details">Details</a> &nbsp; |  &nbsp;
                         <a class="text-danger" href="{% url 'remove_from_favourites' game.id %}" title="Remove from favourites"><i class="fas fa-trash"></i></a>
@@ -63,6 +70,7 @@
 {% endblock content %}
 
 {% block postloadjs %}
+    <!-- Scroll up arrow JS -->
     {{ block.super }}
     <script type="text/javascript">
         $('.btn-link').click(function(e) {
