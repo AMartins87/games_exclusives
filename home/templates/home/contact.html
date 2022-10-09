@@ -13,7 +13,7 @@
         <div class="row header">
             <div class="col text-center mt-3">
                 <hr>
-                <h2 class="logo-font mb-4">Contact us</h2>
+                <h2 class="logo-font mb-4 text-uppercase">Contact us</h2>
                 <p class="lead text-center">Have you got a question? Suggestion? Would you like to leave a compliment?</p>
                 <p class="lead text-center">Fill in the form below and we'll be in touch shortly!</p>
                 <hr class="mb-1">
@@ -21,10 +21,10 @@
         </div>
         <div class="row text-center" id="contact-container">
             <div class="col-12 col-lg-6">
-                <form action="" method="POST" class="form my-3" enctype="multipart/form-data">
+                <form action="" method="POST" class="form my-3 text-uppercase" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ contact_form|crispy }}
-                    <button type="submit" class="btn btn-danger text-center">Send</button>
+                    <button type="submit" class="btn btn-danger text-center text-uppercase">Send</button>
                 </form>
             </div>
         </div>
@@ -53,8 +53,8 @@
                                             id="mce-EMAIL" placeholder="Enter your email here...">
                                         <div class="optionalParent">
                                             <div class="clear foot text-center">
-                                                <input type="submit" value="Sign Up" name="subscribe"
-                                                    class="btn btn-dark">
+                                                <input type="submit" value="Subscribe" name="subscribe"
+                                                    class="btn btn-dark text-uppercase">
                                             </div>
                                         </div>
                                     </div>
