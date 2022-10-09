@@ -43,12 +43,11 @@ h1, h2, h3, h4 {
 }
 
 .hero-container {
-	background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665242517/media/homepage_background.jpg') no-repeat center center;
-	background-size: cover;
-	height: 75vh;
+	background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665242517/media/homepage_background.jpg');
+    background-size: 100% 100%;
+    width: 100%;
+    height: 75vh;
 	position: relative;
-    margin-top: 20px;
-	max-width: 100%;
 }
 
 .hero-info {
@@ -537,7 +536,7 @@ footer ul li{
     }
 
     .hero-container  {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665258965/media/homepage_background_md.jpg') no-repeat center center;
+        background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665258965/media/homepage_background_md.jpg');
     }
 }
 
@@ -554,7 +553,7 @@ footer ul li{
 
 @media (max-width: 576px) {
     .hero-container  {
-        background: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665333126/media/background_image_small.jpg') no-repeat center center;
+        background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665333126/media/background_image_small.jpg');
     }
 
     .navbar {
