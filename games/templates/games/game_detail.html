@@ -13,18 +13,18 @@
     <div class="overlay"></div>
     <!-- Game detail container -->
     <div class="container-fluid">
-        <div class="row games-header">
+        <div class="row header">
             <div class="col-lg-5 game-image">
                 <div class="image-container my-5">
                     <!-- Displays game image if image exists -->
                     {% if game.image %}
                     <a href="{{ game.image.url }}" target="_blank">
-                        <img class="img-responsive" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
+                        <img class="img-fluid" width="360" height="445" src="{{ game.image.url }}" alt="{{ game.name }}">
                     </a>
                     <!-- If image doesn't exists, placeholder image is displayed instead -->
                     {% else %}
                     <a href="">
-                        <img class="img-responsive" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG"
+                        <img class="img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG"
                             alt="{{ game.name }}">
                     </a>
                     {% endif %}

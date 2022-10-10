@@ -22,7 +22,7 @@
                 <div class="col text-center">
                     {% for c in current_categories %}
                     <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
-                        <span class="p-2 mt-2 badge badge-white text-black rounded-0 border border-dark">{{ c.friendly_name }}</span>
+                        <span class="p-2 mt-2 badge badge-white text-dark rounded border">{{ c.friendly_name }}</span>
                     </a>
                     {% endfor %}
                     <hr class="mb-1">

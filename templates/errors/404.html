@@ -22,14 +22,13 @@
                 <h3 class="text-muted">Something went wrong</h3>
                 <hr class="mb-1">
             </div>
-            <div class="col-12 col-md-6 text-center">
+            <div class="col-lg-7 m-3 p-3">
                 <p>It looks like you're looking for page which doesn't exist.</p>
                 <p>Here are some links to help you find what you are looking for! </p>
-                
-                <div class="inline-flex"><a href="{% url 'contact' %}" class="btn btn-black-outline">Contact</a></div>
-                <div class="inline-flex"><a href="{% url 'home' %}" class="btn btn-dark">Home</a></div>
-
-            </div>
+                <hr class="mb-1">
+                <a href="{% url 'contact' %}" class="btn btn-outline-black my-3 text-uppercase">>Contact</a>
+                <a href="{% url 'home' %}" class="btn btn-dark my-3 text-uppercase">Home</a>
+            </div>            
         </div>
     </div>
 </div>
