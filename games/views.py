@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from django.db.models import Q, Avg
+from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Game, Category
@@ -19,7 +19,7 @@ def all_games(request):
     categories = None
     sort = None
     direction = None
-    reviews = GameReview.objects.all()
+    favourites = None
 
     if request.GET:
         if 'sort' in request.GET:
@@ -37,6 +37,7 @@ def all_games(request):
         
             games = games.order_by(sortkey)
 
+    if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             games = games.filter(category__name__in=categories)
@@ -49,22 +50,17 @@ def all_games(request):
                                "any search criteria!")
                 return redirect(reverse('games'))
 
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             games = games.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
-
-    favourites = None
-
-    for game in games:
-        reviews = GameReview.objects.all().filter(game=game)
 
     context = {
         'games': games,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
-        'reviews': reviews,
         'favourites': favourites,
     }
 
@@ -75,7 +71,6 @@ def game_detail(request, game_id):
     """ A view to show individual game details """
 
     game = get_object_or_404(Game, pk=game_id)
-
 
     context = {
         'game': game,

@@ -17,8 +17,6 @@ import dj_database_url
 if os.path.isfile('env.py'):
     import env
 
-DEVELOPMENT = os.environ.get('DEVELOPMENT', False)
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,9 +28,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
+DEVELOPMENT = os.environ.get('DEVELOPMENT', False)
+
 DEBUG = DEVELOPMENT
 
 ALLOWED_HOSTS = ['games-exclusives.herokuapp.com', 'localhost']
+
+if DEVELOPMENT:
+    ALLOWED_HOSTS = [
+        'localhost', '127.0.0.1', '127.0.0.1:8000', "games-exclusives.herokuapp.com"]
+else:
+    ALLOWED_HOSTS = ["games-exclusives.herokuapp.com"]
 
 
 # Application definition
