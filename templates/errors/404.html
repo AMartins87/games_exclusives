@@ -16,19 +16,21 @@
 <div class="overlay"></div>
     <div class="container mb-2">
         <div class="row header">
+            <!-- Contact form header and text -->
             <div class="col text-center mt-3">
                 <hr>
-                <h2 class="logo-font mb-4">Error 404</h2>
-                <h4 class="text-muted">Something went wrong</h4>
+                <h2 class="logo-font mb-4 text-uppercase">Error 404</h2>
+                <h4 class="text-danger">Something went wrong</h4>
                 <hr class="mb-1">
+                <p class="lead">It looks like you're looking for page which doesn't exist.</p>
+                <p class="lead">Here are some links to help you find what you are looking for!</p>
             </div>
-            <div class="col-lg-7 m-3 p-3">
-                <p>It looks like you're looking for page which doesn't exist.</p>
-                <p>Here are some links to help you find what you are looking for! </p>
-                <hr class="mb-1">
-                <a href="{% url 'contact' %}" class="btn btn-outline-black my-3 text-uppercase">>Contact</a>
+        </div>
+        <div class="row text-center">
+            <div class="col-12 col-lg-6">
+                <a href="{% url 'contact' %}" class="btn btn-outline-black my-3 text-uppercase">Contact</a>
                 <a href="{% url 'home' %}" class="btn btn-dark my-3 text-uppercase">Home</a>
-            </div>            
+            </div>
         </div>
     </div>
 </div>
