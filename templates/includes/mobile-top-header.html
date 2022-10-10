@@ -24,29 +24,6 @@
             </form>
         </div>
     </li>
-    <!-- Favourites page link with icon -->
-    <li class="list-inline-item" id="large-screen">
-        <!-- If shopper is logged in, it will take them to their favourites list page -->
-        {% if request.user.is_authenticated %}
-            <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
-                <div class="text-center">
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                        <p class="my-0 text-uppercase">Favourites</p>
-                    </div>
-                </div>
-            </a>
-        {% else %}
-        <!-- If shopper is not logged in, it will redirect the shopper to login page -->
-        {% csrf_token %}
-            <a class="text-black nav-link d-block d-lg-none" href="{% url 'account_login' %}" ><div class="text-center">
-                <div>
-                    <i class="fa-regular fa-heart"></i>
-                    <p class="my-0 text-uppercase">Favourites</p>
-                </div>
-            </a>
-        {% endif %}
-    </li>
     <!-- Account dropdown menu -->
     <li class="list-inline-item dropdown">
         <a class="text-black nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -71,6 +48,29 @@
             <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
             {% endif %}
         </div>
+    </li>
+    <!-- Favourites page link with icon -->
+    <li class="list-inline-item" id="large-screen">
+        <!-- If shopper is logged in, it will take them to their favourites list page -->
+        {% if request.user.is_authenticated %}
+            <a class="text-black nav-link" href="{% url 'favourites' %}" title="Favourites">
+                <div class="text-center">
+                    <div>
+                        <i class="fa-regular fa-heart"></i>
+                        <p class="my-0 text-uppercase">Favourites</p>
+                    </div>
+                </div>
+            </a>
+        {% else %}
+        <!-- If shopper is not logged in, it will redirect the shopper to login page -->
+        {% csrf_token %}
+            <a class="text-black nav-link d-block d-lg-none" href="{% url 'account_login' %}" ><div class="text-center">
+                <div>
+                    <i class="fa-regular fa-heart"></i>
+                    <p class="my-0 text-uppercase">Favourites</p>
+                </div>
+            </a>
+        {% endif %}
     </li>
     <!-- Shopping basket link and icon --><!-- Shopping basket link and icon -->
     <li class="list-inline-item">
