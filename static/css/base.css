@@ -750,4 +750,9 @@ footer ul li{
     .game-name {
         font-size: 0.9rem;
     }
+    
+    /* Game detail */
+    .games-header {
+        margin-top: 10vh!important;
+    }
 }
