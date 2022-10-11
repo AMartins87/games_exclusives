@@ -35,7 +35,7 @@
             </div>
             <!-- Saved favourite games -->
             {% for game in favourites.games.all %}
-                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="games-display">
+                <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3" id="fav-display">
                     <!-- Displays game image if image exists -->
                     {% if game.image %}
                     <a href="{% url 'game_detail' game.id %}">
@@ -72,7 +72,7 @@
 {% block postloadjs %}
     <!-- Scroll up arrow JS -->
     {{ block.super }}
-    <script type="text/javascript">
+    <script>
         $('.btn-link').click(function(e) {
             window.scrollTo(0,0)
         })

@@ -232,7 +232,7 @@ a.category-badge > span.badge:hover {
 
 /*...............................................Favourites page */
 
-#games-display {
+#games-display, #fav-display {
     margin-bottom: 5vh;
     padding: 10px;
 }
@@ -271,45 +271,30 @@ body > footer {
 }
 
 footer.background {
-    width: 100%;
-    padding-top: 1rem;
     background-color: #e85320;
-    padding:10px 70px 0px;
+    padding:1rem;
 }	       
 
-footer ul li{
-   padding:5px 0px;
-   text-decoration: none;
+.social-div { 
+    font-size: 3vw;
 }
 
-.copyright span , .links span , .social span {
-  color: #FFF; 
-  font-weight: 800; 
-  padding-bottom: 10px; 
-  margin-bottom: 20px;
-  display: block;
-  text-transform: uppercase;
-  font-size: 20px;
+.social a {
+    color: white;
+    padding-inline: 25px;
 }
 
-.copyright li p , .links li a , .social li a {
-   color:#FFF;
-   text-decoration: none;
-   font-size: 15px;
-}
-
-.social li {
-   float: left;
-}
-
-.social li a {
-    letter-spacing: 25px;
+.social-icons {
     font-size: x-large;
- }
- 
-.copyright , .links , .social {
-   list-style: none;
 }
+
+.social a {
+    color: white;
+    font-size: 3vh;
+    padding-inline: 20px;
+}
+ 
+ 
 
 .fa {
    color: white;
@@ -606,23 +591,11 @@ footer ul li{
     }
 
     /* Footer styling*/
-    .copyright {
-        display: none;
-    }
     footer.background {
         padding: 10px 0;
-
     }
 
-    .footer {
-        text-align: center;
-    }
-
-    footer ul li {
-        display: contents;
-    }
-
-    .links span, .social span {
+    .links, .social  {
         font-size: 0.9rem;
         padding-bottom: 5px;
         margin-bottom: 10px;
@@ -641,12 +614,6 @@ footer ul li{
 
     .social {
         margin-top: 10px;
-    }
-
-    .social li {
-        display: inline;
-        float: none;
-        padding: 5px;
     }
 
     .links, .social {

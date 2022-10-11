@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" id="games-display">
+                <div class="row games-display">
                     {% for game in games %}
                         <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                             <div class="card game-card border-0">
@@ -147,13 +147,13 @@
 {% block postloadjs %}
     {{ block.super }}
     <!-- Scroll up arrow JS -->
-    <script type="text/javascript">
+    <script>
         $('.scroll-link').click(function(e) {
             window.scrollTo(0,0)
         })
     </script>
     <!-- Sorting function JS -->
-    <script type="text/javascript">
+    <script>
         $('#sort-selector').change(function() {
             var selector = $(this);
             var currentUrl = new URL(window.location);
