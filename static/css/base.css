@@ -167,13 +167,13 @@ a:hover {
 
 /*...............................................Scroll arrow in a circle */
 
-.scroll-link {
+/* .scroll-link {
     position: fixed;
     font-size: xxx-large;
     bottom: 10px;
     right: 10px;
 }
-   
+    */
 
 /*...............................................Forms */
 
@@ -265,9 +265,8 @@ a.category-badge > span.badge:hover {
 /*...............................................Footer */
 
 body > footer {
-    position: sticky;
-    top: 100vh;
-    clear: right;
+    position: relative;
+    clear: both;
 }
 
 footer.background {
@@ -276,25 +275,14 @@ footer.background {
 }	       
 
 .social-div { 
-    font-size: 3vw;
+    font-size: 2vw;
 }
 
-.social a {
+a.social i {
     color: white;
     padding-inline: 25px;
 }
 
-.social-icons {
-    font-size: x-large;
-}
-
-.social a {
-    color: white;
-    font-size: 3vh;
-    padding-inline: 20px;
-}
- 
- 
 
 .fa {
    color: white;
@@ -595,9 +583,12 @@ footer.background {
         padding: 10px 0;
     }
 
+    .social-div { 
+        font-size: 2vw;
+    }
+
     .links, .social  {
-        font-size: 0.9rem;
-        padding-bottom: 5px;
+        font-size: 1.5rem;
         margin-bottom: 10px;
     }
 
@@ -612,12 +603,7 @@ footer.background {
         padding: 15px 15px;
     }
 
-    .social {
-        margin-top: 10px;
-    }
-
     .links, .social {
-        float: none;
         padding: 0;
     }
 
