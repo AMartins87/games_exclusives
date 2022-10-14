@@ -172,4 +172,6 @@ Full deployment procedure can be found [here].
 
 # CREDITS
 
+Favicon - https://www.flaticon.com/free-icon/game-console_2949874 
+
 ## ACKNOWLEDGEMENTS
