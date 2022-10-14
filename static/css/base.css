@@ -136,10 +136,10 @@ h1, h2, h3, h4 {
     color: black;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: rgb(134, 7, 7);
+.btn-dark:hover,
+.btn-dark:active,
+.btn-dark:focus {
+    background: #d48817;
     color: white !important;
 }
 
@@ -205,6 +205,10 @@ a:hover {
     text-transform: uppercase;
 }
 
+.profile-header {
+    margin-top: 10vh!important; 
+}
+
 /*...............................................All Games page */
 .game-name {
     font-weight: 600;
@@ -265,8 +269,6 @@ a.category-badge > span.badge:hover {
     color: red;
 }
 
-/*...............................................Order confirmation page */
-
 /*...............................................Footer */
 
 footer.background {
@@ -274,6 +276,7 @@ footer.background {
     position: relative;
     width: 100%;
     height: auto;
+    padding-top: 2px;
 }	       
 
 .social-div { 
@@ -299,7 +302,7 @@ a.social i {
     transform: scale(1.5);
 }
 
-.links a:hover, .privacy a:hover {
+.links a:hover, .privacy:hover {
     font-size: 120%;
     font-weight: bold;
 }
@@ -347,7 +350,7 @@ a.social i {
 
 .allauth-form-inner-content button:hover,
 .allauth-form-inner-content input[type='submit']:hover {	
-	background: rgb(134, 7, 7);
+	background: #d48817;
     color: white !important;
     border-color: black;
 }
@@ -483,12 +486,16 @@ a.social i {
         font-size: 1rem;
     }
 
-    .header, .container-header {
-        margin-top:  20vh!important;
+    .header {
+        margin-top: 15vh!important;
     }
 
     .games-header {
         margin-top: 25vh!important;
+    }
+
+    .header-container {
+        margin-top: 5vh;
     }
 
 }
@@ -503,6 +510,10 @@ a.social i {
     .header, .container-header {
         margin-top:  13vh!important;
     }
+
+    .profile-header {
+        margin-top: 10vh!important; 
+    }
 }
 
 @media (max-width:768px) {
@@ -514,13 +525,21 @@ a.social i {
     .header {
         margin-top: 13vh!important;
     }
+
+    .nav-link {
+        font-size:0.8rem;
+    }
+    
+    .form-add {
+        width: max-content;
+    }
+    
+    span.btn-warning {
+        width: 65vw;
+    }
 }
 
 @media (max-width: 576px) {
-    .navbar {
-        margin-right: 35px;
-    }   
-
     .delivery-banner {
         font-size: 1rem;
     }
@@ -639,7 +658,7 @@ a.social i {
 
     /* Menu, account, favourites, basket */ 
     .navbar {
-        margin-right: 65px;
+        padding: 0.1rem 0.3rem;
     } 
 
     .nav-link {
