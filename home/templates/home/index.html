@@ -13,18 +13,21 @@
 
     <section class="container-fluid px-0">
         <!-- Background image -->
-        <div class="hero-container img-fluid">
-            <div class="row h-100 mx-0">
-                <!-- Overlay text -->
-                <div class="col text-center text-lg-right">
-                    <h1 class="pt-4 hero-info">Games <span class="uppercap">exclusive only</span> to your console !</h1>
-                </div>
-                <!-- Button with link to all games page -->
-                <h2>
-                    <a href="{% url 'games' %}" class="shop-now-btn btn btn-lg">Shop Now</a>
-                </h2>
+        
+            <div class="hero-container img-fluid">
+                <div class="img-overlay">
+                    <div class="row h-100 mx-0">
+                        <!-- Overlay text -->
+                        <div class="col text-center text-lg-right">
+                            <h1 class="pt-4 hero-info">Games <span class="uppercap">exclusive only</span> to your console !</h1>
+                        </div>
+                        <!-- Button with link to all games page -->
+                        <h2>
+                            <a href="{% url 'games' %}" class="shop-now-btn btn btn-lg">Shop Now</a>
+                        </h2>
+                    </div>
+                 </div>
             </div>
-        </div>
     </section>
     <!-- Mailchimp Signup Form -->
     <div class="container-fluid bg-white p-1">

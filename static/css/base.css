@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    min-height:200vh;
+    min-height: auto;
     display: flex;
     flex-direction: column;
     font-family: 'Electrolize', sans-serif;
@@ -42,9 +42,14 @@ h1, h2, h3, h4 {
 	z-index: -1;
 }
 
+.img-overlay {
+    background-color: #ffc1076e;
+    height: 100%;
+}
+
 .hero-container {
-	background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665242517/media/homepage_background.jpg');
-    background-size: 100% 100%;
+	background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665743443/media/homepage_background.png');
+    background-size: cover;
     width: 100%;
     height: 75vh;
 	position: relative;
@@ -67,6 +72,7 @@ h1, h2, h3, h4 {
 .uppercap {
     font-size: xxx-large;
     color: #032c9f;
+    text-shadow: 1px 1px 2px white;
 }
 
 .btt-link,
@@ -501,10 +507,6 @@ a.social i {
     .header, .container-header {
         margin-top:  13vh!important;
     }
-
-    .hero-container  {
-        background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665258965/media/homepage_background_md.jpg');
-    }
 }
 
 @media (max-width:768px) {
@@ -519,10 +521,6 @@ a.social i {
 }
 
 @media (max-width: 576px) {
-    .hero-container  {
-        background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665333126/media/background_image_small.jpg');
-    }
-
     .navbar {
         margin-right: 35px;
     }   
@@ -541,13 +539,8 @@ a.social i {
     }
 
     /* Main page hero text and button */
-    .hero-info {
-        font-size: 3vh;
-    }
-
     .uppercap {
         font-size: 4vh;
-        text-shadow: 1px 1px 2px yellow;
     }
 
     .scroll-link {
@@ -637,6 +630,14 @@ a.social i {
 
     .header {
         margin-top: 10vh!important;
+    }
+
+    .hero-info {
+        font-size: 4.5vh;
+    }
+
+    .uppercap {
+        font-size: 5vh;
     }
 
     /* Footer - social link icons and quick links */
