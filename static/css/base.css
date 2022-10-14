@@ -568,10 +568,6 @@ a.social i {
     }
 
     /* Footer styling*/
-    footer.background {
-        padding: 10px 0;
-    }
-
     .social-div { 
         font-size: 2vw;
     }
@@ -638,10 +634,6 @@ a.social i {
     }
 
     /* Footer - social link icons and quick links */
-    .social li a {
-        padding: 10px 10px;
-    }
-
     .links li a {
         padding: 5px;
     }
