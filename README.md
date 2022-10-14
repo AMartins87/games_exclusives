@@ -141,9 +141,9 @@ All wireframes were created using Balsamiq.
 
 Facebook and Instagram are our main marketing platforms. 
 
-I have created a Facebook dummy page for Games Exclusives. This page contains description of our online store in ***About*** section, you can also find a link to our application in there images of some of our games and also has a relevant tag and description as online retail store.
+I have created a [Facebook dummy page](https://www.facebook.com/profile.php?id=100086484473315) for Games Exclusives. This page contains description of our online store in ***About*** section, you can also find a link to our application in there images of some of our games and has a business description as video games store.
 
-![Facebook Page](media/wireframes/)
+![Facebook Page](media/wireframes/FB_page_overwiew.JPG)
 
 # **SEARCH ENGINE OPTIMISATION**
 
