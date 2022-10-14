@@ -5,9 +5,9 @@ html {
 }
 
 body {
-    height: calc(100vh - 164px);
-    margin: 0;
-    padding: 0;
+    min-height:200vh;
+    display: flex;
+    flex-direction: column;
     font-family: 'Electrolize', sans-serif;
 }
 
@@ -167,13 +167,13 @@ a:hover {
 
 /*...............................................Scroll arrow in a circle */
 
-/* .scroll-link {
+.scroll-link {
     position: fixed;
     font-size: xxx-large;
     bottom: 10px;
     right: 10px;
 }
-    */
+   
 
 /*...............................................Forms */
 
@@ -271,7 +271,7 @@ body > footer {
 
 footer.background {
     background-color: #e85320;
-    padding:1rem;
+    padding: 1rem;
 }	       
 
 .social-div { 
