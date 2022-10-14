@@ -269,14 +269,11 @@ a.category-badge > span.badge:hover {
 
 /*...............................................Footer */
 
-body > footer {
-    position: relative;
-    clear: both;
-}
-
 footer.background {
     background-color: #e85320;
-    padding: 1rem;
+    position: relative;
+    width: 100%;
+    height: auto;
 }	       
 
 .social-div { 

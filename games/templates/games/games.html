@@ -14,14 +14,14 @@
     <!-- Games page container -->
     <div class="container-fluid">
         <div class="row header">
-            <div class="col text-center mt-3">
+            <div class="col w-auto text-center mt-3">
                 <hr>
                 <!-- Games page title -->
                 <h3 class="logo-font mb-4 text-uppercase">Games</h3>
                 <!-- Category badges -->
-                <div class="col text-center">
+                <div class="col">
                     {% for c in current_categories %}
-                        <a class="category-badge text-decoration-none" href="{% url 'games' %}?category={{ c.name }}">
+                        <a class="category-badge text-decoration-none" href="{% url 'games' %}?categories={{ c.name }}">
                             <span class="p-2 mt-2 badge badge-white text-dark rounded border">{{ c.friendly_name }}</span>
                         </a>
                     {% endfor %}

@@ -16,8 +16,8 @@
         <div class="col text-center mt-3">
             <hr>
             <h2 class="logo-font mb-4 text-uppercase">Contact us</h2>
-            <p class="lead text-center">Have you got a question? Suggestion? Would you like to leave a compliment?</p>
-            <p class="lead text-center">Fill in the form below and we'll be in touch shortly!</p>
+            <p class="lead">Have you got a question? Suggestion? Would you like to leave a compliment?</p>
+            <p class="lead">Fill in the form below and we'll be in touch shortly!</p>
             <hr class="mb-1">
         </div>
     </div>
@@ -28,7 +28,7 @@
                 {% csrf_token %}
                 {{ contact_form|crispy }}
                 <!-- Contact form send button -->
-                <button type="submit" class="btn btn-danger text-center text-uppercase">Send</button>
+                <button type="submit" class="btn btn-danger font-weight-bold text-center w-auto text-uppercase">Send</button>
             </form>
         </div>
     </div>
@@ -67,8 +67,8 @@
                                 <div class="col-sm-0 col-md-3"></div>
                                 <!-- Confirmation message of (un)successful subcription -->
                                 <div id="mce-responses" class="clear foot">
-                                    <div class="response" id="mce-error-response" style="display:none"></div>
-                                    <div class="response" id="mce-success-response" style="display:none"></div>
+                                    <div class="response" id="mce-error-response" ></div>
+                                    <div class="response" id="mce-success-response"></div>
                                 </div>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                 <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
@@ -79,11 +79,13 @@
                     </div>
                 </form>
             </div>
-            <script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
-            <script>
-                (function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
-            <!--End mc_embed_signup-->
         </div>
     </div>
 </div>
 {% endblock content %}
+
+{% block postloadsjs %}
+<!-- Mailchimp JS -->
+<script src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+{% endblock %}
