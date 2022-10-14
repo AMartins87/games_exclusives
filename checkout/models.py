@@ -90,7 +90,7 @@ class OrderLineItem(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Override the original save method to set the lineitem total
+        Override the original save method to set the line item total
         and update the order total.
         """
         self.lineitem_total = self.game.price * self.quantity

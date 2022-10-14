@@ -1,3 +1,4 @@
+""" Basket app views """
 from django.shortcuts import (
      render, redirect, reverse, HttpResponse, get_object_or_404
 )
@@ -23,7 +24,7 @@ def add_to_basket(request, item_id):
         basket[item_id] += quantity
     else:
         basket[item_id] = quantity
-        messages.success(request, f'Added {game.name} to your basket')
+        messages.success(request, f' You added {game.name} to your basket')
 
     request.session['basket'] = basket
     return redirect(redirect_url)
@@ -56,7 +57,8 @@ def remove_from_basket(request, item_id):
         game = get_object_or_404(Game, pk=item_id)
         basket = request.session.get('basket', {})
         basket.pop(item_id)
-        messages.success(request, f'Removed {game.name} from your basket')
+        messages.success(request, f'You have succcessfully removed {game.name}'
+                         'from your basket!')
 
         request.session['basket'] = basket
         return HttpResponse(status=200)

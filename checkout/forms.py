@@ -4,6 +4,7 @@ from .models import Order
 
 
 class OrderForm(forms.ModelForm):
+    """ Creates order form for a shopper """
     class Meta:
         model = Order
         fields = ('full_name', 'email', 'phone_number',
@@ -13,8 +14,8 @@ class OrderForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders and classes, remove auto-generated
-        labels and set autofocus on first field
+        Adds placeholders and classes, removes auto-generated
+        labels and sets autofocus on first field
         """
         super().__init__(*args, **kwargs)
         placeholders = {

@@ -1,3 +1,4 @@
+""" Games url paths configuration """
 from django.urls import path
 from . import views
 

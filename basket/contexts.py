@@ -1,3 +1,4 @@
+""" Basket contexts"""
 from decimal import Decimal
 from django.conf import settings
 from django.shortcuts import get_object_or_404
@@ -5,7 +6,7 @@ from games.models import Game
 
 
 def basket_contents(request):
-
+    """ Puts together basket contents """
     basket_items = []
     total = 0
     game_count = 0

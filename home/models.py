@@ -1,3 +1,4 @@
+""" Contact model configuration """
 from django.db import models
 
 
