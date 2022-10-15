@@ -61,24 +61,49 @@ Documentation like README, TESTING md files and preview of my business Facebook 
 **Top navbar of a user who is not logged in:**
 Register | Login
 
-![Top navbar image - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
+![Top navbar - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
 
 **Top navbar when logged in as a standard user:**
 My Profile | Logout
-![Top navbar image - logged in](media/features/Top_nav_drop_account_user.JPG)
+![Top navbar - logged in](media/features/Top_nav_drop_account_user.JPG)
 
 **Top navbar when logged in as an admin:**
 Admin Dashboard | Game Management | My Profile | Logout
 
-![Top navbar image - admin login](media/features/Top_nav_drop_account_admin.JPG)
+![Top navbar - admin logged in](media/features/Top_nav_drop_account_admin.JPG)
 
-**Main navbar present on every page**
+**Main navbar with search banner on large screens**
 
-![Main navbar image](media/features/)
+![Main navbar on large screens](media/features/main_nav_lg.JPG)
 
 **Main navbar with collapsible menu icon for screens with a width of 991px or less**
 
-![Mobile navbar image](media/features/)
+![Main navbar on medium and small screens](media/features/Top_nav_bar_md_all.JPG)
+
+**Main navbar with collapsed menu for screens with a width of 991px or less**
+![Medium and small navbar collapsed](media/features/main_nav_md_sm.JPG)
+
+**Main navbar - games dropdown menu on large screens:**
+By Category | By Name | By Price 
+![Main navbar on large screens - games menu image](media/features/menu_drop_games.JPG)
+
+**Main navbar - games dropdown menu on screens with a width of 991px or less:**
+![Main navbar on medium and small screens - games menu](media/features/main_nav_md_sm_games.JPG)
+
+**Main navbar - all games dropdown menu on large screens:**
+All Games | PlayStation | Xbox | Nintendo | PC Classics
+![Main navbar on large screens - all games menu](media/features/menu_drop_all_games.JPG)
+
+
+**Main navbar - all games dropdown menu on screens with a width of 991px or less:**
+![Main navbaron medium and small screens - all games menu](media/features/main_nav_md_sm_all_games.JPG)
+
+**Main navbar - special offers dropdown menu on large screens:**
+Clearance 
+![Main navbar on large screens - special offers menu](media/features/menu_drop_clearance.JPG)
+
+**Main navbar - clearance dropdown menu on screens with a width of 991px or less:**
+![Main navbar on medium and small screens - special offers menu](media/features/main_nav_md_sm_clearance.JPG)
 
 **Home page with a welcome text box and *SHOP NOW* button**
 
@@ -88,13 +113,15 @@ Admin Dashboard | Game Management | My Profile | Logout
 
 ![Mailchimp subscription section](media/features/MC_subscribe_window_lg.JPG)
 
-    
-**Footer**
+**Footer on large screens**
 - Social media links for Facebook, Instagram and a link for a contact page
 - Policy Privacy link
 - Copyright information
 
-![Footer image](media/features/Footer_lg.JPG)
+![Footer on large screens](media/features/Footer_lg.JPG)
+
+**Footer on medium and small screens with a width of 767px or less**
+![Footer on medium and small screens](media/features/Footer_sm.JPG)
 
 ## All Games
 
