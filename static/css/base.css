@@ -172,12 +172,16 @@ a:hover {
 }
 
 /*...............................................Scroll arrow in a circle */
-
-.scroll-link {
+.btt-button {
     position: fixed;
-    font-size: xxx-large;
+    height: 42px;
+    width: 42px;
     bottom: 10px;
     right: 10px;
+}
+
+.scroll-link {
+    font-size: xxx-large;
 }
 
 /*...............................................Forms */
@@ -307,58 +311,6 @@ a.social i {
     font-weight: bold;
 }
 
-/*...............................................Allauth form formatting */
-
-.allauth-form-inner-content p {
-    margin-top: 1.5rem;
-    color: black;
-}
-    
-
-.allauth-form-inner-content input {
-    border-color: #000;
-}
-
-.allauth-form-inner-content label:not([for='id_remember']) {
-    display: none;
-}
-
-.allauth-form-inner-content input::placeholder {
-    color: #aab7c4;
-}
-
-.allauth-form-inner-content button,
-.allauth-form-inner-content input[type='submit'] {
-	/* btn */
-    display: inline-block;
-    font-weight: 400;
-    color: #fff;
-    text-align: center;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    background-color: #000;
-    border: 1px solid #000;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    border-radius: 25px;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-
-.allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	background: #d48817;
-    color: white !important;
-    border-color: black;
-}
-
-/* .allauth-form-inner-content a {
-	color: #17a2b8;
-} */
-
 /*...............................................Mailchimp */
 
 #mc_embed_signup_email {
@@ -412,7 +364,7 @@ a.social i {
     height: 2px;
 }
 
-/*...............................................Convenience classes - colors copied from Bootstrap */
+/*...............................................Convenience classes */
 
 .bag-notification-wrapper {
     height: 100px;
@@ -466,6 +418,17 @@ a.social i {
     line-height: 1.5;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	background: #d48817;
+    color: white !important;
+    border-color: black;
+}
+
+/* .allauth-form-inner-content a {
+	color: #17a2b8;
+} */
 
 /*...............................................Media Queries */
 
