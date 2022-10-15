@@ -203,6 +203,10 @@ a:hover {
     font-size: medium;
 }
 
+.form-add {
+    margin: 0 auto;
+}
+
 /*...............................................Profile page */
 
 .profile {
@@ -281,6 +285,7 @@ footer.background {
     width: 100%;
     height: auto;
     padding-top: 2px;
+    margin-block: inherit;
 }	       
 
 .social-div { 
@@ -441,16 +446,16 @@ a.social i {
         display: none;
     }
 
+    .header {
+        margin-top: 15vh!important;
+    }
+
     .nav-link {
         font-size: 0.85rem;
     }
 
     .nav-item {
         font-size: 1rem;
-    }
-
-    .header {
-        margin-top: 15vh!important;
     }
 
     .games-header {
@@ -470,7 +475,11 @@ a.social i {
 }
 
 @media (max-width:992px) {
-    .header, .container-header {
+    .header {
+        margin-top: 15vh!important;
+    }
+
+    .container-header {
         margin-top:  13vh!important;
     }
 
@@ -483,10 +492,6 @@ a.social i {
     .mob-nav {
         margin-left: 5px;
         margin-right: 5px;
-    }
-
-    .header {
-        margin-top: 13vh!important;
     }
 
     .nav-link {
@@ -602,10 +607,6 @@ a.social i {
         font-size: 0.9rem;
     }
 
-    .header {
-        margin-top: 10vh!important;
-    }
-
     .hero-info {
         font-size: 4.5vh;
     }
@@ -654,6 +655,13 @@ a.social i {
     a, .profile {
         font-size: small;
     }
+
+    /* Add/edit game */ 
+    .form-control {
+        width: 75%;
+        display: inline-block;
+    }
+    
      /* Scroll arrow */ 
     .scroll-link {
         font-size: x-large;
@@ -666,10 +674,6 @@ a.social i {
     }
     
     /* Games */ 
-    .header {
-        margin-top: 10vh!important;
-    }
-
     .game-name {
         font-size: 0.9rem;
     }
