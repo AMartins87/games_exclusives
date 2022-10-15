@@ -85,7 +85,7 @@ Admin Dashboard | Game Management | My Profile | Logout
 
 **Main navbar - games dropdown menu on large screens:**
 By Category | By Name | By Price 
-![Main navbar on large screens - games menu image](media/features/menu_drop_games.JPG)
+![Main navbar on large screens - games menu](media/features/menu_drop_games.JPG)
 
 **Main navbar - games dropdown menu on screens with a width of 991px or less:**
 ![Main navbar on medium and small screens - games menu](media/features/main_nav_md_sm_games.JPG)
@@ -123,33 +123,32 @@ Clearance
 **Footer on medium and small screens with a width of 767px or less**
 ![Footer on medium and small screens](media/features/Footer_sm.JPG)
 
-## All Games
+# **GAMES**
+ 
+All **Games** pages display all listed games with preview of an image, the their name, price, category and add to favourites button with heart icon
 
-**All Games** pages displays all listed games with preview of the item name, price and an image
+![All Games image](media/features/games_lg.JPG)
 
-![All Games image](media/features/)
+## **Games by category** 
+### **Playstation**
 
-# **Games** 
-**Playstation**
+![PlayStation Games image](media/features/games_ps_lg.JPG)
 
-![PlayStation Games image](media/features/)
+### **Xbox**
 
-**Xbox**
+![Xbox Games image](media/features/games_xbox_lg.JPG)
 
-![Xbox Games image](media/features/)
+### **Nintendo**
 
-**Nintendo**
+![Nintendo Games image](media/features/games_nintendo_lg.JPG)
 
-![Nintendo Games image](media/features/)
+### **PC Classics**
 
-**PC Classics**
+![PC Classics Games image](media/features/games_pc_lg.JPG)
 
-![PC Classics Games image](media/features/)
+### **Special offers: Clearance**
 
-# **Special offers**
-**Clearance**
-
-![Clearance Games image](media/features/)
+![Clearance Games image](media/features/games_clearance_lg.JPG)
 
 ## **Add a product page**
 
@@ -159,11 +158,16 @@ Clearance
 
 ![Update/Remove product page image](media/features/)
 
-## **Contact page**
+# **MY PROFILE PAGE**
+![My Profile page on large screens](media/features/profile_lg.JPG)
 
-Users can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, **subject** and then type in their **message**
+# **FAVOURITES PAGE**
+![Favourites page on large screens](media/features/favourites_lg.JPG)
 
-![Contact page](media/features/)
+# **CONTACT PAGE**
+Users can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, and then type in their **message**.
+
+![Contact page](media/features/contact_lg.JPG)
 
 **Wireframes**
 All wireframes were created using Balsamiq.
