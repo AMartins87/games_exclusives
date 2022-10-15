@@ -34,7 +34,7 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 ## **USER STORIES**
 
 ### **Agile planning**
-The development of this project was managed and implemented using GitHub project Kanban board and can be found [**here**](https://github.com/users/AMartins87/projects/7).
+The development of this project was managed and implemented using GitHub project Kanban board and can be found [**here**](https://github.com/users/AMartins87/projects/7) *(press Ctrl in Windows or Command on Mac button while clicking on the link for it to open in a new tab)*.
 
 User stories were labeled with <span style="color:#c5f015">**Must Have**</span>, <span style="color: #FBCA04">**Nice to have**</span>, <span style="color:#7057ff">**Future development**</span> and <span style="color:#35EE53">**CRUD**</span>. 
 
@@ -159,13 +159,19 @@ All **Games** pages display all listed games with preview of an image, the their
 ![Update/Remove product page image](media/features/)
 
 # **MY PROFILE PAGE**
+- Shows shopper's profile page with their delivery information and button to submit any changes made to their details
+- Order history with linked order numbers which will take them to their order confirmation page
+- Link to their favourites page
+
 ![My Profile page on large screens](media/features/profile_lg.JPG)
 
 # **FAVOURITES PAGE**
+- Shows shoppers' favourites games they saved while browsing the site. Page also contains a **Browse Games** button which will take them to a Games page
+
 ![Favourites page on large screens](media/features/favourites_lg.JPG)
 
 # **CONTACT PAGE**
-Users can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, and then type in their **message**.
+- Shoppers can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, and then type in their **message**.
 
 ![Contact page](media/features/contact_lg.JPG)
 
