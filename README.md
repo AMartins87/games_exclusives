@@ -10,43 +10,43 @@ Live project can be found [here](https://games-exclusives.herokuapp.com/).
 
 *Please press **Ctrl** in Windows or **Command** on Mac button and click for any links which you would like to open in a new tab when in the README.md file*
 
-**USER EXPERIENCE**
+## **USER EXPERIENCE**
 
 This website is based on a Business to Consumer (B2C) model. 
 
 The target market for this store are game enthusiasts, collectors and fellow gamers with peculiar tastes in games. 
 
-***Shopper Expectations***
-Ability to view and purchase games
-Easy to search and filter by category, name and price
-Can save a game into favourites
-Can access their account and view order history, favourite games and change personal information
-Can contact the owner via simple contact form
-Can leave, edit and delete their review
+### **Shopper Expectations**
+- Ability to view and purchase games
+- Easy to search and filter by category, name and price
+- Can save a game into favourites
+- Can access their account and view order history, favourite games and change personal information
+- Can contact the owner via simple contact form
+- Can leave, edit and delete their review
 
-***Website Expectations***
-Has links to Facebook, Instagram and Twitter
+### **Website Expectations**
+- Has links to Facebook, Instagram and Twitter
+- Privacy Policy link is included
 
 ***Web Admin Expectations***
-Can update, add or remove products
-Can delete shopper's reviews
+- Can update, add or remove products
 
-# **User Stories**
+## **USER STORIES**
 
-**Agile planning**
-The development of this project was managed and implemented using GitHub project Kanban board and can be found here[link].
+### **Agile planning**
+The development of this project was managed and implemented using GitHub project Kanban board and can be found [**here**](https://github.com/users/AMartins87/projects/7).
 
 User stories were labeled with **Must Have**, **Nice to have**, **Future development**. 
-Documentation like README, TESTING md files and preview of my business Facebook page were assigned a **Documentation** label.
 
+Documentation like README, TESTING md files and preview of my business Facebook page were assigned a **Documentation** label.
+<hr>
 
 # **FEATURES**
 ## **Home Page**
-- Top Navbar
+- Delivery banner (on every page for constant reminder to a shopper)
+- Shop name/logo with built in link to home page
+- Top Navbar (on every page for ease of access)
     - Account
-        - Register | Login (if user is not logged in)
-        - Game Management | My Profile | Logout (if logged in as an admin)
-        - My Profile | Logout (if logged in as a standard user)
     - Favourites
     - Basket
 
@@ -56,21 +56,21 @@ Documentation like README, TESTING md files and preview of my business Facebook 
     - Games
     - Special Offers
 
-**Home page with a welcome text box and *Browse All* button**
+![Delivery banner, top navbar and main navigation](media/features/top_nav_main_nav.JPG)
 
-![Home page](media/features/)
+**Top navbar of a user who is not logged in:**
+Register | Login
 
-**Top navbar of a user who is not logged in**
+![Top navbar image - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
 
-![Top navbar image - not logged in](media/features/)
+**Top navbar when logged in as a standard user:**
+My Profile | Logout
+![Top navbar image - logged in](media/features/Top_nav_drop_account_user.JPG)
 
-**Top navbar when logged in as a standard user**
+**Top navbar when logged in as an admin:**
+Admin Dashboard | Game Management | My Profile | Logout
 
-![Top navbar image - logged in](media/features/)
-
-**Top navbar when logged in as an admin**
-
-![Top navbar image - admin login](media/features/)
+![Top navbar image - admin login](media/features/Top_nav_drop_account_admin.JPG)
 
 **Main navbar present on every page**
 
@@ -79,12 +79,22 @@ Documentation like README, TESTING md files and preview of my business Facebook 
 **Main navbar with collapsible menu icon for screens with a width of 991px or less**
 
 ![Mobile navbar image](media/features/)
+
+**Home page with a welcome text box and *SHOP NOW* button**
+
+![Home page](media/features/hero_img_text_btn.JPG)
+
+**Mailchimp - Subscription section**
+
+![Mailchimp subscription section](media/features/MC_subscribe_window_lg.JPG)
+
     
 **Footer**
-- Copyright information
 - Social media links for Facebook, Instagram and a link for a contact page
+- Policy Privacy link
+- Copyright information
 
-![Footer image](media/features/)
+![Footer image](media/features/Footer_lg.JPG)
 
 ## All Games
 
@@ -162,13 +172,13 @@ games had several " " within " " in description of some games
 
 # UNFIXED BUGS
 
-# DEPLOYMENT
+# **DEPLOYMENT**
 
 This project was created using GitHub and Gitpod. Branches were created and after committing to the branch it was pushed up to the repository. 
 
-Later, the project was deployed to Heroku, Heroku deployment was set to Enable Automatic Deploys, which meant that every time that the repository was pushed to, Heroku was also updated.
+Later, the project was deployed to Heroku, Heroku deployment was set to Enable Automatic Deploys, which meant that every time that the repository was pushed, Heroku was also updated.
 
-Full deployment procedure can be found [here].
+Full deployment procedure can be found [here](DEPLOYMENT.md).
 
 # CREDITS
 
