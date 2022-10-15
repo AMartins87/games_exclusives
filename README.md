@@ -36,9 +36,9 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 ### **Agile planning**
 The development of this project was managed and implemented using GitHub project Kanban board and can be found [**here**](https://github.com/users/AMartins87/projects/7).
 
-User stories were labeled with **Must Have**, **Nice to have**, **Future development**. 
+User stories were labeled with <span style="color:#c5f015">**Must Have**</span>, <span style="color: #FBCA04">**Nice to have**</span>, <span style="color:#7057ff">**Future development**</span> and <span style="color:#35EE53">**CRUD**</span>. 
 
-Documentation like README, TESTING md files and preview of my business Facebook page were assigned a **Documentation** label.
+Documentation like README, TESTING md files and preview of my business Facebook page were assigned a <span style="color: #1589F0">**Documentation**</span> label.
 <hr>
 
 # **FEATURES**
