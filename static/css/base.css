@@ -431,10 +431,6 @@ a.social i {
     border-color: black;
 }
 
-/* .allauth-form-inner-content a {
-	color: #17a2b8;
-} */
-
 /*...............................................Media Queries */
 
 /* Extra large screens ≥1200px up to 992px */
@@ -657,6 +653,23 @@ a.social i {
     }
 
     /* Add/edit game */ 
+
+    .container {
+        margin-top: 3vh!important;
+    }
+
+    .header {
+        margin-top: 8vh!important;
+    }
+
+    .logo-font {
+        font-size: 1.5rem;
+    }
+
+    .text-muted {
+        font-size: inherit;
+    }
+
     .form-control {
         width: 75%;
         display: inline-block;
