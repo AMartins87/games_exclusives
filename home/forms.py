@@ -4,10 +4,8 @@ from .models import Contact
 
 
 class ContactForm(ModelForm):
-    """
-    The form is for user to contact the shop owner.
-    """
     class Meta:
+        """ Generates contact form """
         model = Contact
         fields = [
             'full_name',

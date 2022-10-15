@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% block extra_title %} - Get in touch{% endblock %}
 
 {% block page_header %}
 <div class="container header-container">
@@ -16,7 +17,7 @@
         <div class="col text-center mt-3">
             <hr>
             <!-- Contact page title  -->
-            <h2 class="logo-font mb-4 text-uppercase">Contact us</h2>
+            <h2 class="logo-font mb-4 text-uppercase">Get in touch</h2>
             <p class="lead">Have you got a question? Suggestion? Would you like to leave a compliment?</p>
             <p class="lead">Fill in the form below and we'll be in touch shortly!</p>
             <hr class="mb-1">
@@ -29,7 +30,7 @@
                 {% csrf_token %}
                 {{ contact_form|crispy }}
                 <!-- Contact form send button -->
-                <button type="submit" class="btn btn-danger font-weight-bold text-center w-auto text-uppercase">Send</button>
+                <button type="submit" class="btn btn-danger font-weight-bold text-center w-auto text-uppercase">Send <i class="fa-solid fa-paper-plane"></i></button>
             </form>
         </div>
     </div>
@@ -38,7 +39,7 @@
 <!-- Mailchimp Signup Form -->
 <div class="container-fluid bg-white p-1">
     <div class="row text-center background-email">
-        <div class="col-12 text-black">
+        <div class="col-12 text-black">  
             <div class="text-center pt-4 p-2" id="mc_embed_signup_email">
                 <form
                     action="https://gmail.us12.list-manage.com/subscribe/post?u=77e4f058758090cb78ce56441&amp;id=2cd0b142c9&amp;f_id=000c53e0f0"
@@ -68,12 +69,12 @@
                                 <div class="col-sm-0 col-md-3"></div>
                                 <!-- Confirmation message of (un)successful subcription -->
                                 <div id="mce-responses" class="clear foot">
-                                    <div class="response" id="mce-error-response" ></div>
-                                    <div class="response" id="mce-success-response"></div>
+                                    <div class="response" id="mce-error-response" style="display:none"></div>
+                                    <div class="response" id="mce-success-response" style="display:none"></div>
                                 </div>
                                 <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
-                                        name="b_f1aacedf9c1d9cd972b2746b3_ed76271233" tabindex="-1">
+                                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input
+                                        type="text" name="b_f1aacedf9c1d9cd972b2746b3_ed76271233" tabindex="-1">
                                 </div>
                             </div>
                         </div>
@@ -83,7 +84,7 @@
         </div>
     </div>
 </div>
-{% endblock content %}
+{% endblock %}
 
 {% block postloadsjs %}
 <!-- Mailchimp JS -->

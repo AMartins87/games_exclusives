@@ -3,6 +3,8 @@ from django.contrib import messages
 from django.core.mail import send_mail
 from django.template.loader import render_to_string
 from .forms import ContactForm
+from django.conf import settings
+
 
 
 def index(request):
@@ -12,9 +14,7 @@ def index(request):
 
 
 def contact(request):
-    """
-    A view to return the contact page
-    """
+    """ Renders the contact page """
     contact_form = ContactForm(data=request.POST)
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)
@@ -38,8 +38,8 @@ def contact(request):
             send_mail(
                 'Contact us',
                 'Thank you for contacting us!',
-                'games.exlusives@gmail.com',
-                ['user@email.com'],
+                'aneta.martinss@gmail.com',
+                {email},
                 fail_silently=False,
             )
             messages.info(request, 'Message sent successfully!')
@@ -51,3 +51,4 @@ def contact(request):
         'contact_form': contact_form,
     }
     return render(request, 'home/contact.html', context)
+
