@@ -205,12 +205,7 @@ Instagram page was also created for purpose of this project [Instagram dummy pag
 
 # **SEARCH ENGINE OPTIMISATION**
 
-To find the relevant keywords for this website I made the following searches on Google, Word Tracker...and selected keywords which would be important to the customers and added them in the meta tag. 
-
-![screenshot]
-
-- Keywords
-- Long-tail keywords
+To find the relevant keywords for this project I made searches on [Wordtracker](https://www.wordtracker.com/), [ahrefs](https://ahrefs.com/free-seo-tools) and [Game shop website](https://www.game.co.uk/), and selected keywords which would be important to customers, and added them in the meta tag section of my base.html 
 
 # BUGS
 
@@ -219,6 +214,10 @@ categories had a typo in model "model":"games.category",
 games had several " " within " " in description of some games
 
 # UNFIXED BUGS
+1. When logged in as admin and editing or adding a game, missing image placeholder doesn't upload if I delete an image from listed product or decide not to upload one.
+
+2. Category badges are not showing on all games page. Only on selected category page. 
+
 
 # **DEPLOYMENT**
 
