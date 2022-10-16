@@ -188,15 +188,20 @@ All wireframes were created using Balsamiq
 ![Logout Page](media/wireframes/logout.JPG)
 ![Profile page](media/wireframes/profile.JPG)
 ![Favourites page](media/wireframes/favourites.JPG)
-![Contact Page](media/wireframes/)
+![Contact Page](media/wireframes/contact.JPG)
 
 # **MARKETING**
 
 Facebook and Instagram are our main marketing platforms. 
 
-I have created a [Facebook dummy page](https://www.facebook.com/profile.php?id=100086484473315) for Games Exclusives. This page contains description of our online store in ***About*** section, you can also find a link to our application in there images of some of our games and has a business description as video games store.
+I have created a [Facebook dummy page](https://www.facebook.com/profile.php?id=100086484473315) for Games Exclusives. This page contains description of our online store in ***About*** section, you can also find a link to our application, privacy policy and business description as video games store.
 
-![Facebook Page](media/wireframes/FB_page_overwiew.JPG)
+![Facebook Page](media/wireframes/facebook.JPG)
+
+Instagram page was also created for purpose of this project [Instagram dummy page](https://www.instagram.com/gamesexclusives/)
+
+![Instagram Page](media/wireframes/instagram.jpg)
+
 
 # **SEARCH ENGINE OPTIMISATION**
 
