@@ -175,13 +175,19 @@ All **Games** pages display all listed games with preview of an image, the their
 
 ![Contact page](media/features/contact_lg.JPG)
 
-**Wireframes**
-All wireframes were created using Balsamiq.
-![Home Page](media/wireframes/)
-![All Games](media/wireframes/)
-![Game Page with description](media/wireframes/)
-![Registration](media/wireframes/)
-![Login/Logout Page](media/wireframes/)
+## **WIREFRAMES**
+All wireframes were created using Balsamiq
+
+![Home Page](media/wireframes/home.JPG)
+![All Games](media/wireframes/games.JPG)
+![Game page with description and reviews](media/wireframes/game_detail.JPG)
+![Edit Game page](media/wireframes/edit_game.JPG)
+![Add Game page](media/wireframes/add_game.JPG)
+![Registration](media/wireframes/register.JPG)
+![Login Page](media/wireframes/login.JPG)
+![Logout Page](media/wireframes/logout.JPG)
+![Profile page](media/wireframes/profile.JPG)
+![Favourites page](media/wireframes/favourites.JPG)
 ![Contact Page](media/wireframes/)
 
 # **MARKETING**
