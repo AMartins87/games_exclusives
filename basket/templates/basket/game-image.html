@@ -1,0 +1,7 @@
+<!-- Displays game image if image exists -->
+{% if item.game.image %}
+<img class="img-fluid" width="360" height="445" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
+<!-- If image doesn't exists, placeholder image is displayed instead -->
+{% else %}
+<img class="img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ item.game.name }}">
+{% endif %}

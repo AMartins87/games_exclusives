@@ -13,20 +13,55 @@
 {% block content %}
     <div class="overlay"></div>
     <!-- Shopping basket container -->
-    <div class="container mb-2">
-        <div class="row header">
-            <div class="col text-center mt-3">
+    <div class="container header text-uppercase text-center mb-2">
+        <div class="row">
+            <!-- Shopping basket page title -->
+            <div class="col">
                 <hr>
-                <!-- Shopping basket page title -->
-                <h2 class="logo-font mb-4 text-uppercase">Shopping Basket</h2>
-                <hr class="mb-1">
+                <h2 class="logo-font mb-4">Shopping Basket</h2>
+                <hr>
             </div>
         </div>
+        
         <div class="row">
-            <div class="col text-center">
-                <!-- If anything in the basket, summary will show -->
+            <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
+                    <div class="d-block d-md-none">
+                        <div class="row">
+                            <!-- If anything in the basket, summary will show -->
+                            <div class="col">
+                                {% include "basket/basket-total.html" %}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                {% include "basket/checkout-buttons.html" %}
+                                <p class="text-muted mb-5">A summary of your basket contents is below</p>
+                            </div>
+                        </div>
+                        {% for item in basket_items %}
+                            <div class="row">
+                                <!-- Displays game image if image exists -->
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "basket/game-image.html" %}
+                                </div>
+                                <!-- Game name and SKU number -->
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "basket/game-info.html" %}
+                                </div>
+                                <!-- Game price -->
+                                <div class="col-12 col-sm-6 order-sm-last">
+                                    <p class="my-0">Price Each: £{{ item.game.price }}</p>
+                                    <p><strong>Subtotal: </strong>£{{ item.game.price | calc_subtotal:item.quantity }}</p>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    {% include "basket/quantity-form.html" %}
+                                </div>
+                            </div>
+                            <div class="row"><div class="col"><hr></div></div>
+                        {% endfor %}
+                    </div>
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead class="text-black">
                                 <tr>
@@ -37,105 +72,45 @@
                                     <th scope="col">Subtotal</th>
                                 </tr>
                             </thead>
+
                             {% for item in basket_items %}
                                 <tr>
                                     <td class="p-3 w-25">
-                                        <!-- Displays game image if image exists -->
-                                        {% if item.game.image %}
-                                        <img class="img-fluid rounded" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
-                                        <!-- If image doesn't exists, placeholder image is displayed instead -->
-                                        {% else %}
-                                        <img class="img-fluid rounded" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ item.game.name }}">
-                                        {% endif %}
+                                        {% include "basket/game-image.html" %}
                                     </td>
-                                    <!-- Game name and SKU number -->
                                     <td class="py-3">
-                                        <p class="my-0"><strong>{{ item.game.name }}</strong></p>
-                                        <p class="my-0 small text-muted">SKU: {{ item.game.sku|upper }}</p>
+                                        {% include "basket/game-info.html" %}
                                     </td>
-                                    <!-- Game price -->
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.game.price }}</p>
                                     </td>
                                     <td class="py-3 w-25">
-                                        <form class="form update-form" method="POST" action="{% url 'adjust_basket' item.item_id %}">
-                                            {% csrf_token %}
-                                            <div class="form-group">
-                                                <div class="input-group">
-                                                    <div class="input-group-prepend">
-                                                        <!-- Button to decrease quantity -->
-                                                        <button class="decrement-qty btn btn-sm btn-warning rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-minus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
-                                                    <div class="input-group-append">
-                                                        <!-- Button to increase quantity -->
-                                                        <button class="increment-qty btn btn-sm btn-black rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
-                                                            <span>
-                                                                <i class="fas fa-plus fa-sm"></i>
-                                                            </span>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
-                                        <!-- Link to update the basket or to delete game from the basket -->
-                                        <a class="update-link text-info"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
+                                        {% include "basket/quantity-form.html" %}
                                     </td>
-                                    <!-- Subtotal -->
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.game.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
-                            <!-- Button to take shopper to all games page -->
                             <tr>
                                 <!-- Subtotal, delivery charges, total, if minimum not met, message saying how much more shopper needs to spend for free delivery -->
                                 <td colspan="5" class="pt-5 text-right">
-                                    <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
-                                    <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
-                                    <h4 class="mt-4"><strong>Grand Total: £{{ grand_total|floatformat:2 }}</strong></h4>
-                                    {% if free_delivery_delta > 0 %}
-                                        <p class="mb-1 text-danger">
-                                            You could get free delivery by spending just <strong>£{{ free_delivery_delta }}</strong> more!
-                                        </p>
-                                    {% endif %}
+                                    {% include "basket/basket-total.html" %}
                                 </td>
                             </tr>
                             <tr>
+                                <!-- Button to take shopper to all games page or checkout page -->
                                 <td colspan="5" class="text-right">
-                                    <!-- Button to take shopper to all games page -->
-                                    <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg">
-                                        <span class="icon">
-                                            <i class="fas fa-chevron-left"></i>
-                                        </span>
-                                        <span class="text-uppercase">Keep Shopping</span>
-                                    </a>
-                                    <!-- Button to take shopper to checkout page -->
-                                    <a href="{% url 'checkout' %}" class="btn btn-black btn-lg">
-                                        <span class="text-uppercase">Secure Checkout</span>
-                                        <span class="icon">
-                                            <i class="fas fa-lock"></i>
-                                        </span>
-                                    </a>
+                                    {% include "basket/checkout-buttons.html" %}
                                 </td>
                             </tr>
                         </table>
                     </div>
                 <!-- If no games in the basket, button with all games page link will appear -->
                 {% else %}
-                    <p class="lead text-center mb-5">Your basket is empty.</p>
+                    <p class="lead mb-5">Your basket is empty.</p>
                     <!-- Button to take shopper to all games page -->
-                    <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg w-auto">
+                    <a href="{% url 'games' %}" class="btn btn-outline-black rounded-0 btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
@@ -144,11 +119,24 @@
                 {% endif %}
             </div>
         </div>
+    </div> 
+    <!-- Scroll up arrow for ease of navigation -->
+    <div class="btt-button">
+        <a class="scroll-link d-flex">
+            <i class="fa-solid fa-circle-arrow-up mx-auto my-auto text-dark"></i>
+        </a>	
     </div>
+ 
 {% endblock %}
 
 {% block postloadjs %}
 {{ block.super }}
+<!-- Scroll up arrow JS -->
+<script>
+    $('.scroll-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
 {% include 'games/includes/quantity_input_script.html' %}
 
 <script>

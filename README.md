@@ -28,7 +28,7 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 - Has links to Facebook, Instagram and Twitter
 - Privacy Policy link is included
 
-***Web Admin Expectations***
+### ***Web Admin Expectations***
 - Can update, add or remove products
 
 ## **USER STORIES**
