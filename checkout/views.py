@@ -4,6 +4,8 @@ from django.shortcuts import (
     render, redirect, reverse, get_object_or_404, HttpResponse
 )
 from django.views.decorators.http import require_POST
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.contrib import messages
 from django.conf import settings
 
@@ -183,9 +185,9 @@ def checkout_success(request, order_number):
 
 def send_confirmation_email(order):
     """
-    Sends shopper a confirmation email after successful order placement
+    Send email to customer with order confirmation
     """
-    cust_email = order.user_profile.user.email
+    cust_email = order.user_profile
     subject = render_to_string(
         'checkout/confirmation_emails/confirmation_email_subject.txt',
         {'order': order})
