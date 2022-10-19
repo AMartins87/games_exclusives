@@ -11,7 +11,7 @@ body {
     font-family: 'Electrolize', sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
@@ -637,8 +637,12 @@ a.social i {
     } 
 
     .nav-link {
-        padding: 0.15rem;
+        padding: 0.35rem;
         font-size: 0.65rem;
+    }
+
+    .menu-sm {
+        font-size: 0.85rem!important;
     }
 
     .dropdown-item {
@@ -704,5 +708,11 @@ a.social i {
     /* Games */ 
     .game-name {
         font-size: 0.9rem;
+    }
+
+    /* Shopping basket */
+    p.total {
+        font-size: 0.75rem;
+        text-transform: none;
     }
 }

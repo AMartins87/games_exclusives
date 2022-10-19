@@ -36,7 +36,7 @@
                         <div class="row">
                             <div class="col">
                                 {% include "basket/checkout-buttons.html" %}
-                                <p class="text-muted mb-5">A summary of your basket contents is below</p>
+                                <p class="text-muted mb-5 total">A summary of your basket contents is below</p>
                             </div>
                         </div>
                         {% for item in basket_items %}
@@ -110,7 +110,7 @@
                 {% else %}
                     <p class="lead mb-5">Your basket is empty.</p>
                     <!-- Button to take shopper to all games page -->
-                    <a href="{% url 'games' %}" class="btn btn-outline-black rounded-0 btn-lg">
+                    <a href="{% url 'games' %}" class="btn btn-outline-black btn-lg">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
