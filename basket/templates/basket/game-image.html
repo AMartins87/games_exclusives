@@ -3,5 +3,5 @@
 <img class="img-fluid p-4" width="360" height="445" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
 <!-- If image doesn't exists, placeholder image is displayed instead -->
 {% else %}
-<img class="img-fluid p-4" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ item.game.name }}">
+<img class="img-fluid p-4" width="360" height="445" src="https://res.cloudinary.com/games-exclusives/image/upload/v1665160548/media/no_image_placeholder.jpg" alt="{{ item.game.name }}">
 {% endif %}
