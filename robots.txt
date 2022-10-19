@@ -3,4 +3,4 @@ Disallow: /accounts/
 Disallow: /profiles/
 Disallow: /basket/
 Disallow: /checkout/
-Sitemap: https://games-exclusives.herokuapp.com/stiemap.xml
+Sitemap: https://games-exclusives.herokuapp.com/sitemap.xml
