@@ -36,9 +36,10 @@ ALLOWED_HOSTS = ['games-exclusives.herokuapp.com', 'localhost']
 
 if DEVELOPMENT:
     ALLOWED_HOSTS = [
-        'localhost', '127.0.0.1', '127.0.0.1:8000', "games-exclusives.herokuapp.com"]
+        'localhost', '127.0.0.1', '127.0.0.1:8000',
+        'games-exclusives.herokuapp.com']
 else:
-    ALLOWED_HOSTS = ["games-exclusives.herokuapp.com"]
+    ALLOWED_HOSTS = ['games-exclusives.herokuapp.com']
 
 
 # Application definition
