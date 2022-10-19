@@ -6,7 +6,6 @@ from .forms import ContactForm
 from django.conf import settings
 
 
-
 def index(request):
     """ A view to return the index page """
 
@@ -51,4 +50,3 @@ def contact(request):
         'contact_form': contact_form,
     }
     return render(request, 'home/contact.html', context)
-
