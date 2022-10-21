@@ -201,4 +201,4 @@ def send_confirmation_email(order):
             body,
             settings.DEFAULT_FROM_EMAIL,
             [cust_email]
-            )
+        )
