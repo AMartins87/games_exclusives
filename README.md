@@ -214,9 +214,7 @@ categories had a typo in model "model":"games.category",
 games had several " " within " " in description of some games
 
 # UNFIXED BUGS
-1. When logged in as admin and editing or adding a game, missing image placeholder doesn't upload if I delete an image from listed product or decide not to upload one.
-
-2. Category badges are not showing on all games page. Only on selected category page. 
+1. Category badges are not showing on all games page. Only on selected category page. 
 
 
 # **DEPLOYMENT**
@@ -232,3 +230,6 @@ Full deployment procedure can be found [here](DEPLOYMENT.md).
 Favicon - https://www.flaticon.com/free-icon/game-console_2949874 
 
 ## ACKNOWLEDGEMENTS
+
+Tutor support - John 
+send_confirmation_emails

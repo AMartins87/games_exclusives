@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from .views import handler404
+from .views import handler404, handler500
 
 
 urlpatterns = [
@@ -34,3 +34,4 @@ urlpatterns = [
 
 # Handler path to handler views
 HANDLER404 = 'games_exclusives.views.handler404'
+HANDLER500 = 'games_exclusives.views.handler500'

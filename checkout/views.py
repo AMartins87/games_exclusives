@@ -187,7 +187,6 @@ def send_confirmation_email(order):
     """
     Send email to customer with order confirmation
     """
-    print(f'in send email, order: {order}')
     if order.user_profile is not None:
         cust_email = order.user_profile.user.email
     else:
