@@ -171,6 +171,8 @@ def checkout_success(request, order_number):
     messages.success(request, f'Order successfully processed! \
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
+        
+    send_confirmation_email(order)
 
     if 'basket' in request.session:
         del request.session['basket']
@@ -187,6 +189,7 @@ def send_confirmation_email(order):
     """
     Send email to customer with order confirmation
     """
+    print(f'in send email, order: {order}')
     if order.user_profile is not None:
         cust_email = order.user_profile.user.email
         subject = render_to_string(
