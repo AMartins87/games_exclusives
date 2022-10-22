@@ -22,7 +22,7 @@
             "price": 28.99,
             "category": 1,
             "image_url": "https://assets-prd.ignimgs.com/2022/01/07/god-of-war-1-button-1641590922128.jpg",
-            "image": "god_of_war.jpg"
+            "image": "god_of_war.webp"
         }
     },
     {
@@ -35,7 +35,7 @@
             "price": 15.99,
             "category": 1,
             "image_url": "https://m.media-amazon.com/images/I/A1Er5NlA3eL._AC_SX466_.jpg",
-            "image": "uncharted.jpg"
+            "image": "uncharted.webp"
         }
     },
     {
@@ -48,7 +48,7 @@
             "price": 99.99,
             "category": 1,
             "image_url": "https://www.gran-turismo.com/images/c/i1xYzE2C9BPwg.jpg",
-            "image": "gran_turismo.jpg"
+            "image": "gran_turismo.webp"
         }
     },
     {
@@ -61,7 +61,7 @@
             "price": 25.99,
             "category": 2,
             "image_url": "https://m.media-amazon.com/images/I/71ZrUAqWYCL._AC_SY741_.jpg",
-            "image": "halo.png"
+            "image": "halo.webp"
         }
     },
     {
@@ -74,7 +74,7 @@
             "price": 35.99,
             "category": 2,
             "image_url": "https://m.media-amazon.com/images/I/51QFYHXAT9L._AC_.jpg",
-            "image": "forza_motorsport.jpg"
+            "image": "forza_motorsport.webp"
         }
     },
     {
@@ -87,7 +87,7 @@
             "price": 59.99,
             "category": 2,
             "image_url": "https://m.media-amazon.com/images/M/MV5BZjhhNWQ0YzQtMTk5Ni00OTE4LTlkYzQtYTZhMTNiYmE5OWQzXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_FMjpg_UX1000_.jpg",
-            "image": "gears_of_war.jpg"
+            "image": "gears_of_war.webp"
         }
     },
     {
@@ -113,7 +113,7 @@
             "price": 49.99,
             "category": 3,
             "image_url": "https://media.4rgos.it/i/Argos/7918865_R_Z001A?w=1500&h=880&qlt=70&fmt=webp",
-            "image": "super_mario_3d_bowser.png"
+            "image": "super_mario_3d_bowser.webp"
         }
     },
     {
@@ -126,7 +126,7 @@
             "price": 43.99,
             "category": 3,
             "image_url": "https://media.4rgos.it/i/Argos/1345001_R_Z001A?w=750&h=440&qlt=70",
-            "image": "luigi_mansion.jpg"
+            "image": "luigi_mansion.webp"
         }
     },
     {
@@ -139,7 +139,7 @@
             "price": 29.99,
             "category": 3,
             "image_url": "https://m.media-amazon.com/images/I/8176VSvYCDS._AC_SY500_.jpg",
-            "image": "zelda.jpg"
+            "image": "zelda.webp"
         }
     },
     {
@@ -152,7 +152,7 @@
             "price": 14.99,
             "category": 3,
             "image_url": "https://i0.wp.com/www.nintendotimes.com/wp-content/uploads/2017/11/feat-goonies-2.jpg?fit=1200%2C668&ssl=1",
-            "image": "goonies_2.jpg"
+            "image": "goonies_2.webp"
         }
     },
     {
@@ -165,7 +165,7 @@
             "price": 9.99,
             "category": 4,
             "image_url": "https://cdn.ebaumsworld.com/mediaFiles/picture/2559883/86701462.jpg",
-            "image": "arkanoid.jpg"
+            "image": "arkanoid.webp"
         }
     },
     {
@@ -178,7 +178,7 @@
             "price": 6.99,
             "category": 4,
             "image_url": "https://en.wikipedia.org/wiki/Gobliiins#/media/File:Gobliiins_Cover.jpg",
-            "image": "gobliiins.jpg"
+            "image": "gobliiins.webp"
         }
     },
     {
@@ -191,7 +191,7 @@
             "price": 3.99,
             "category": 4,
             "image_url": "https://cdn.nivoli.com/adventuregamers/images/screenshots/15842/k_box_cover.jpg",
-            "image": "book_of_kyrandia.jpg"
+            "image": "book_of_kyrandia.webp"
         }
     },
     {
@@ -204,7 +204,7 @@
             "price": 8.99,
             "category": 4,
             "image_url": "https://ia804602.us.archive.org/18/items/PrinceOfPersiaTheFirst/IMGs/1.png",
-            "image": "prince_of_persia.png"
+            "image": "prince_of_persia.webp"
         }
     },
     {
@@ -217,7 +217,7 @@
             "price": 2.99,
             "category": 5,
             "image_url": "https://static.wikia.nocookie.net/tropico/images/4/45/Tropico_Coverart.png/revision/latest?cb=20190225184724",
-            "image": "tropico.jpg"
+            "image": "tropico.webp"
         }
     },
     {
@@ -230,7 +230,7 @@
             "price": 17.99,
             "category": 5,
             "image_url": "https://www.mobygames.com/images/covers/l/157647-warcraft-orcs-humans-dos-front-cover.jpg",
-            "image": "warcraft.jpg"
+            "image": "warcraft.webp"
         }
     },
     {
@@ -243,7 +243,7 @@
             "price": 4.99,
             "category": 5,
             "image_url": "https://store.ubi.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dw76833b4c/images/large/5be2b34288a7e3b8170265cb.jpg?sw=341&sh=450&sm=fit",
-            "image": "settlers_2.jpg"
+            "image": "settlers_2.webp"
         }
     },
     {
@@ -256,7 +256,7 @@
             "price": 5.99,
             "category": 5,
             "image_url": "https://classicreload.com/sites/default/files/wolfensein-3d.png",
-            "image": "wolfenstein_3d.png"
+            "image": "wolfenstein_3d.webp"
         }
     }
 ]
