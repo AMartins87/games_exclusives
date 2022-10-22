@@ -46,7 +46,7 @@
                             <!-- If image doesn't exists, placeholder image is displayed instead -->
                             {% else %}
                             <a href="{% url 'game_detail' game.id %}">
-                                <img class="card-img-top img-fluid" width="360" height="445" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ game.name }}">
+                                <img class="card-img-top img-fluid" width="360" height="445" src="https://res.cloudinary.com/games-exclusives/image/upload/v1666464360/media/book_of_kyrandia.webp" alt="{{ game.name }}">
                             </a>
                             <!-- Game name, price -->
                             {% endif %}

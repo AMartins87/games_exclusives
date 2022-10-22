@@ -35,7 +35,7 @@ def all_games(request):
                 direction = request.GET['direction']
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
-        
+
             games = games.order_by(sortkey)
 
     if request.GET:
@@ -78,6 +78,7 @@ def game_detail(request, game_id):
     }
 
     return render(request, 'games/game_detail.html', context)
+
 
 @login_required
 def add_game(request):
