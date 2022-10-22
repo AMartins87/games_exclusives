@@ -35,9 +35,11 @@ def contact(request):
             contact_form = contact_form.save(commit=False)
             contact_form.save()
             send_mail(
-                'Contact us',
-                'Thank you for contacting us!',
-                'aneta.martinss@gmail.com',
+                'Games Exclusive - Contact Us',
+                'Thank you for contacting us! '
+                'We will be in touch within 48 hours'
+                'Games Exclusives Team',
+                'aneta.martins@gmail.com',
                 {email},
                 fail_silently=False,
             )
