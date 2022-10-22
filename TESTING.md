@@ -321,7 +321,13 @@ I checked that the chosen colors and fonts are easy to read. All pages have pass
 
   ### **Desktop**
   
-  ![Lighthouse_desktop](media/testing/validators/)
+  ![Home page - lighthouse desktop](media/testing/validators/lighthouse_desktop.JPG)
+  ![Games page - lighthouse desktop](media/testing/validators/lighthouse_games_desktop.JPG)
+  ![Game detail page - lighthouse desktop](media/testing/validators/lighthouse_game_detail_desktop.JPG)
+  ![Profile page - lighthouse desktop](media/testing/validators/lighthouse_profile_desktop.JPG)
+  ![Contact page - lighthouse desktop](media/testing/validators/lighthouse_contact_desktop.JPG)
+  ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
+  ![Shopping basket - lighthouse desktop](media/testing/validators/lighthouse_shopping_basket_desktop.JPG)
 
   ### **Mobile**
 
