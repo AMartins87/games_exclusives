@@ -37,8 +37,8 @@ def contact(request):
             send_mail(
                 'Games Exclusive - Contact Us',
                 'Thank you for contacting us! '
-                'We will be in touch within 48 hours'
-                'Games Exclusives Team',
+                'We will be in touch within 48 hours. '
+                'Games Exclusives',
                 'aneta.martins@gmail.com',
                 {email},
                 fail_silently=False,
