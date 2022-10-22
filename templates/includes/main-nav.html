@@ -24,7 +24,7 @@
             </a>
             <!-- Dropdown menu where shopper can choose to view all games, or by their category only -->
             <div class="dropdown-menu bg-white border-0">
-                <a href="{% url 'games' %}"  class="dropdown-item ml-4 ml-lg-0">All Games</a>
+                <a href="{% url 'games' %}?category=playstation,xbox,nintendo,pc,clearance"  class="dropdown-item ml-4 ml-lg-0">All Games</a>
                 <a href="{% url 'games' %}?category=playstation" class="dropdown-item ml-4 ml-lg-0">PlayStation</a>
                 <a href="{% url 'games' %}?category=xbox" class="dropdown-item ml-4 ml-lg-0">Xbox</a>
                 <a href="{% url 'games' %}?category=nintendo" class="dropdown-item ml-4 ml-lg-0">Nintendo</a>
