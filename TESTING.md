@@ -350,13 +350,13 @@ I checked that the chosen colors and fonts are easy to read. All pages have pass
   Contact page
   ![Contact page - lighthouse desktop](media/testing/validators/lighthouse_contact_desktop.JPG)
 
-   Shopping basket page
+  Shopping basket page
   ![Shopping basket - lighthouse desktop](media/testing/validators/lighthouse_shopping_basket_desktop.JPG)
 
   Checkout page
   ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
 
-### Mobile
+### **Mobile**
 While Lighthouse testing was quite high in desktop version, the performance during mobile testing was lacking. It is mostly due to render-blocking resources like jquery, bootstrap js and css. 
 I have originally got a very high score on Lighthouse under mobile performance, but it had dropped down and it's moving around 70-82 points only on Performance. 
 
@@ -364,4 +364,4 @@ Home page - first testing
 ![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile.JPG)
 
 Home page - following testing
-![Home page - lighthouse first mobile testing](media/testing/validators/)
+![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile_second.JPG)

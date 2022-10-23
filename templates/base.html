@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!-- Meta tags -->
     {% block meta %}
@@ -38,7 +39,7 @@
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
         integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous">
-    </script>
+        </script>
     <!-- Stripe -->
     <script src="https://js.stripe.com/v3/"></script>
     <!-- Fontawesome -->
@@ -56,7 +57,8 @@
         <!-- Free delivery banner -->
         <div id="delivery-banner" class="row text-center">
             <div class="col bg-warning text-black">
-                <h4 class="my-1 delivery-banner text-uppercase">Free delivery on orders over £{{ free_delivery_threshold}}!</h4>
+                <h4 class="my-1 delivery-banner text-uppercase">Free delivery on orders over £{{
+                    free_delivery_threshold}}!</h4>
             </div>
         </div>
         <!-- Website name with embedded home link -->
@@ -129,7 +131,7 @@
                         <div class="text-center">
                             <a class="text-black nav-link" href="{% url 'account_login' %}">
                                 <i class="fa-regular fa-heart"></i>
-                                <p class="my-0 text-uppercase">Favourites</p> 
+                                <p class="my-0 text-uppercase">Favourites</p>
                             </a>
                         </div>
                         {% endif %}
@@ -180,45 +182,43 @@
                 <div class="row text-center d-flex justify-content-center pt-1">
                     <div class="col-md-2">
                         <h5 class="text-uppercase font-weight-bold">
-                        <a href="{% url 'home' %}" class="text-white">Home</a>
+                            <a href="{% url 'home' %}" class="text-white">Home</a>
                         </h5>
                     </div>
                     <div class="col-md-2">
                         <h5 class="text-uppercase font-weight-bold">
-                        <a href="{% url 'games' %}" class="text-white">Shop</a>
+                            <a href="{% url 'games' %}" class="text-white">Shop</a>
                         </h5>
                     </div>
                     <div class="col-md-2">
                         <h5 class="text-uppercase font-weight-bold">
-                        <a href="{% url 'contact' %}" class="text-white">Contact</a>
+                            <a href="{% url 'contact' %}" class="text-white">Contact</a>
                         </h5>
                     </div>
                 </div>
             </div>
             <!-- Social media links -->
             <div class="text-center mt-3 mb-2 social-div">
-                <a href="https://www.facebook.com/profile.php?id=100086484473315" class="social"
-                    target="_blank" rel="noopener noreferrer nofollow"
-                    aria-label="Click here to visit our facebook page">
+                <a href="https://www.facebook.com/profile.php?id=100086484473315" class="social" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="Click here to visit our facebook page">
                     <i class="fab fa-facebook"></i>
                 </a>
-                <a href="https://twitter.com/home" class="social"
-                    target="_blank" rel="noopener noreferrer nofollow"
+                <a href="https://twitter.com/home" class="social" target="_blank" rel="noopener noreferrer nofollow"
                     aria-label="Click here to visit our twitter page">
                     <i class="fab fa-twitter"></i>
                 </a>
-                <a href="https://www.instagram.com/gamesexclusives/" class="social"
-                    target="_blank" rel="noopener noreferrer nofollow"
-                    aria-label="Click here to visit our instagram page">
+                <a href="https://www.instagram.com/gamesexclusives/" class="social" target="_blank"
+                    rel="noopener noreferrer nofollow" aria-label="Click here to visit our instagram page">
                     <i class="fab fa-instagram"></i>
                 </a>
-        
+
             </div>
         </div>
         <!-- Privacy policy link and copyright -->
         <div class="col-12 text-center small p-3">
-            <a href="https://www.privacypolicygenerator.info/live.php?token=vYPTnLUtWIxH7X9PDbLdJSaRqtZfaIk7" 
-                target="_blank" rel="noopener" class="text-white text-uppercase privacy">Privacy Policy </a>| © Games Exclusives 2022
+            <a href="https://www.privacypolicygenerator.info/live.php?token=vYPTnLUtWIxH7X9PDbLdJSaRqtZfaIk7"
+                target="_blank" rel="noopener" class="text-white text-uppercase privacy">Privacy Policy </a>| © Games
+            Exclusives 2022
         </div>
     </footer>
 
@@ -240,7 +240,7 @@
         {% endfor %}
     </div>
     {% endif %}
-   
+
     {% block postloadjs %}
     <!-- Toast messages JS -->
     <script>

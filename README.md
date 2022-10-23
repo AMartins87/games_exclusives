@@ -10,6 +10,7 @@ Live project can be found [here](https://games-exclusives.herokuapp.com/).
 
 *Please press **Ctrl** in Windows or **Command** on Mac button and click for any links which you would like to open in a new tab when in the README.md file*
 
+---
 ## **USER EXPERIENCE**
 
 This website is based on a Business to Consumer (B2C) model. 
@@ -31,6 +32,7 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 ### ***Web Admin Expectations***
 - Can update, add or remove products
 
+---
 ## **USER STORIES**
 
 ### **Agile planning**
@@ -39,10 +41,10 @@ The development of this project was managed and implemented using GitHub project
 User stories were labeled with <span style="color:#c5f015">**Must Have**</span>, <span style="color: #FBCA04">**Nice to have**</span>, <span style="color:#7057ff">**Future development**</span> and <span style="color:#35EE53">**CRUD**</span>. 
 
 Documentation like README, TESTING md files and preview of my business Facebook page were assigned a <span style="color: #1589F0">**Documentation**</span> label.
-<hr>
 
-# **FEATURES**
-## **Home Page**
+---
+## **FEATURES**
+### **Home Page**
 - Delivery banner (on every page for constant reminder to a shopper)
 - Shop name/logo with built in link to home page
 - Top Navbar (on every page for ease of access)
@@ -123,73 +125,114 @@ Clearance
 **Footer on medium and small screens with a width of 767px or less**
 ![Footer on medium and small screens](media/features/Footer_sm.JPG)
 
-# **GAMES**
+## **GAMES**
  
 All **Games** pages display all listed games with preview of an image, the their name, price, category and add to favourites button with heart icon
 
 ![All Games image](media/features/games_lg.JPG)
 
-## **Games by category** 
-### **Playstation**
+### **GAMES BY CATEGORY** 
+#### **Playstation**
 
 ![PlayStation Games image](media/features/games_ps_lg.JPG)
 
-### **Xbox**
+#### **Xbox**
 
 ![Xbox Games image](media/features/games_xbox_lg.JPG)
 
-### **Nintendo**
+#### **Nintendo**
 
 ![Nintendo Games image](media/features/games_nintendo_lg.JPG)
 
-### **PC Classics**
+#### **PC Classics**
 
 ![PC Classics Games image](media/features/games_pc_lg.JPG)
 
-### **Special offers: Clearance**
+#### **Special offers: Clearance**
 
 ![Clearance Games image](media/features/games_clearance_lg.JPG)
 
-## **Add a product page**
+### **ADD A GAME PAGE**
 
-![Add a game page image](media/features/)
+![Add a game page image](media/features/add_game_form_page.png)
 
-## **Update/remove product page**
+### **EDIT A GAME PAGE**
 
-![Update/Remove product page image](media/features/)
+![Update/Remove product page image](media/features/edit_game_form_page.JPG)
 
-# **MY PROFILE PAGE**
+### **MY PROFILE PAGE**
 - Shows shopper's profile page with their delivery information and button to submit any changes made to their details
 - Order history with linked order numbers which will take them to their order confirmation page
 - Link to their favourites page
 
 ![My Profile page on large screens](media/features/profile_lg.JPG)
 
-# **FAVOURITES PAGE**
+### **FAVOURITES PAGE**
 - Shows shoppers' favourites games they saved while browsing the site. Page also contains a **Browse Games** button which will take them to a Games page
 
 ![Favourites page on large screens](media/features/favourites_lg.JPG)
 
-# **CONTACT PAGE**
+### **CONTACT PAGE**
 - Shoppers can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, and then type in their **message**.
 
 ![Contact page](media/features/contact_lg.JPG)
 
+---
 ## **WIREFRAMES**
 All wireframes were created using Balsamiq
 
+<details><summary>View wireframe images here</summary>
+
+**Home page**
 ![Home Page](media/wireframes/home.JPG)
+
+**Games page**
 ![All Games](media/wireframes/games.JPG)
+
+**Game detail page**
 ![Game page with description and reviews](media/wireframes/game_detail.JPG)
+
+**Edit game page**
 ![Edit Game page](media/wireframes/edit_game.JPG)
+
+**Add game page**
 ![Add Game page](media/wireframes/add_game.JPG)
+
+**Registration page**
 ![Registration](media/wireframes/register.JPG)
+
+**Login page**
 ![Login Page](media/wireframes/login.JPG)
+
+**Logout page**
 ![Logout Page](media/wireframes/logout.JPG)
+
+**Profile page**
 ![Profile page](media/wireframes/profile.JPG)
+
+**Favourites page**
 ![Favourites page](media/wireframes/favourites.JPG)
+
+**Contact page**
 ![Contact Page](media/wireframes/contact.JPG)
 
+</details>
+
+--- 
+## **DESIGN**
+
+### **FONT**
+Electrolize font was used across the whole site, and sourced from [**Google Fonts**](https://fonts.google.com/?query=electrolize).
+
+### **COLOUR SCHEME**
+
+The main background colour for the site is white, apart from the footer background which was set to #e85320.
+
+Apart from the website logo and links in a footer, all text is black.
+
+The footer text, links and icons are white.
+
+---
 # **MARKETING**
 
 Facebook and Instagram are our main marketing platforms. 
@@ -202,21 +245,17 @@ Instagram page was also created for purpose of this project [Instagram dummy pag
 
 ![Instagram Page](media/wireframes/instagram.jpg)
 
-
+---
 # **SEARCH ENGINE OPTIMISATION**
 
 To find the relevant keywords for this project I made searches on [Wordtracker](https://www.wordtracker.com/), [ahrefs](https://ahrefs.com/free-seo-tools) and [Game shop website](https://www.game.co.uk/), and selected keywords which would be important to customers, and added them in the meta tag section of my base.html 
 
-# BUGS
+---
+# **BUGS**
 
-issues with installing fixtures both with categories and games 
-categories had a typo in model "model":"games.category",
-games had several " " within " " in description of some games
+- I had issues with installing fixtures with both categories and games fixtures. After a review I found I had a typo in category model, and my games fixtures contained double quotation marks within double quotation marks in the games description. Once I changed these to single quote marks all was loading correctly. 
 
-# UNFIXED BUGS
-1. Category badges are not showing on all games page. Only on selected category page. 
-
-
+--- 
 # **DEPLOYMENT**
 
 This project was created using GitHub and Gitpod. Branches were created and after committing to the branch it was pushed up to the repository. 
@@ -225,11 +264,16 @@ Later, the project was deployed to Heroku, Heroku deployment was set to Enable A
 
 Full deployment procedure can be found [here](DEPLOYMENT.md).
 
-# CREDITS
+---
+# **CREDITS**
+
+Background image was created in [Canva](https://www.canva.com/)
+
 
 Favicon - https://www.flaticon.com/free-icon/game-console_2949874 
 
-## ACKNOWLEDGEMENTS
+---
+## **ACKNOWLEDGEMENTS**
 
 Tutor support - John 
 send_confirmation_emails
