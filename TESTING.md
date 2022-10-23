@@ -314,29 +314,10 @@ Contact page
 
     ![Jigsaw Validator](media/testing/validators/css_validator.JPG)
 
-## **PEP8**
-- All python code was checked via [PEP8](http://pep8online.com/) with no errors reported.)
-    
-  ### **Games app**
-  #### **admin.py**
+## **PYTHON VALIDATION**
+As PEP8 validator is down I had to use the built-in pycodestyle linter checker as per CI tutor advice
 
-  ![PEP8 admin.py](media/testing/validators/)
-
-  #### **forms.py**
-
-  ![PEP8 forms.py](media/testing/validators/)
-
-  #### **models.py**
-
-  ![PEP8 models.py](media/testing/validators/)
-
-  #### **urls.py**
-
-  ![PEP8 urls.py](media/testing/validators/)
-
-  #### **views.py**
-
-  ![PEP8 views.py](media/testing/validators/)
+All code was checked and minor issues like blank spaces were fixed on all files. 
 
 # Accessibility
 
