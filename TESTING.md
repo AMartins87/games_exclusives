@@ -283,7 +283,7 @@ Games page
 ![W3C Validator - games page](media/testing//validators/html_validator_games.JPG)
 
 Game detail page
-![W3C Validator - game detail page](media/testing//validators)
+![W3C Validator - game detail page](media/testing//validators/html_validator_game_detail.JPG)
 
 Shopping basket page
 ![W3C Validator - shopping basket page](media/testing//validators/html_validator_basket.JPG)
@@ -294,9 +294,6 @@ Checkout page
 Checkout success page 
 ![W3C Validator - checkout success page](media/testing//validators/html_validator_checkout_success.JPG)
 
-Contact page 
-![W3C Validator - contact page](media/testing//validators/html_validator_contact.JPG)
-
 Login page
 ![W3C Validator - login page](media/testing//validators/html_validator_login.JPG)
 
@@ -306,14 +303,16 @@ Logout page
 Register page
 ![W3C Validator - register page](media/testing//validators/html_validator_signup.JPG)
 
-
 Profile page
-![W3C Validator - profile page](media/testing//validators)
+![W3C Validator - profile page](media/testing//validators/html_validator_profile.JPG)
+
+Contact page 
+![W3C Validator - contact page](media/testing//validators/html_validator_contact.JPG)
 
 ## **CSS**
 - No errors were found when passing through the official Jigsaw validator
 
-    ![Jigsaw Validator](media/testing/validators/)
+    ![Jigsaw Validator](media/testing/validators/css_validator.JPG)
 
 ## **PEP8**
 - All python code was checked via [PEP8](http://pep8online.com/) with no errors reported.)
