@@ -24,7 +24,8 @@
                     <!-- If image doesn't exists, placeholder image is displayed instead -->
                     {% else %}
                     <a href="">
-                        <img class="img-fluid" width="360" height="445" src="https://res.cloudinary.com/games-exclusives/image/upload/v1666464360/media/no_image_placeholder.webp"
+                        <img class="img-fluid" width="360" height="445" 
+                            src="https://res.cloudinary.com/games-exclusives/image/upload/v1666464360/media/no_image_placeholder.webp"
                             alt="{{ game.name }}">
                     </a>
                     {% endif %}
@@ -59,8 +60,7 @@
                 <div class="row-lg-7">
                     <small class="ml-3">
                         <a href="{% url 'edit_game' game.id %}" aria-label="edit game">Edit</a> |
-                        <a class="text-danger" href="{% url 'delete_game' game.id %}" aria-label="delete game"></i> Delete
-                        </a>
+                        <a class="text-danger" href="{% url 'delete_game' game.id %}" aria-label="delete game">Delete</a>
                     </small>
                 </div>
                 {% endif %}
@@ -101,21 +101,19 @@
                                 </div>                                    
                             </div>
                         </div>
-                       
                     </div>
-                        <div class="col-lg-7 m-3 p-3">
-                            <!-- Button link which returns shopper to all games -->
-                            <a href="{% url 'games' %}" class="btn btn-outline-black my-3">
-                                <span class="icon">
-                                    <i class="fas fa-chevron-left"></i>
-                                </span>
-                                <span class="text-uppercase">Keep Shopping</span>
-                            </a>
-                            <!-- Button link for adding games into basket -->
-                            <input type="submit" class="btn btn-dark text-uppercase" value="Add to Basket">
-                        </div>
-                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    <div class="col-lg-7 m-3 p-3">
+                        <!-- Button link which returns shopper to all games -->
+                        <a href="{% url 'games' %}" class="btn btn-outline-black my-3">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                        <!-- Button link for adding games into basket -->
+                        <input type="submit" class="btn btn-dark text-uppercase" value="Add to Basket">
                     </div>
+                    <input type="hidden" name="redirect_url" value="{{ request.path }}">
                 </form>
             </div>
         </div>
@@ -139,22 +137,17 @@
             </a>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">
             {% endif %}
-
             <!-- Existing review cards -->
             <div class="row">
-
                 <!-- Iterates through reviews and displays them in cards -->
                 {% for review in game_reviews reversed %}
-                
                 <!-- Checks for relevant reviews -->
                 {% if game.name in review.game.name %}
                 <div class="col-sm-6 my-4">
                     <div class="card">
                         <div class="card-header">
-
                             <!-- Review title -->
                             <h5 class="card-title">"{{ review.title }}"</h5>
-            
                             <!-- Edit and delete if user is reviewer -->
                             {% if user == review.reviewer %}
                             <small class="ml-3">
@@ -164,12 +157,10 @@
                             </small>
                             {% endif %}
                         </div>
-
                         <!-- Review -->
                         <div class="card-body">
                             <p class="card-text">{{ review.review }}</p>
                         </div>
-
                         <!-- Displays reviewer's username/name and date of review -->
                         <div class="card-footer text-black">
                             {{ review.reviewer }} -
@@ -178,8 +169,7 @@
                     </div>
                 </div>
                 <!-- Delete review modal -->
-                <div class="modal fade" id="deleteReview{{ review.id }}Modal" tabindex="-1"
-                    aria-labelledby="deleteReview{{ review.id }}ModalLabel" aria-hidden="true">
+                <div class="modal fade" tabindex="-1" role="dialog">
                     <div class="modal-dialog">
                         <div class="modal-content text-black">
                             <div class="modal-header">
@@ -191,9 +181,9 @@
                             <div class="modal-footer">
                                 <!-- Cancel and delete button -->
                                 <button type="button" class="btn btn-dark text-uppercase"
-                                    data-dismiss="modal">Cancel</button>
+                                    data-dismiss="modal" aria-label="cancel">Cancel</button>
                                 <a class="btn btn-danger text-uppercase" href="{% url 'delete_review' game.id review.id %}"
-                                    id="{{ review.id }}">Delete</a>
+                                    id="{{ review.id }}" aria-label="delete">Delete</a>
                             </div>
                         </div>
                     </div>
