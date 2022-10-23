@@ -276,7 +276,39 @@ All of these tests were performed on desktop PC, Dell laptop, and iPhone8, iPhon
 ## **HTML**
 - No errors were returned when passing through the official W3C validator
 
-    ![W3C Validator](media/testing//validators/)
+Home page
+![W3C Validator - home page](media/testing//validators/html_validator_home.JPG)
+
+Games page
+![W3C Validator - games page](media/testing//validators/html_validator_games.JPG)
+
+Game detail page
+![W3C Validator - game detail page](media/testing//validators)
+
+Shopping basket page
+![W3C Validator - shopping basket page](media/testing//validators/html_validator_basket.JPG)
+
+Checkout page 
+![W3C Validator - checkout page](media/testing//validators/html_validator_checkout.JPG)
+
+Checkout success page 
+![W3C Validator - checkout success page](media/testing//validators/html_validator_checkout_success.JPG)
+
+Contact page 
+![W3C Validator - contact page](media/testing//validators/html_validator_contact.JPG)
+
+Login page
+![W3C Validator - login page](media/testing//validators/html_validator_login.JPG)
+
+Logout page
+![W3C Validator - logout page](media/testing//validators/html_validator_logout.JPG)
+
+Register page
+![W3C Validator - register page](media/testing//validators/html_validator_signup.JPG)
+
+
+Profile page
+![W3C Validator - profile page](media/testing//validators)
 
 ## **CSS**
 - No errors were found when passing through the official Jigsaw validator
@@ -320,15 +352,36 @@ I checked that the chosen colors and fonts are easy to read. All pages have pass
 ## **Lighthouse Testing**
 
   ### **Desktop**
-  
+  Home page
   ![Home page - lighthouse desktop](media/testing/validators/lighthouse_desktop.JPG)
+
+  Games page
   ![Games page - lighthouse desktop](media/testing/validators/lighthouse_games_desktop.JPG)
+
+  Game detail page
   ![Game detail page - lighthouse desktop](media/testing/validators/lighthouse_game_detail_desktop.JPG)
+
+  Profile page
   ![Profile page - lighthouse desktop](media/testing/validators/lighthouse_profile_desktop.JPG)
+
+  Favourites page
+  ![Favourites page - lighthouse desktop](media/testing/validators/lighthouse_favourites_desktop.JPG)
+
+  Contact page
   ![Contact page - lighthouse desktop](media/testing/validators/lighthouse_contact_desktop.JPG)
-  ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
+
+   Shopping basket page
   ![Shopping basket - lighthouse desktop](media/testing/validators/lighthouse_shopping_basket_desktop.JPG)
 
-  ### **Mobile**
+  Checkout page
+  ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
 
-  ![Lighthouse_mobile](media/testing/validators/)
+### Mobile
+While Lighthouse testing was quite high in desktop version, the performance during mobile testing was lacking. It is mostly due to render-blocking resources like jquery, bootstrap js and css. 
+I have originally got a very high score on Lighthouse under mobile performance, but it had dropped down and it's moving around 70-82 points only on Performance. 
+
+Home page - first testing
+![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile.JPG)
+
+Home page - following testing
+![Home page - lighthouse first mobile testing](media/testing/validators/)
