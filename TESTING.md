@@ -139,6 +139,16 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![Game detail page](media/testing/user-stories/game_detail_page.JPG)
 
+- As a Shopper I want to be able to sort all products by name, price and product category so that I can see them in desired order to ease site navigation and for faster shopping experience
+
+    - There is a **'sort-by'** selector box on games page which allowed me to sort the games by category, name and price in ascending or descending order
+
+        ![Sort-by drop down menu](media/testing/user-stories/sort-by-drop-down.jpg)
+
+    - I could also view games sorted by their category, name or price via the main navigation bar - when I clicked on **Games**, dropdown menu opened up with three categories
+
+        ![Main nav dropdown menu with categories](media/testing/user-stories/main-nav-drop-down-sort-menu.jpg)
+
 - As a **Shopper** I want to be able to read games review so that I can make informed decision before making a purchase
 
     - If I want to read reviews about a desired game, I have to click on the game card to get into its game detail page and see if there are any reviews in the **Review** section at the bottom of the page
@@ -152,17 +162,6 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Once I click on **Add to Basket** button, success toast pops up in the top right corner announcing I successfully added said game to a shopping basket and a pop up showing my current shopping basket summary, prices, total cost and shipping cost, if I haven't crossed the minimum spend for a free shipping. It also contains a button to a secure checkout
 
         ![Shopping basket toast and pop-up message](media/testing/user-stories/adding_to_basket_toast_pop_up.JPG)
-
-- As a **Shopper** I can checkout my shopping bag so that I can complete my purchase and see a summary of my order
-
-    - The shopping basket icon in the header gives an up-to-date counter of the current shopping basket total
-
-        ![Shopping basket icon in top nav](media/testing/user-stories/basket_icon.png)
-
-    - When I clicked on the shopping basket icon, I was redirected to a shopping basket page which allowed me to view all games currently in my basket, quantity, and total cost and shipping cost *(if applicable)*
-
-        ![**Shopping basket page view**](media/testing/user-stories/basket_page_view.png)
-
 - As a **Shopper** I can add or remove products in the shopping basket so that I can buy the wanted amount if I change my mind
 
     - There is a quantity increment and decrement button with an update button that allows the user to increase or decrease the number of the specific item they wish to purchase
@@ -181,9 +180,35 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![Removing items from shopping basket button](media/testing/user-stories/adjusting_basket_volume_remove_toast.png)
 
+- As a **Shopper** I can checkout my shopping bag so that I can complete my purchase and see a summary of my order
+
+    - The shopping basket icon in the header gives an up-to-date counter of the current shopping basket total
+
+        ![Shopping basket icon in top nav](media/testing/user-stories/basket_icon.png)
+
+    - When I clicked on the shopping basket icon, I was redirected to a shopping basket page which allowed me to view all games currently in my basket, quantity, and total cost and shipping cost *(if applicable)*
+
+        ![Shopping basket page view](media/testing/user-stories/basket_page_view.png)
+
+    - Once I reviewed my basket and was happy with its contents I clicked on **Secure Checkout** button
+
+         ![Secure checkout button](media/testing/user-stories/secure_checkout.jpg)
+
+    - I was then taken to a **Checkout** page where I had to fill in my full name as it is not stored in my profile
+
+        ![Checkout form missing info](media/testing/user-stories/checkout_form.jpg)
+
+    - I had to then enter my card details and zip or post code - this automatically changes according to if I enter a UK card number or from another country
+
+        ![Card details](media/testing/user-stories/card_details.jpg)
+
+    - Once I clicked on **Complete Order** button, overlay appeared on the screen and after a short while I was taken to a page confirming my order
+
+        ![Payment overlay](media/testing/user-stories/payment_overlay.JPG)
+
 - As a **Shopper**, I can view the order confirmation page after I made a payment so that I know my order and payment have gone through successfully
 
-    - Once I clicked on **Complete Order** I was taken to checkout success page with my order summary of what I ordered, my billing information, my delivery information and how much I spent in total
+    - Once I clicked on **Complete Order** button I was taken to **checkout success** page with my order summary of what I ordered and quantities, my billing information, my delivery information and how much I spent in total
 
         ![Checkout Success page](media/testing/user-stories/checkout_success.JPG)
 
@@ -227,21 +252,9 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![Favourites page view](media/testing/user-stories/favourites_page_view.png)
 
-    - When I clicked on the trash icon, game was removed from my favourites page and success toast message popped up in the top right corner with a message
+    - When I clicked on the trash icon, game was removed from my favourites page and success toast message popped up in the top right corner I have succesfully removed the game from my favourites, and because it was the only game there, I have also received a notification my favourites list was empty
 
         ![Removing game from favourites toast](media/testing/user-stories/favourites_removal_toast.JPG)
-
-
-- As a Site User, I want to be able to sort a specific game category so that I can find the best-priced or best-rated game in a specific category, or sort the games in that category by name.
-    - There are navigation links and filter buttons that allow the user to view all games of a certain category or group of categories.
-
-- As a Shopper I want to be able to sort all products by name, price and product category so that I can see them in desired order to ease site navigation and for faster shopping experience
-    - There is a 'sort-by' selector box on the games page which allows the user to sort the games by category, name and price in ascending or descending order
-
-- As a Shopper, I can view the order confirmation page after I made a payment so that I know my order and payment have gone through successfully
-
-- As a Shopper, I can add my card details during checkout process so that I can pay for the products in my shopping basket
-- The checkout screen uses the Stripe payment system for safe and secure payment of purchases
 
 - As a **Shopper** I can subscribe with my email address so that I will get informed about promotions, sales and new games coming in
 
