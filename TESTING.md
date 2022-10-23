@@ -3,10 +3,9 @@
 Testing.md document records all reports from validators and gives a summary of manual testing which got carried out on several devices.
 
 ## **TABLE OF CONTENTS**
-1. [Testing User Stories](#Testing-User-Stories)
+1. [User Testing - User Stories](#Testing-User-Stories)
 2. [Manual Testing](#Manual-Testing)
 3. [Automated Testing](#Automated-Testing) 
-4. [User Testing](#User-Testing)
 
 ---
 ## [**USER STORIES**](#Testing-User-Stories)
@@ -72,19 +71,32 @@ Testing.md document records all reports from validators and gives a summary of m
     ![**Game detail page**](media/testing/user-stories/game_detail_page.JPG)
     - I can also add the game to my favourites by clicking on the heart icon next to the title
 
-- As a Shopper I want to be able to read games review so that I can make informed decision before making a purchase
+- As a **Shopper** I want to be able to read games review so that I can make informed decision before making a purchase
     - If I want to read reviews about a desired game, I have to click on the game card to get into its game detail page and see if there are any reviews in the **Review** section at the bottom of the page
     ![**Reviews**](media/testing/user-stories/reviews.png)
 
-- As a Shopper I can add a product in to the shopping basket so that I can buy this product
-  - The link to the shopping basket page advises the checkout is secure, and the payment information input is set to ensure the user's information is correct and valid before purchasing.
+- As a **Shopper** I can add a product in to the shopping basket so that I can buy this product
+ ![**Adding a product to shopping basket**](media/testing/user-stories/adding_to_basket_arrow.png)
+    - Once I click on **Add to Basket** button, success toast pops up in the top right corner announcing I successfully added said game to a shopping basket and a pop up showing my current shopping basket summary, prices, total cost and shipping cost, if I haven't crossed the minimum spend for a free shipping. It also contains a button to a secure checkout
+    ![**Shopping basket toast and pop up message**](media/testing/user-stories/adding_to_basket_toast_pop_up.JPG)
 
-- As a Shopper I can add or remove products in the shopping basket so that I can buy the wanted amount if I change my mind
+- As a **Shopper** I can checkout my shopping bag so that I can complete my purchase and see a summary of my order
+    - The shopping basket icon in the header gives an up-to-date counter of the current shopping basket total
+    ![**Shopping basket icon in top nav**](media/testing/user-stories/basket_icon.png)
+    - When I clicked on the shopping basket icon, I was redirected to a shopping basket page which allowed me to view all games currently in my basket, quantity, and total cost and shipping cost (if applicable)
+    ![**Shopping basket page view**](media/testing/user-stories/basket_page_view.png)
+
+- As a **Shopper** I can add or remove products in the shopping basket so that I can buy the wanted amount if I change my mind
     - There is a quantity increment and decrement button with an update button that allows the user to increase or decrease the number of the specific item they wish to purchase
+    ![**Adjusting shopping basket volume button**](media/testing/user-stories/adjusting_basket_volume.png)
+    - If choose to increase or decrease the volume, I need to click on the update button after I have selected the desired amount
+    ![**Adjusting shopping basket update**](media/testing/user-stories/adjusting_basket_volume_update.png)
+    - Once I clicked on update, success toast popped up in the top right corner announcing I successfully increased/decreased quantity and updated pop-up view of shopping basket with total and checkout link button
+    ![**Adjusting shopping basket toast and pop up**](media/testing/user-stories/adjusting_basket_volume_update_toast.png)
+    - When I clicked on remove button, the item got removed from the shopping basket, the total has updated and success toast popped up in the top right corner announcing I successfully removed the game and an updated pop-up view of shopping basket with total and checkout link button
+    ![**Removing items from shopping basket button**](media/testing/user-stories/adjusting_basket_volume_remove_toast.png)
 
-- As a Shopper I can checkout my shopping bag so that I can complete my purchase and see a summary of my order
-    - The shopping basket icon in the header gives an up-to-date counter of the current shopping basket total. In addition, each item added to the shopping basket activates a pop-up which details your current shopping basket summary, prices, total cost and shipping. It also advises the user how much more they need to spend to qualify for free shipping.
-    - There is a shopping basket page which allows the user to view all games currently selected, quantity, and the total cost with of shipping. Here the user can also update and delete items from the shopping basket if required.
+
 
 - As a **Shopper**, I can view the order confirmation page after I made a payment so that I know my order and payment have gone through successfully.
     - Once I clicked on **Complete Order** I was taken to checkout success page with my order summary of what I ordered, my billing information, my delivery information and how much I spent in total
@@ -96,8 +108,6 @@ Testing.md document records all reports from validators and gives a summary of m
 - As a **Shopper** I want to be able to receive an order confirmation email after I finalise checkout so that I can verify that I placed my order successfully
     - Once I clicked on **Complete Order** button and was taken to order confirmation page, I have received an email confirming my order with all the details
     ![**Order email confirmation**](media/testing/user-stories/confirmation_email.JPG)
-
-
 
 
 
