@@ -73,18 +73,19 @@
     </div>
     <!-- Scroll up arrow for ease of navigation -->
     <div class="btt-button">
-        <a class="scroll-link d-flex h-100">
+        <a class="scroll-link d-flex">
             <i class="fa-solid fa-circle-arrow-up mx-auto my-auto text-dark"></i>
         </a>	
     </div>
+ 
 {% endblock content %}
 
 {% block postloadjs %}
-    <!-- Scroll up arrow JS -->
-    {{ block.super }}
-    <script>
-        $('.btn-link').click(function(e) {
-            window.scrollTo(0,0)
-        })
-    </script>
+{{ block.super }}
+<!-- Scroll up arrow JS -->
+<script>
+    $('.scroll-link').click(function(e) {
+        window.scrollTo(0,0)
+    })
+</script>
 {% endblock %}

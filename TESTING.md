@@ -139,7 +139,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![Game detail page](media/testing/user-stories/game_detail_page.JPG)
 
-- As a Shopper I want to be able to sort all products by name, price and product category so that I can see them in desired order to ease site navigation and for faster shopping experience
+- As a **Shopper** I want to be able to sort all products by name, price and product category so that I can see them in desired order to ease site navigation and for faster shopping experience
 
     - There is a **'sort-by'** selector box on games page which allowed me to sort the games by category, name and price in ascending or descending order
 
@@ -162,6 +162,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Once I click on **Add to Basket** button, success toast pops up in the top right corner announcing I successfully added said game to a shopping basket and a pop up showing my current shopping basket summary, prices, total cost and shipping cost, if I haven't crossed the minimum spend for a free shipping. It also contains a button to a secure checkout
 
         ![Shopping basket toast and pop-up message](media/testing/user-stories/adding_to_basket_toast_pop_up.JPG)
+
 - As a **Shopper** I can add or remove products in the shopping basket so that I can buy the wanted amount if I change my mind
 
     - There is a quantity increment and decrement button with an update button that allows the user to increase or decrease the number of the specific item they wish to purchase

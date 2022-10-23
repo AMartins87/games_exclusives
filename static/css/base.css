@@ -714,4 +714,9 @@ a.social i {
         font-size: 0.75rem;
         text-transform: none;
     }
+
+    /* Favourites */
+    .card-img-top {
+        width: 95%;
+    }
 }
