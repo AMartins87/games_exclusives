@@ -29,7 +29,7 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 - Has links to Facebook, Instagram and Twitter
 - Privacy Policy link is included
 
-### ***Web Admin Expectations***
+### **Web Admin Expectations**
 - Can update, add or remove products
 
 ---
@@ -40,7 +40,7 @@ The development of this project was managed and implemented using GitHub project
 
 User stories were labeled with <span style="color:#c5f015">**Must Have**</span>, <span style="color: #FBCA04">**Nice to have**</span>, <span style="color:#7057ff">**Future development**</span> and <span style="color:#35EE53">**CRUD**</span>. 
 
-Documentation like README, TESTING md files and preview of my business Facebook page were assigned a <span style="color: #1589F0">**Documentation**</span> label.
+Documentation like README, TESTING and DEPLOYMENT md files and preview of my business Facebook page were assigned a <span style="color: #1589F0">**Documentation**</span> label.
 
 ---
 ## **FEATURES**
