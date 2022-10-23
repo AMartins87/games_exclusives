@@ -23,7 +23,7 @@
                             {% if item.game.image %}
                             <img class="w-100" src="{{ item.game.image.url }}" alt="{{ item.game.name }}">
                             {% else %}
-                            <img class="w-100" src="{{ MEDIA_URL }}no_image_placeholder.JPG" alt="{{ item.game.name }}">
+                            <img class="w-100" src="https://res.cloudinary.com/games-exclusives/image/upload/v1666464360/media/no_image_placeholder.webp" alt="{{ item.game.name }}">
                             {% endif %}
                         </div>
                         <div class="col-9">

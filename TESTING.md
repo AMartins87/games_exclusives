@@ -19,7 +19,6 @@ Testing.md document records all reports from validators and gives a summary of m
     - I am also reminded of logging in or creating an account when on checkout page
     ![**Registration reminder on checkout page**](media/testing/user-stories/registration_prompt_checkout.png)
 
-
 - As a **Registered Shopper** I can easily login/logout of my account so that I can access my personal details, view my orders history and view my favourite games
     - Main navbar in the header contains link to account **Login** 
     ![**Login link in main nav bar**](media/testing/user-stories/Top_nav_drop_account_not_logged.JPG)
@@ -39,7 +38,6 @@ Testing.md document records all reports from validators and gives a summary of m
     - Once I click **Add Game Review** button, review is added to the game detail page and a notification toast pops up in the top right corner announcing I added my review
     ![**Added review toast notification**](media/testing/user-stories/added_game_review_toast.JPG)
 
-
 - As a **Registered Shopper** I can edit my game review that I can share a correct view on a game
     - As a author of the review I can edit it via the link shown below the review's title
     ![**Review view as an author**](media/testing/user-stories/review_author_view.JPG)
@@ -55,7 +53,6 @@ Testing.md document records all reports from validators and gives a summary of m
     - The *Cancel* button returns me back to the review, the *delete* button deletes the review and notification toast pops up in the top right corner announcing I deleted my review
     ![**Deleted review toast notification**](media/testing/user-stories/deleted_game_review_toast.JPG)
     
-
 - As a **Shopper** I can type in search bar name of a product or related keyword so that I can be taken to a searched for product or list of similar ones
     - There is a search bar in the header which allows users to search for games based on keywords in the description or name fields
     ![**Search bar**](media/testing/user-stories/search_bar.JPG)
@@ -96,8 +93,6 @@ Testing.md document records all reports from validators and gives a summary of m
     - When I clicked on remove button, the item got removed from the shopping basket, the total has updated and success toast popped up in the top right corner announcing I successfully removed the game and an updated pop-up view of shopping basket with total and checkout link button
     ![**Removing items from shopping basket button**](media/testing/user-stories/adjusting_basket_volume_remove_toast.png)
 
-
-
 - As a **Shopper**, I can view the order confirmation page after I made a payment so that I know my order and payment have gone through successfully.
     - Once I clicked on **Complete Order** I was taken to checkout success page with my order summary of what I ordered, my billing information, my delivery information and how much I spent in total
     ![**Checkout Success page**](media/testing/user-stories/checkout_success.JPG)
@@ -110,8 +105,26 @@ Testing.md document records all reports from validators and gives a summary of m
     ![**Order email confirmation**](media/testing/user-stories/confirmation_email.JPG)
 
 
+- As a **Registered Shopper** I can add or remove a game to my favourites so that I can either purchase it again or go back to it at later stage without prolonged searches
+    - I could add a game to my favourites from the main game page view by clicking the link **Add to favourites** with red heart icon
+    ![**Adding to favourites**](media/testing/user-stories/adding_to_favourites.png)
+    - I could add a game to my favourites from within the game detail page by clicking on the heart icon which is displayed far right next to the game title 
+    ![**Adding to favourites from game detail page**](media/testing/user-stories/adding_to_favourites_game_page.png)
+    - When I clicked on the heart icon to add a game to my favourites list, success toast message popped up in the top right corner
+    ![**Adding game to favourites toast**](media/testing/user-stories/favourites_add_toast.JPG)
+    - When I clicked on the heart icon of the same game to add it to my favourites list, error toast message popped up in the top right corner notifying me that the game is already in my favourites list
+    ![**Adding the same game to favourites toast**](media/testing/user-stories/favourites_error_toast.JPG)
+    - I could visit my favourites page by clicking the heart icon in the top nav bar 
+     ![**Visiting favourites page**](media/testing/user-stories/favourites_icon.png)
+    - I could also access my favourite page via my **My Profile** page by clicking on the **Favourites** link there
+    ![**Visiting favourites page via profile page**](media/testing/user-stories/profile_page_favourites_link.png)
+    - I could view all games on my favourites page where I could either click on link called **Details** to visit the game page or I could click on the **trash icon** to remove the game from my favourites list
+    ![**Favourites page view**](media/testing/user-stories/favourites_page_view.png)
+    - When I clicked on the trash icon, game was removed from my favourites page and success toast message popped up in the top right corner with a message
+    ![**Removing game from favourites toast**](media/testing/user-stories/favourites_removal_toast.JPG)
 
-- As a Registered Shopper I can add or remove a game to my favourites so that I can either purchase it again or go back to it at later stage without prolonged searches
+
+
 
 - As a Shopper I can subscribe with my email address so that I will get informed about promotions, sales and new games coming in
 
