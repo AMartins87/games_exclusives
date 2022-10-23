@@ -6,7 +6,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
 ## SUMMARY OF ALL TESTS 
 - **As user**:
-    - Navigation bar links tested
+    - Navigation bar links directed me to the correct pages as expected
     - Clicking through site logo gets me back to home page
     - Login, registration and loggout worked as expected
         - Verification email request received upon registration
@@ -19,8 +19,12 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Adding games to favourites and removing them
     - Subscribed to newsletter service
     - Tested footer social media links, quick links, privacy policy link
-        - Tested contact link and filled in the contact form
-            - Confirmation email received
+        - Facebook link took me to Games Exclusives business page
+        - Instagram link to me to Games Exclusives account
+        - Twitter link took me to a Twitter page
+        - Privacy Policy link took me to Games Exclusives privacy policy page
+    - Contact link, which is present in the footer, tested
+        - Confirmation email received
 
 - **As administrator**:
     - Added a new game with and without image
@@ -285,120 +289,9 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Once clicked on the **delete** link, game gets deleted immediately and a notification toast pops up in the top right corner
 
         ![**Game deleted toast**](media/testing/user-stories/game_deleted_toast.JPG)
-
-***
+---
 
 [Back to top](#)
-
-## **SUMMARY**
-
-I have tested the site functionality and created a couple of normal user accounts during this process to test all functionality
-
-### **1. Menu/navbar links**
-### **Purpose: Test if all present link take users to the correct pages**
-
-These were tested by clicking on each navigation link from each page.
-All links are directed to the correct pages as expected.
-
----
-
-### **2. Registration & Login**
-### **Purpose:Test if users can register to the website**
-
-1. Enter [Games Exclusives e-commerce site](https://games_exclusives.herokuapp.com/) and click on [**Register** link](https://games_exclusives.herokuapp.com/users/register/) in top navbar
-
-    ![Registration testing](media/testing/)
-
-2. Write in the username, first and last name, email, password, and again password to confirm. Then click *Register* button
-
-    ![Registration testing 2](media/testing/)
-
-3. Once the user clicks on the register button, they will be taken **Login page** to log in with their new login details
-
-4. User is successfully logged and redirected to home page
-
----
-
-### **3. Logout**
-### **Purpose: Test if users can logout of their account**
-
-1. log in to [Games Exlusives](https://games_exclusives.herokuapp.com/)
-2. Top navbar links change from Login / Register to **Logout** and **My Profile** link will appear
-3. Click on **Logout**
-
-    ![Logout testing](media/testing/)
-
-4. User will be asked if they are sure they want to loggout and if clicked yes, user is successfully logged out and redirected to the home page
-
----
-
-### **4. Adding game into shopping basket**
-### **Purpose: Test if users can add a game into a shopping basket**
-
----
-
-### **5. Checkout**
-### **Purpose: Test if users can checkout**
-
----
-
-### **6. Ameding quantities and removing itesm from a shopping basket**
-### **Purpose: Test if users can change quantities of games in their basket and/or remove them**
-
----
-
-### **7. Add to favourites testing**
-### **Purpose: Test if favourite button works**
-
-1. If shopers are not logged in, the favourite icon won't show on the screen
-
-    ![Favorite icon testing - not logged in](media/testing/)
-
-2. If shoppers are logged in, the favourite icon will show on the screen
-
-    ![Favorite icon testing  - logged in](media/testing/)
-
-3. By clicking on the **Favourite** icon, the game will save in shoppers account and they will be able to view it when clicking on **My Account** link in top nav bar
-
-    ![Favorite icon testing  - favourited](media/testing/)
-
----
-
-### **8. Edit/Update listed game**
-### **Purpose: Test if listed games can be updated with new price, information or with a new image**
-
-1. To be able to edit/update a game I have to be logged in as an administrator
-
-
----
-
-### **9. Delete listed game**
-### **Purpose: Test if a game can be deleted**
-
-1. To be able to delete a game, I have to be logged in as an administrator
-2. Once logged in, I have to click on **My Account** in top right corner and then game management link 
-
-    ![Delete game testing](media/testing/)
- 
----
-
-### **10. Footer - social media links**
-### **Purpose: Test if all social media links take users to their respective links and open in new windows**
-
-These were tested by clicking on each social media icon.
-All of these opened respective social media sites in new windows as expected.
-
-### **11. Footer - contact page link**
-### **Purpose: Test if users can successfully contact the site administrator via the Contact page link**
-
-1. Click on [**Contact Us**](https://games_exclusives.herokuapp.com/contact/) link within a footer
-2. The page opened, I was able to fill it in and submitted. All site users, both registered and not, can use the contact form by filling all the required details - Name, email, reason of their contact and then the message text
-    ![Contact form testing of name input](media/testing/contact_page_testing_name.png)
-    ![Contact form testing of email input](media/testing/contact_page_testing_email.png)
-    ![Contact form testing of subject input](media/testing/contact_page_testing_subject.png)
-    ![Contact form testing of message input](media/testing/contact_page_testing_body.png)
-
-3. Confirmation of its succesfull submission was shown on screen and confirmation email received.
 
 ---
 ## **AUTOMATED TESTING - CODE VALIDATORS**
@@ -502,7 +395,7 @@ Home page - following testing
 </details>
 
 ---
-# Accessibility
+## Accessibility
 
 I checked that the chosen colors and fonts are easy to read. All pages have passed through the Lighthouse reporting tool in Chrome developer tools on both mobile and desktop.
 
