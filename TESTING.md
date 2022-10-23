@@ -289,8 +289,11 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Once clicked, the superuser will be taken to a **Game Management - Add a game** page, where I had to select a category, and fill in the game details like game name, description and price. Optional fields are SKU number, image URL and uploading game image
 
         ![Add game page form](media/testing/user-stories/add_game_form_page.png)
-    
-    
+
+    - If I chose to not to upload a game image, an automated placeholder image was uploaded
+
+        ![Added game with no image](media/testing/user-stories/added_game_no_image.jpg)
+
 - As a **Site Admin** I can change product details so that I can reflect any changes like a new description or price change
 
     - I can do this by selecting a game I want to edit, entering the game's info page and click on the **Edit** link which is placed underneath the category tag and is only visible to super users
@@ -377,6 +380,19 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 - All code was checked and minor issues like blank spaces were fixed on all files
 </details>
 
+<details>
+<summary>JS Validator Testing</summary>
+
+- I have run the JS code through [**jshint**](https://jshint.com/)
+
+**CHECKOUT PAGE**
+![Checkout page - jshint validator](media/testing/validators/jshint_validator_checkout.JPG)
+
+**QUANTITY INPUT SCRIPT**
+![Checkout page - jshint validator](media/testing/validators/jshint_validator_quantity_input_script.JPG)
+
+</details>
+
 ---
 ## **Lighthouse Testing**
 <details>
@@ -424,9 +440,11 @@ Home page - following testing
 
 I checked that the chosen colours and fonts are easy to read. All pages have passed through the Lighthouse reporting tool in Chrome developer tools on both mobile and desktop.
 
-- [Contrast checker - body text](media/testing/validators/)
-- [Contrast checker - links](media/testing/validators/)
-- [Contrast checker - hover selector](media/testing/validators/)
+- **CONTRAST CHECKER - BODY TEXT**
+![Contrast checker - body text](media/testing/validators/contrast_checker_body.JPG)
+
+[Contrast checker - links](media/testing/validators/)
+[Contrast checker - hover selector](media/testing/validators/)
 
 ---
 [Back to top](#)

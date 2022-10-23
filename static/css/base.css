@@ -138,7 +138,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn-dark:active,
 .btn-dark:focus {
     background: #d48817;
-    color: white !important;
+    color: black !important;
 }
 
 .shop-now-btn:hover,
