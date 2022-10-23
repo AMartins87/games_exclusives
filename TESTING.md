@@ -3,12 +3,12 @@
 Testing.md document records all reports from validators and gives a summary of manual testing which got carried out on several devices.
 
 ## **TABLE OF CONTENTS**
-1. [User Testing - User Stories](#Testing-User-Stories)
+1. [User Testing - User Stories](#User-Testing-User-Stories)
 2. [Manual Testing](#Manual-Testing)
-3. [Automated Testing](#Automated-Testing) 
+3. [Automated Testing - Code Validators](#Automated-Testing-Code-Validators) 
 
 ---
-## [**USER STORIES**](#Testing-User-Stories)
+## [**USER STORIES**](#User-Testing-User-Stories)
 ### **SITE USER / SHOPPER**
 
 - As a **New User/Shopper** I can easily register on this website so that I can place an order quickly and easily
@@ -285,7 +285,7 @@ All of these opened respective social media sites in new windows as expected.
 
 ---
 
-All of these tests were performed on desktop PC, Dell laptop, and iPhone8, iPhone 8, iPhone 12, and iPad Pro and worked as planned. The app was responsive and very easy to navigate.
+All of these tests were performed on desktop PC, Dell laptop, iPhone 8, iPhone 12, and iPad Pro and worked as planned. The app was responsive and very easy to navigate.
 
 ### SUMMARY OF ALL TESTS 
 - Menu links tested
@@ -299,69 +299,72 @@ All of these tests were performed on desktop PC, Dell laptop, and iPhone8, iPhon
 - Tested all footer social media links
 - Tested contact link and filled in the contact form
 
+[Back to top](#)
+
 ---
 
-# [**AUTOMATED TESTING - CODE VALIDATORS**](#Automated-Testing)
+# [**AUTOMATED TESTING - CODE VALIDATORS**](#Automated-Testing-Code-Validators)
 
-## **HTML**
+<details>
+<summary>HTML Validator Testing</summary>
+
 - No errors were returned when passing through the official W3C validator
 
-Home page
+**HOME PAGE**
 ![W3C Validator - home page](media/testing//validators/html_validator_home.JPG)
 
-Games page
+**GAMES PAGE**
 ![W3C Validator - games page](media/testing//validators/html_validator_games.JPG)
 
-Game detail page
+**GAME DETAIL PAGE**
 ![W3C Validator - game detail page](media/testing//validators/html_validator_game_detail.JPG)
 
-Shopping basket page
+**SHOPPING BASKET PAGE**
 ![W3C Validator - shopping basket page](media/testing//validators/html_validator_basket.JPG)
 
-Checkout page 
+**CHECKOUT PAGE**
 ![W3C Validator - checkout page](media/testing//validators/html_validator_checkout.JPG)
 
-Checkout success page 
+**CHECKOUT SUCCESS PAGE** 
 ![W3C Validator - checkout success page](media/testing//validators/html_validator_checkout_success.JPG)
 
-Login page
+**LOGIN PAGE**
 ![W3C Validator - login page](media/testing//validators/html_validator_login.JPG)
 
-Logout page
+**LOGOUT PAGE**
 ![W3C Validator - logout page](media/testing//validators/html_validator_logout.JPG)
 
-Register page
+**REGISTRATION PAGE**
 ![W3C Validator - register page](media/testing//validators/html_validator_signup.JPG)
 
-Profile page
+**PROFILE PAGE**
 ![W3C Validator - profile page](media/testing//validators/html_validator_profile.JPG)
 
-Contact page 
+**CONTACT PAGE** 
 ![W3C Validator - contact page](media/testing//validators/html_validator_contact.JPG)
+</details>
 
-## **CSS**
+<details>
+<summary>CSS Validator Testing</summary>
+
 - No errors were found when passing through the official Jigsaw validator
 
     ![Jigsaw Validator](media/testing/validators/css_validator.JPG)
+</details>
 
-## **PYTHON VALIDATION**
-As PEP8 validator is down I had to use the built-in pycodestyle linter checker as per CI tutor advice
 
-All code was checked and minor issues like blank spaces were fixed on all files. 
+<details>
+<summary>Python Validator Testing</summary>
 
-# Accessibility
+- As PEP8 validator is down I had to use the built-in pycodestyle linter checker as per CI tutor advice
 
-I checked that the chosen colors and fonts are easy to read. All pages have passed through the Lighthouse reporting tool in Chrome developer tools on both mobile and desktop.
-
-- [Contrast checker - body text](media/testing/validators/)
-- [Contrast checker - links](media/testing/validators/)
-- [Contrast checker - hover selector](media/testing/validators/)
+- All code was checked and minor issues like blank spaces were fixed on all files. 
+</details>
 
 ---
-
 ## **Lighthouse Testing**
-
-  ### **Desktop**
+<details>
+<summary>Desktop lighthouse testing</summary>
   Home page
   ![Home page - lighthouse desktop](media/testing/validators/lighthouse_desktop.JPG)
 
@@ -385,9 +388,12 @@ I checked that the chosen colors and fonts are easy to read. All pages have pass
 
   Checkout page
   ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
+</details>
 
-### **Mobile**
-While Lighthouse testing was quite high in desktop version, the performance during mobile testing was lacking. It is mostly due to render-blocking resources like jquery, bootstrap js and css. 
+<details>
+<summary>Mobile lighthouse testing</summary>
+
+- While Lighthouse testing was quite high in desktop version, the performance during mobile testing was lacking. It is mostly due to render-blocking resources like jquery, bootstrap js and css. 
 I have originally got a very high score on Lighthouse under mobile performance, but it had dropped down and it's moving around 70-82 points only on Performance. 
 
 Home page - first testing
@@ -395,3 +401,16 @@ Home page - first testing
 
 Home page - following testing
 ![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile_second.JPG)
+</details>
+
+---
+# Accessibility
+
+I checked that the chosen colors and fonts are easy to read. All pages have passed through the Lighthouse reporting tool in Chrome developer tools on both mobile and desktop.
+
+- [Contrast checker - body text](media/testing/validators/)
+- [Contrast checker - links](media/testing/validators/)
+- [Contrast checker - hover selector](media/testing/validators/)
+
+---
+[Back to top](#)
