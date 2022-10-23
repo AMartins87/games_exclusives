@@ -17,6 +17,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Left a review on a game
     - Edited and deleted a review on a game
     - Adding games to favourites and removing them
+    - Subscribed to newsletter service
     - Tested footer social media links, quick links, privacy policy link
         - Tested contact link and filled in the contact form
             - Confirmation email received
@@ -25,8 +26,6 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Added a new game with and without image
     - Edited an existing listed game
     - Deleted a listed game
-
-
 
 ---
 ## **USER STORIES - USER TESTING**
@@ -38,7 +37,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![**Registration link in main nav bar**](media/testing/user-stories/Top_nav_drop_account_not_logged.JPG)
 
-    - I am also prompted to register if I try to access favourites section or add a game to favourites, and try to *Add Review*
+    - I am also prompted to register if I try to access favourites section or add a game to favourites, and try to add review
 
         ![**Registration prompt when accessing favourites and trying to add a review**](media/testing/user-stories/registration_prompt.png)
 
@@ -84,11 +83,11 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![**Review view as an author**](media/testing/user-stories/review_author_view.JPG)
 
-    - Once I click on the *Edit* link, I am taken to a **Edit Review** page
+    - Once I click on the **Edit** link, I am taken to a **Edit Review** page
 
         ![**Edit review page**](media/testing/user-stories/edit_game_review.JPG)
 
-    - The *Back to game* button returns me back to the game page, the *Update Game Review* button updates the review and notification toast pops up in the top right corner announcing I updated my review
+    - The **Back to game** button returns me back to the game page, the **Update Game Review** button updates the review and notification toast pops up in the top right corner announcing I updated my review
 
         ![**Updated review toast notification**](media/testing/user-stories/updated_game_review_toast.JPG)
 
@@ -96,11 +95,11 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
     - As a author of the review I can delete it via the link shown below the review's title
 
-    - Once I click on the *Delete* link, a modal pops up asking if I am sure I want to delete said review
+    - Once I click on the **Delete** link, a modal pops up asking if I am sure I want to delete said review
 
         ![**Delete review modal**](media/testing/user-stories/delete_review_modal.JPG)
 
-    - The *Cancel* button returns me back to the review, the *delete* button deletes the review and notification toast pops up in the top right corner announcing I deleted my review
+    - The **Cancel** button returns me back to the review, the **delete** button deletes the review and notification toast pops up in the top right corner announcing I deleted my review
 
         ![**Deleted review toast notification**](media/testing/user-stories/deleted_game_review_toast.JPG)
     
@@ -114,9 +113,9 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![**Search by keyword**](media/testing/user-stories/search_keyword.JPG)
 
-- As a **Shopper** I can **browse through all listed products so that I can make a purchase
+- As a **Shopper** I can browse through all listed products so that I can make a purchase
 
-    - I can see a list of product cards with listed games, showing their image, name, price and *Add to favourites* link
+    - I can see a list of product cards with listed games, showing their image, name, price and **Add to favourites** link
 
         ![**Games page with game cards**](media/testing/user-stories/games_cards.JPG)
 
@@ -146,7 +145,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
         ![**Shopping basket icon in top nav**](media/testing/user-stories/basket_icon.png)
 
-    - When I clicked on the shopping basket icon, I was redirected to a shopping basket page which allowed me to view all games currently in my basket, quantity, and total cost and shipping cost (if applicable)
+    - When I clicked on the shopping basket icon, I was redirected to a shopping basket page which allowed me to view all games currently in my basket, quantity, and total cost and shipping cost *(if applicable)*
 
         ![**Shopping basket page view**](media/testing/user-stories/basket_page_view.png)
 
@@ -241,7 +240,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     ![**Subscription section**](media/testing/user-stories/subscription_view.JPG)
 
     - I could find the subscription service on home page and contact page
-    
+
     - Once I entered my email address and pressed **Subscribe** button, I was redirected to a page confirming my subscription
 
         ![**Subscription section**](media/testing/user-stories/subscription_confirmation.JPG)
