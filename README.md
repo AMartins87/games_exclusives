@@ -152,13 +152,9 @@ All **Games** pages display all listed games with preview of an image, the their
 
 ![Clearance Games image](media/features/games_clearance_lg.JPG)
 
-### **ADD A GAME PAGE**
+### **ADD A GAME PAGE and EDIT A GAME PAGE**
 
-![Add a game page image](media/features/add_game_form_page.png)
-
-### **EDIT A GAME PAGE**
-
-![Update/Remove product page image](media/features/edit_game_form_page.JPG)
+![Add game and edit game page image](media/features/add_edit_game_sbs_view.jpg)
 
 ### **MY PROFILE PAGE**
 - Shows shopper's profile page with their delivery information and button to submit any changes made to their details

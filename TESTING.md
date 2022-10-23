@@ -147,11 +147,15 @@ Testing.md document records all reports from validators and gives a summary of m
 
 ***
 ### **SHOP OWNER / ADMINISTRATOR** 
-- As a **Site Admin** I can change product details so that I can reflect any changes like a new description or price change
-    - If logged in as super user, I can access the **Game Management** section via a link which is in the **Account** dropdown in main nav bar
-    - Once clicked, the super user will be taken to a **Game Management - Add a game** page, where they have to select a category, and fill in the game details like game name, description and price. Optional fields are SKU number, image URL and uploading game image
-
 - As a **Site Admin** I can add a new product so that I can add variety to my e-store
+    - When logged in as superuser, I can access the **Game Management** section via a link which is in the **Account** dropdown in the top nav bar
+    ![**Accessing game management page**](media/testing/user-stories/game_management_link.png)
+
+    - Once clicked, the superuser will be taken to a **Game Management - Add a game** page, where I had to select a category, and fill in the game details like game name, description and price. Optional fields are SKU number, image URL and uploading game image
+    ![**Add game page form**](media/testing/user-stories/add_game_form_page.png)
+    
+    
+- As a **Site Admin** I can change product details so that I can reflect any changes like a new description or price change
     - I can do this by selecting a game I want to edit, entering the game's info page and click on the **Edit** link which is placed underneath the category tag and is only visible to super users
     ![**Game detail page with edit game link**](media/testing/user-stories/edit_game_link.png)
     - I can also view this link on the main games page underneath each game
@@ -162,6 +166,9 @@ Testing.md document records all reports from validators and gives a summary of m
 - As a **Site Admin** I want to be able to delete a game so that I can remove it if it's no longer available
     - I can do this by selecting a game I want to delete, entering the game's info page and click on the **Delete** link which is placed underneath the category tag and is only visible to super users
     ![**Game detail page with delete game link**](media/testing/user-stories/delete_game_link.png)
+    - Once clicked on the **delete** link, game gets deleted immediately and a notification toast pops up in the top right corner
+    ![**Game deleted toast**](media/testing/user-stories/game_deleted_toast.JPG)
+
 ***
 
 [Back to top](#)
