@@ -4,7 +4,7 @@ Games Exclusives is an e-commerce website built using Django, Python, HTML, CSS 
 
 Purpose of this e-commerce store is to sell game versions which are only exclusive to only one type of game console or were developed only for a PC. 
 
-Live project can be found [here](https://games-exclusives.herokuapp.com/).
+Live project can be found [**HERE**](https://games-exclusives.herokuapp.com/).
 
 ![Am I Responsive](media/wireframes/air_main_image.JPG)
 
@@ -247,6 +247,11 @@ Instagram page was also created for purpose of this project [Instagram dummy pag
 To find the relevant keywords for this project I made searches on [Wordtracker](https://www.wordtracker.com/), [ahrefs](https://ahrefs.com/free-seo-tools) and [Game shop website](https://www.game.co.uk/), and selected keywords which would be important to customers, and added them in the meta tag section of my base.html 
 
 ---
+# **TESTING**
+
+Full testing document can be found [**HERE**](TESTING.md)
+
+---
 # **BUGS**
 
 - I had issues with installing fixtures with both categories and games fixtures. After a review I found I had a typo in category model, and my games fixtures contained double quotation marks within double quotation marks in the games description. Once I changed these to single quote marks all was loading correctly. 
@@ -258,12 +263,14 @@ This project was created using GitHub and Gitpod. Branches were created and afte
 
 Later, the project was deployed to Heroku, Heroku deployment was set to Enable Automatic Deploys, which meant that every time that the repository was pushed, Heroku was also updated.
 
-Full deployment procedure can be found [here](DEPLOYMENT.md).
+Full deployment procedure can be found [**HERE**](DEPLOYMENT.md).
 
 ---
 # **CREDITS**
 
-Background image was created in [Canva](https://www.canva.com/)
+Background image was created in [Canva](https://www.canva.com/).
+
+Placeholder image for a missing game image was created in [Canva](https://www.canva.com/).
 
 
 Favicon - https://www.flaticon.com/free-icon/game-console_2949874 
