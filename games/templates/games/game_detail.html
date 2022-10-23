@@ -124,7 +124,7 @@
        
             <!-- Reviews header -->
             <hr class="mb-1">
-            <h3 class="review-title">Reviews</h3>
+            <h3 class="review-title text-uppercase">Reviews</h3>
 
             <!-- Add review link if user logged in -->
             {% if user.is_authenticated %}
@@ -132,7 +132,6 @@
             {% else %}
             <a href="{% url 'account_login' %}" class="text-uppercase"
                 data-toggle="tooltip" data-placement="top" title="Add review">
-                <small><i class="fa-regular fa-face-smile"></i></small>
                 Add review
             </a>
             <input type="hidden" name="redirect_url" value="{{ request.path }}">

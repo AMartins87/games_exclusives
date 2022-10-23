@@ -161,8 +161,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a:hover {
-    color: #e85320;
+    color: #2844D2;
     text-decoration: none;
+    font-weight: bold;
 }
 
 .navbar-toggler-icon {

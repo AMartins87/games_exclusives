@@ -436,15 +436,17 @@ Home page - following testing
 </details>
 
 ---
-## Accessibility
+## ACCESSIBILITY
 
 I checked that the chosen colours and fonts are easy to read. All pages have passed through the Lighthouse reporting tool in Chrome developer tools on both mobile and desktop.
 
-- **CONTRAST CHECKER - BODY TEXT**
+- **CONTRAST CHECKER - BODY TEXT and HOVER SELECTOR FOR ALL BUTTONS (*unless specified otherwise*)**
 ![Contrast checker - body text](media/testing/validators/contrast_checker_body.JPG)
 
-[Contrast checker - links](media/testing/validators/)
-[Contrast checker - hover selector](media/testing/validators/)
+[Contrast checker - hover links](media/testing/validators/contrast_checker_hover_links.JPG)
+
+- **CONTRAST CHECKER - HOVER SELECTOR FOR BUTTONS WITH CLASS btn-dark**
+[Contrast checker - hover selector](media/testing/validators/contrast_checker_hover.JPG)
 
 ---
 [Back to top](#)
