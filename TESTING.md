@@ -1,14 +1,35 @@
 # **GAMES EXCLUSIVES - TESTING**
 
-Testing.md document records all reports from validators and gives a summary of manual testing which got carried out on several devices.
+Testing.md document records all reports from validators, and gives a summary of manual testing which got carried out on several devices.
 
-## **TABLE OF CONTENTS**
-1. [User Testing - User Stories](#User-Testing)
-2. [Manual Testing](#Manual-Testing)
-3. [Automated Testing - Code Validators](#Automated-Testing) 
+All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPhone 12, and iPad Pro and worked as planned. The app was responsive and very easy to navigate.
+
+## SUMMARY OF ALL TESTS 
+- **As user**:
+    - Navigation bar links tested
+    - Clicking through site logo gets me back to home page
+    - Login, registration and loggout worked as expected
+        - Verification email request received upon registration
+    - Browsing the site, clicking through listed games
+    - Adding games to shopping basket, increasing/decreasing quantities
+    - Completing successfull checkout, including payment
+        - Upon successful order placement, order confirmation email received
+    - Left a review on a game
+    - Edited and deleted a review on a game
+    - Adding games to favourites and removing them
+    - Tested footer social media links, quick links, privacy policy link
+        - Tested contact link and filled in the contact form
+            - Confirmation email received
+
+- **As administrator**:
+    - Added a new game with and without image
+    - Edited an existing listed game
+    - Deleted a listed game
+
+
 
 ---
-## [**USER STORIES**](#User-Testing)
+## **USER STORIES - USER TESTING**
 ### **SITE USER / SHOPPER**
 
 - As a **New User/Shopper** I can easily register on this website so that I can place an order quickly and easily
@@ -105,8 +126,6 @@ Testing.md document records all reports from validators and gives a summary of m
 
         ![**Game detail page**](media/testing/user-stories/game_detail_page.JPG)
 
-    - I can also add the game to my favourites by clicking on the heart icon next to the title
-
 - As a **Shopper** I want to be able to read games review so that I can make informed decision before making a purchase
 
     - If I want to read reviews about a desired game, I have to click on the game card to get into its game detail page and see if there are any reviews in the **Review** section at the bottom of the page
@@ -202,9 +221,8 @@ Testing.md document records all reports from validators and gives a summary of m
         ![**Removing game from favourites toast**](media/testing/user-stories/favourites_removal_toast.JPG)
 
 
-
-
-- As a Shopper I can subscribe with my email address so that I will get informed about promotions, sales and new games coming in
+- As a Site User, I want to be able to sort a specific game category so that I can find the best-priced or best-rated game in a specific category, or sort the games in that category by name.
+    - There are navigation links and filter buttons that allow the user to view all games of a certain category or group of categories.
 
 - As a Shopper I want to be able to sort all products by name, price and product category so that I can see them in desired order to ease site navigation and for faster shopping experience
     - There is a 'sort-by' selector box on the games page which allows the user to sort the games by category, name and price in ascending or descending order
@@ -217,11 +235,20 @@ Testing.md document records all reports from validators and gives a summary of m
 - As a Shopper I can register my profile so that I can add or change delivery address and view my current and previous orders
     - On registration of a new account, a personal profile is automatically rendered. Here the user can view their order history and pet profiles
 
-- As a Shopper I want to be able to contact the site admin so that I can ask a question, make a suggestion or send a compliment
 
+- As a **Shopper** I can subscribe with my email address so that I will get informed about promotions, sales and new games coming in
 
-- As a Site User, I want to be able to sort a specific game category so that I can find the best-priced or best-rated game in a specific category, or sort the games in that category by name.
-    - There are navigation links and filter buttons that allow the user to view all games of a certain category or group of categories.
+    ![**Subscription section**](media/testing/user-stories/subscription_view.JPG)
+
+    - I could find the subscription service on home page and contact page
+    
+    - Once I entered my email address and pressed **Subscribe** button, I was redirected to a page confirming my subscription
+
+        ![**Subscription section**](media/testing/user-stories/subscription_confirmation.JPG)
+
+- As a **Shopper** I want to be able to contact the site admin so that I can ask a question, make a suggestion or send a compliment
+
+ - Confirmation of its succesfull submission was shown on screen and confirmation email received.
 
 ---
 ### **SHOP OWNER / ADMINISTRATOR** 
@@ -264,9 +291,9 @@ Testing.md document records all reports from validators and gives a summary of m
 
 [Back to top](#)
 
-## [**MANUAL TESTING**](#Manual-Testing)
+## **SUMMARY**
 
-I have tested the site functionality and created a couple of normal user accounts during this process.
+I have tested the site functionality and created a couple of normal user accounts during this process to test all functionality
 
 ### **1. Menu/navbar links**
 ### **Purpose: Test if all present link take users to the correct pages**
@@ -375,26 +402,7 @@ All of these opened respective social media sites in new windows as expected.
 3. Confirmation of its succesfull submission was shown on screen and confirmation email received.
 
 ---
-
-All of these tests were performed on desktop PC, Dell laptop, iPhone 8, iPhone 12, and iPad Pro and worked as planned. The app was responsive and very easy to navigate.
-
-### SUMMARY OF ALL TESTS 
-- Menu links tested
-- Login and registration
-- Browsing and clicking through of listed games
-- Added a new game with and without image
-- Edited an existing listed game
-- Deleted a game listing
-- Left a rating/review on a game
-- Added a game to favourites
-- Tested all footer social media links
-- Tested contact link and filled in the contact form
-
-[Back to top](#)
-
----
-
-# [**AUTOMATED TESTING - CODE VALIDATORS**](#Automated-Testing)
+## **AUTOMATED TESTING - CODE VALIDATORS**
 
 <details>
 <summary>HTML Validator Testing</summary>
