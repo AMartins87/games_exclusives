@@ -17,7 +17,7 @@ This website is based on a Business to Consumer (B2C) model.
 
 The target market for this store are game enthusiasts, collectors and fellow gamers with peculiar tastes in games. 
 
-### **Shopper Expectations**
+### **SHOPPER EXPECTATIONS**
 - Ability to view and purchase games
 - Easy to search and filter by category, name and price
 - Can save a game into favourites
@@ -25,17 +25,17 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 - Can contact the owner via simple contact form
 - Can leave, edit and delete their review
 
-### **Website Expectations**
+### **WEBSITE EXPECTATIONS**
 - Has links to Facebook, Instagram and Twitter
 - Privacy Policy link is included
 
-### **Web Admin Expectations**
+### **WEB ADMIN EXPECTATIONS**
 - Can update, add or remove products
 
 ---
 ## **USER STORIES**
 
-### **Agile planning**
+### **AGILE PLANNING**
 The development of this project was managed and implemented using GitHub project Kanban board and can be found [**HERE**](https://github.com/users/AMartins87/projects/7) *(press Ctrl in Windows or Command on Mac button while clicking on the link for it to open in a new tab)*.
 
 User stories were labelled with **Must Have**, **Nice to have**, **Future development** and **CRUD**. 
@@ -50,7 +50,7 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
 
 ---
 ## **FEATURES**
-### **Home Page**
+### **HOME PAGE**
 - Delivery banner (on every page for constant reminder to a shopper)
 - Shop name/logo with built in link to home page
 - Top Navbar (on every page for ease of access)
@@ -66,71 +66,71 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
 
     ![Delivery banner, top navbar and main navigation](media/features/top_nav_main_nav.JPG)
 
-**Top navbar of a user who is not logged in:** Register | Login
+**TOP NAVBAR OF A USER WHO IS NOT LOGGED IN:** Register | Login
     
 ![Top navbar - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
 
-**Top navbar when logged in as a standard user:** My Profile | Logout
+**TOP NAVBAR WHEN LOGGED IN AS A STANDARD USER:** My Profile | Logout
 
 ![Top navbar - logged in](media/features/Top_nav_drop_account_user.JPG)
 
-**Top navbar when logged in as an admin:** Admin Dashboard | Game Management | My Profile | Logout
+**TOP NAVBAR WHEN LOGGED IN AS AN ADMIN:** Admin Dashboard | Game Management | My Profile | Logout
 
 ![Top navbar - admin logged in](media/features/Top_nav_drop_account_admin.JPG)
 
-**Main navbar with search banner on large screens**
+**MAIN NAVBAR WITH SEARCH BANNER ON LARGE SCREENS**
 
 ![Main navbar on large screens](media/features/main_nav_lg.JPG)
 
-**Main navbar with collapsible menu icon for screens with a width of 991px or less**
+**MAIN NAVBAR WITH COLLAPSIBLE MENU ICON FOR SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens](media/features/Top_nav_bar_md_all.JPG)
 
-**Main navbar with collapsed menu for screens with a width of 991px or less**
+**MAIN NAVBAR WITH COLLAPSED MENU FOR SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Medium and small navbar collapsed](media/features/main_nav_md_sm.JPG)
 
-**Main navbar - games dropdown menu on large screens:** By Category | By Name | By Price 
+**MAIN NAVBAR - GAMES DROPDOWN MENU ON LARGE SCREENS:** By Category | By Name | By Price 
 
 ![Main navbar on large screens - games menu](media/features/menu_drop_games.JPG)
 
-**Main navbar - games dropdown menu on screens with a width of 991px or less:**
+**MAIN NAVBAR -  GAMES DROPDOWN MENU ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - games menu](media/features/main_nav_md_sm_games.JPG)
 
-**Main navbar - all games dropdown menu on large screens:** All Games | PlayStation | Xbox | Nintendo | PC Classics
+**MAIN NAVBAR- ALL GAMES DROPDOWN MENU ON LARGE SCREENS:** All Games | PlayStation | Xbox | Nintendo | PC Classics
 
 ![Main navbar on large screens - all games menu](media/features/menu_drop_all_games.JPG)
 
 
-**Main navbar - all games dropdown menu on screens with a width of 991px or less:**
+**MAIN NAVBAR - ALL GAMES DROPDOWN MENU  ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - all games menu](media/features/main_nav_md_sm_all_games.JPG)
 
-**Main navbar - special offers dropdown menu on large screens:** Clearance 
+**MAIN NAVBAR - SPECIAL OFFERS DROPDOWN MENU ON LARGE SCREENS:** Clearance 
 
 ![Main navbar on large screens - special offers menu](media/features/menu_drop_clearance.JPG)
 
-**Main navbar - clearance dropdown menu on screens with a width of 991px or less:**
+**MAIN NAVBAR - SPECIAL OFFERS DROPDOWN MENU ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - special offers menu](media/features/main_nav_md_sm_clearance.JPG)
 
-**Home page with a welcome text box and *SHOP NOW* button**
+**HOME PAGE WITH A WELCOME TEXT AREA AND *SHOW NOW* BUTTON**
 
 ![Home page](media/features/hero_img_text_btn.JPG)
 
-**Mailchimp - Subscription section**
+**MAILCHIMP - SUBSCRIPTION SECTION**
 
 ![Mailchimp subscription section](media/features/MC_subscribe_window_lg.JPG)
 
-**Footer on large screens**
+**FOOTER ON LARGE SCREENS**
 - Social media links for Facebook, Instagram and a link for a contact page
 - Policy Privacy link
 - Copyright information
 
 ![Footer on large screens](media/features/Footer_lg.JPG)
 
-**Footer on medium and small screens with a width of 767px or less**
+**FOOTER ON MEDIUM AND SMALL SCREENS WITH A WIDTH OF 767px OR LESS**
 ![Footer on medium and small screens](media/features/Footer_sm.JPG)
 
 ## **GAMES**
@@ -140,23 +140,23 @@ All **Games** pages display all listed games with preview of an image, their nam
 ![All Games image](media/features/games_lg.JPG)
 
 ### **GAMES BY CATEGORY** 
-#### **PlayStation**
+#### **PLAYSTATION**
 
 ![PlayStation Games image](media/features/games_ps_lg.JPG)
 
-#### **Xbox**
+#### **XBOX**
 
 ![Xbox Games image](media/features/games_xbox_lg.JPG)
 
-#### **Nintendo**
+#### **NINTENDO**
 
 ![Nintendo Games image](media/features/games_nintendo_lg.JPG)
 
-#### **PC Classics**
+#### **PC CLASSICS**
 
 ![PC Classics Games image](media/features/games_pc_lg.JPG)
 
-#### **Special offers: Clearance**
+#### **SPECIAL OFFERS: CLEARANCE**
 
 ![Clearance Games image](media/features/games_clearance_lg.JPG)
 
@@ -187,37 +187,48 @@ All wireframes were created using Balsamiq
 
 <details><summary>View wireframe images here</summary>
 
-**Home page**
+**HOME PAGE**
+
 ![Home Page](media/wireframes/home.JPG)
 
-**Games page**
+**GAMES PAGE**
+
 ![All Games](media/wireframes/games.JPG)
 
-**Game detail page**
+**GAME DETAIL PAGE**
+
 ![Game page with description and reviews](media/wireframes/game_detail.JPG)
 
-**Edit game page**
+**EDIT GAME PAGE**
+
 ![Edit Game page](media/wireframes/edit_game.JPG)
 
-**Add game page**
+**ADD GAME PAGE**
+
 ![Add Game page](media/wireframes/add_game.JPG)
 
-**Registration page**
+**REGISTRATION PAGE**
+
 ![Registration](media/wireframes/register.JPG)
 
-**Login page**
+**LOGIN PAGE**
+
 ![Login Page](media/wireframes/login.JPG)
 
-**Logout page**
+**LOGOUT PAGE**
+
 ![Logout Page](media/wireframes/logout.JPG)
 
-**Profile page**
+**PROFILE PAGE**
+
 ![Profile page](media/wireframes/profile.JPG)
 
-**Favourites page**
+**FAVOURITES PAGE**
+
 ![Favourites page](media/wireframes/favourites.JPG)
 
-**Contact page**
+**CONTACT PAGE**
+
 ![Contact Page](media/wireframes/contact.JPG)
 
 </details>
