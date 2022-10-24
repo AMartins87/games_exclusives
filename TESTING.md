@@ -271,7 +271,7 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 
     ![Contact confirmation email](media/testing/user-stories/contact_page.JPG)
 
-    - Once I sent my query, confirmation of its succesful submission was shown on screen via a toast message in the top right corner
+    - Once I sent my query, confirmation of its successful submission was shown on screen via a toast message in the top right corner
 
         ![Successful contact submission toast](media/testing/user-stories/contact_form_success_msg.JPG)
 

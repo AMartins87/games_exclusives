@@ -36,11 +36,17 @@ The target market for this store are game enthusiasts, collectors and fellow gam
 ## **USER STORIES**
 
 ### **Agile planning**
-The development of this project was managed and implemented using GitHub project Kanban board and can be found [**here**](https://github.com/users/AMartins87/projects/7) *(press Ctrl in Windows or Command on Mac button while clicking on the link for it to open in a new tab)*.
+The development of this project was managed and implemented using GitHub project Kanban board and can be found [**HERE**](https://github.com/users/AMartins87/projects/7) *(press Ctrl in Windows or Command on Mac button while clicking on the link for it to open in a new tab)*.
 
-User stories were labeled with <span style="color:#c5f015">**Must Have**</span>, <span style="color: #FBCA04">**Nice to have**</span>, <span style="color:#7057ff">**Future development**</span> and <span style="color:#35EE53">**CRUD**</span>. 
+User stories were labelled with **Must Have**, **Nice to have**, **Future development** and **CRUD**. 
 
-Documentation like README, TESTING and DEPLOYMENT md files and preview of my business Facebook page were assigned a <span style="color: #1589F0">**Documentation**</span> label.
+Documentation like README, TESTING and DEPLOYMENT md files and preview of my business Facebook page were assigned a **Documentation** label.
+
+#### **DATABASE SCHEMA**
+
+- Database schema was created with [LucidChart app](Lucid.app)
+
+    ![Database schema](media/wireframes/database_schema.JPG)
 
 ---
 ## **FEATURES**
@@ -58,19 +64,17 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
     - Games
     - Special Offers
 
-![Delivery banner, top navbar and main navigation](media/features/top_nav_main_nav.JPG)
+    ![Delivery banner, top navbar and main navigation](media/features/top_nav_main_nav.JPG)
 
-**Top navbar of a user who is not logged in:**
-Register | Login
-
+**Top navbar of a user who is not logged in:** Register | Login
+    
 ![Top navbar - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
 
-**Top navbar when logged in as a standard user:**
-My Profile | Logout
+**Top navbar when logged in as a standard user:** My Profile | Logout
+
 ![Top navbar - logged in](media/features/Top_nav_drop_account_user.JPG)
 
-**Top navbar when logged in as an admin:**
-Admin Dashboard | Game Management | My Profile | Logout
+**Top navbar when logged in as an admin:** Admin Dashboard | Game Management | My Profile | Logout
 
 ![Top navbar - admin logged in](media/features/Top_nav_drop_account_admin.JPG)
 
@@ -83,28 +87,32 @@ Admin Dashboard | Game Management | My Profile | Logout
 ![Main navbar on medium and small screens](media/features/Top_nav_bar_md_all.JPG)
 
 **Main navbar with collapsed menu for screens with a width of 991px or less**
+
 ![Medium and small navbar collapsed](media/features/main_nav_md_sm.JPG)
 
-**Main navbar - games dropdown menu on large screens:**
-By Category | By Name | By Price 
+**Main navbar - games dropdown menu on large screens:** By Category | By Name | By Price 
+
 ![Main navbar on large screens - games menu](media/features/menu_drop_games.JPG)
 
 **Main navbar - games dropdown menu on screens with a width of 991px or less:**
+
 ![Main navbar on medium and small screens - games menu](media/features/main_nav_md_sm_games.JPG)
 
-**Main navbar - all games dropdown menu on large screens:**
-All Games | PlayStation | Xbox | Nintendo | PC Classics
+**Main navbar - all games dropdown menu on large screens:** All Games | PlayStation | Xbox | Nintendo | PC Classics
+
 ![Main navbar on large screens - all games menu](media/features/menu_drop_all_games.JPG)
 
 
 **Main navbar - all games dropdown menu on screens with a width of 991px or less:**
-![Main navbaron medium and small screens - all games menu](media/features/main_nav_md_sm_all_games.JPG)
 
-**Main navbar - special offers dropdown menu on large screens:**
-Clearance 
+![Main navbar on medium and small screens - all games menu](media/features/main_nav_md_sm_all_games.JPG)
+
+**Main navbar - special offers dropdown menu on large screens:** Clearance 
+
 ![Main navbar on large screens - special offers menu](media/features/menu_drop_clearance.JPG)
 
 **Main navbar - clearance dropdown menu on screens with a width of 991px or less:**
+
 ![Main navbar on medium and small screens - special offers menu](media/features/main_nav_md_sm_clearance.JPG)
 
 **Home page with a welcome text box and *SHOP NOW* button**
@@ -127,12 +135,12 @@ Clearance
 
 ## **GAMES**
  
-All **Games** pages display all listed games with preview of an image, the their name, price, category and add to favourites button with heart icon
+All **Games** pages display all listed games with preview of an image, their name, price, category and add to favourites button with heart icon
 
 ![All Games image](media/features/games_lg.JPG)
 
 ### **GAMES BY CATEGORY** 
-#### **Playstation**
+#### **PlayStation**
 
 ![PlayStation Games image](media/features/games_ps_lg.JPG)
 
@@ -218,7 +226,7 @@ All wireframes were created using Balsamiq
 ## **DESIGN**
 
 ### **FONT**
-Electrolize font was used across the whole site, and sourced from [**Google Fonts**](https://fonts.google.com/?query=electrolize).
+Electrolize font was used across the whole site and sourced from [**Google Fonts**](https://fonts.google.com/?query=electrolize).
 
 ### **COLOUR SCHEME**
 
@@ -254,7 +262,7 @@ Full testing document can be found [**HERE**](TESTING.md)
 ---
 # **BUGS**
 
-- I had issues with installing fixtures with both categories and games fixtures. After a review I found I had a typo in category model, and my games fixtures contained double quotation marks within double quotation marks in the games description. Once I changed these to single quote marks all was loading correctly. 
+- I had issues with installing fixtures with both categories and games fixtures. After a review I found I had a typo in category model, and my games fixtures contained double quotation marks within double quotation marks in the games' description. Once I changed these to single quote marks all was loading correctly. 
 
 --- 
 # **DEPLOYMENT**
@@ -268,15 +276,36 @@ Full deployment procedure can be found [**HERE**](DEPLOYMENT.md).
 ---
 # **CREDITS**
 
-Background image was created in [Canva](https://www.canva.com/).
+## **CODE** 
+- Code from walkthrough project of Boutique Ado by Code Institute was my main reference point when creating my own e-commerce website
 
-Placeholder image for a missing game image was created in [Canva](https://www.canva.com/).
+- I used following sites as my main search point for this project: 
+    - [**Django Docs**](https://docs.djangoproject.com/en/3.2/)
+    - [**W3Schools**](https://www.w3schools.com/)
+    - [**Bootstrap**](https://getbootstrap.com/docs/4.6/getting-started/introduction/)
 
+- I searched for solutions to my many issues on the following sites and forums:
+    - [**Stack Overflow**](https://stackoverflow.com/)
+    - **Slack**
 
-Favicon - https://www.flaticon.com/free-icon/game-console_2949874 
+- I exhausted all the references above regarding bugs and issues, but **TUTOR SUPPORT** was there for me when I needed it most and for that I will be always thankful, especially to **Franciska** who helped me with my initial project setup after my 3 month study break,**John** who was a huge help during my deployment to Heroku and for help with my confirmation email function, **Oisin** who helped me with my checkout issue, **Alan** for guiding me through my issue/bug when deleting a review and **Sean**, **Alex**, **Scott** and **Ger**.
+
+## **MEDIA**
+- Background image was created in [Canva](https://www.canva.com/)
+
+- Placeholder image for a missing game image was created in [Canva](https://www.canva.com/)
+
+- Favicon - downloaded from [Flaticon](https://www.flaticon.com/free-icon/game-console_2949874)
+
+- Product images were downloaded from various ecommerce websites and gaming blogs - I would have sourced my own images or sought copyright to use images not owned by me, would this have been a real e-commerce website
 
 ---
 ## **ACKNOWLEDGEMENTS**
 
-Tutor support - John 
-send_confirmation_emails
+I would like to thank my mentor [**Daisy McGirr**] (https://github.com/Daisy-McG), who has provided me with support in returning to this course after a break and has been instrumental in working through a few obstacles during this course.
+
+My former mentor, **Maria Hynes**, was also a pivotal figure in my beginnings in coding.
+
+---
+
+*This project is for educational purposes only*

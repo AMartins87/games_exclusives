@@ -9,7 +9,7 @@ The web applications itself is deployed to **Heroku** with static and media file
 1. Created a new GitHub repository page using the **Code Institute Template**
 2. Opened new repository by clicking on **Gitpod** button
 3. Setup your workspace and installed relevant applications and packages which were needed for deployment to **Heroku** 
-4. Created three directories in the top level directory: media, storage and templates
+4. Created three directories in the top-level directory: media, storage and templates
 5. All new apps added to my **settings.py** file in **INSTALLED_APPS** section
 6. First migration and testing of the server - following steps are always followed during migration process: 
     - python3 manage.py makemigrations --dry-run
