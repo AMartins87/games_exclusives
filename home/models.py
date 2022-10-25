@@ -4,7 +4,7 @@ from django.db import models
 
 class Contact(models.Model):
     """
-    To contact the shop owner.
+    To contact the shop owner
     """
     full_name = models.CharField(
         max_length=100,
@@ -24,7 +24,7 @@ class Contact(models.Model):
 
     class Meta:
         """
-        Meta data for the contact.
+        Meta data for the contact
         """
         ordering = ('-date_sent',)
 

@@ -13,7 +13,9 @@ from profiles.models import UserProfile, Favourites, FavouritesItem
 
 
 def all_games(request):
-    """ A view to show all games, including sorting and search queries """
+    """
+    A view to show all games, including sorting and search queries
+    """
 
     games = Game.objects.all()
     query = None
@@ -69,7 +71,9 @@ def all_games(request):
 
 
 def game_detail(request, game_id):
-    """ A view to show individual game details """
+    """
+    A view to show individual game details
+    """
 
     game = get_object_or_404(Game, pk=game_id)
 
@@ -82,7 +86,9 @@ def game_detail(request, game_id):
 
 @login_required
 def add_game(request):
-    """ Add a game to the store """
+    """
+    Adds a game to the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -109,7 +115,9 @@ def add_game(request):
 
 @login_required
 def edit_game(request, game_id):
-    """ Edit a game in the store """
+    """
+    Edits a game in the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
@@ -139,7 +147,9 @@ def edit_game(request, game_id):
 
 @login_required
 def delete_game(request, game_id):
-    """ Delete a game from the store """
+    """
+    Deletes a game from the store
+    """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))

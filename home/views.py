@@ -7,13 +7,17 @@ from django.conf import settings
 
 
 def index(request):
-    """ A view to return the index page """
+    """
+    A view to return the index page
+    """
 
     return render(request, 'home/index.html')
 
 
 def contact(request):
-    """ Renders the contact page """
+    """
+    Renders the contact page
+    """
     contact_form = ContactForm(data=request.POST)
     if request.method == 'POST':
         contact_form = ContactForm(data=request.POST)

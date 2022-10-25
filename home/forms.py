@@ -5,7 +5,9 @@ from .models import Contact
 
 class ContactForm(ModelForm):
     class Meta:
-        """ Generates contact form """
+        """
+        Creates contact form
+        """
         model = Contact
         fields = [
             'full_name',

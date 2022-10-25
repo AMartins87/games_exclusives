@@ -4,7 +4,9 @@ from .models import UserProfile, Favourites, FavouritesItem
 
 @admin.register(UserProfile)
 class ProfileAdmin(admin.ModelAdmin):
-    """ Admin user profile """
+    """
+    Admin user profile
+    """
     list_display = ('user', 'default_phone_number')
     list_filter = ('user',)
     search_fields = ('user', 'default_phone_number')

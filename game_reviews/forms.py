@@ -3,7 +3,9 @@ from .models import GameReview
 
 
 class GameReviewForm(forms.ModelForm):
-    """ Form to add game review """
+    """
+    Form to add game review
+    """
     class Meta:
         model = GameReview
         fields = ('title',

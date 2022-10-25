@@ -4,7 +4,9 @@ from .models import GameReview
 
 
 class GameReviewAdmin(admin.ModelAdmin):
-    """ List display for games in admin page """
+    """
+    List display for games in admin page
+    """
     list_display = (
         'game',
         'reviewer',

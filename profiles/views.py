@@ -12,7 +12,9 @@ from .forms import UserProfileForm
 
 @login_required
 def profile(request):
-    """ Displays the user's profile """
+    """
+    Displays the user's profile
+    """
     profile = get_object_or_404(UserProfile, user=request.user)
 
     if request.method == 'POST':
@@ -38,7 +40,9 @@ def profile(request):
 
 
 def order_history(request, order_number):
-    """ View to display previous order confirmation page """
+    """
+    View to display previous order confirmation page
+    """
     order = get_object_or_404(Order, order_number=order_number)
 
     messages.info(request, (

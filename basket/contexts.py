@@ -6,7 +6,9 @@ from games.models import Game
 
 
 def basket_contents(request):
-    """ Puts together basket contents """
+    """
+    Puts together basket contents
+    """
     basket_items = []
     total = 0
     game_count = 0

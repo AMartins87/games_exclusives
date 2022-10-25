@@ -10,7 +10,9 @@ from .forms import GameReviewForm
 
 @login_required
 def add_review(request, game_id):
-    """ Add game review """
+    """
+    Adds game review
+    """
     game = get_object_or_404(Game, pk=game_id)
     form = GameReviewForm
 
@@ -54,7 +56,9 @@ def add_review(request, game_id):
 
 @login_required
 def edit_review(request, game_id, review_id):
-    """ Edit game review """
+    """
+    Edits game review
+    """
     game = Game.objects.get(pk=game_id)
     review = GameReview.objects.get(pk=review_id)
 
@@ -86,7 +90,9 @@ def edit_review(request, game_id, review_id):
 
 @login_required
 def delete_review(request, game_id, review_id):
-    """ Delete game review """
+    """
+    Deletes game review
+    """
     game = get_object_or_404(Game, pk=game_id)
     review = get_object_or_404(GameReview, pk=review_id)
     review.delete()

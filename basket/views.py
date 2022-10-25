@@ -7,13 +7,17 @@ from games.models import Game
 
 
 def view_basket(request):
-    """ A view that renders the basket contents page """
+    """
+    A view that renders the basket contents page
+    """
 
     return render(request, 'basket/basket.html')
 
 
 def add_to_basket(request, item_id):
-    """ Adds quantity of chosen game to the shopping basket """
+    """
+    Adds quantity of chosen game to the shopping basket
+    """
 
     game = get_object_or_404(Game, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -31,7 +35,9 @@ def add_to_basket(request, item_id):
 
 
 def adjust_basket(request, item_id):
-    """ Adjusts the quantity of chosen game to selected amount """
+    """
+    Adjusts the quantity of chosen game to selected amount
+    """
 
     game = get_object_or_404(Game, pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -52,7 +58,9 @@ def adjust_basket(request, item_id):
 
 
 def remove_from_basket(request, item_id):
-    """Remove the item from the shopping basket"""
+    """
+    Removes the item from the shopping basket
+    """
     try:
         game = get_object_or_404(Game, pk=item_id)
         basket = request.session.get('basket', {})

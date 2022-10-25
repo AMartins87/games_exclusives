@@ -3,7 +3,9 @@ from .models import Game, Category
 
 
 class GameAdmin(admin.ModelAdmin):
-    """Tells admin which fields to display """
+    """
+    Tells admin which fields to display
+    """
     list_display = (
         'sku',
         'name',
@@ -12,11 +14,16 @@ class GameAdmin(admin.ModelAdmin):
         'image',
     )
 
-    """Sorts the products by SKU using the ordering attribute """
+    """
+    Sorts the products by SKU using the ordering attribute
+    """
     ordering = ('sku',)
 
 
 class CategoryAdmin(admin.ModelAdmin):
+    """
+     Creates admin display in database
+     """
     list_display = (
         'friendly_name',
         'name',

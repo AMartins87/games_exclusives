@@ -4,7 +4,9 @@ from games.models import Game
 
 
 class GameReview(models.Model):
-    """ Model for game reviews """
+    """
+    Model for game reviews
+    """
     reviewer = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
     title = models.CharField(max_length=150, default="Game Review")
