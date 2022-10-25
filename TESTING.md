@@ -324,6 +324,9 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - When logged in as standard user, an error toast message popped up in the top right corner telling me, only store owners could access the editing page 
 
         ![Store owner access only](media/testing//user-stories/store_owner_access.JPG)
+
+    - I have done the same testing for [**Add game**](https://games-exclusives.herokuapp.com/games/add/) and the outcome was the same
+
 ---
 
 [Back to top](#)
@@ -462,10 +465,10 @@ I checked that the chosen colours and fonts are easy to read. All pages have pas
 - **CONTRAST CHECKER - BODY TEXT and HOVER SELECTOR FOR ALL BUTTONS (*unless specified otherwise*)**
 ![Contrast checker - body text](media/testing/validators/contrast_checker_body.JPG)
 
-[Contrast checker - hover links](media/testing/validators/contrast_checker_hover_links.JPG)
+![Contrast checker - hover links](media/testing/validators/contrast_checker_hover_links.JPG)
 
 - **CONTRAST CHECKER - HOVER SELECTOR FOR BUTTONS WITH CLASS btn-dark**
-[Contrast checker - hover selector](media/testing/validators/contrast_checker_hover.JPG)
+![Contrast checker - hover selector](media/testing/validators/contrast_checker_hover.JPG)
 
 ---
 [Back to top](#)
