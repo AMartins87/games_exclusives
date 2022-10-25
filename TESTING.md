@@ -398,28 +398,37 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 ## **Lighthouse Testing**
 <details>
 <summary>Desktop lighthouse testing</summary>
-  Home page
+  
+  **HOME PAGE**
+
   ![Home page - lighthouse desktop](media/testing/validators/lighthouse_desktop.JPG)
 
-  Games page
+  **GAMES PAGE**
+
   ![Games page - lighthouse desktop](media/testing/validators/lighthouse_games_desktop.JPG)
 
-  Game detail page
+  **GAME DETAIL PAGE**
+
   ![Game detail page - lighthouse desktop](media/testing/validators/lighthouse_game_detail_desktop.JPG)
 
-  Profile page
+ **PROFILE PAGE**
+
   ![Profile page - lighthouse desktop](media/testing/validators/lighthouse_profile_desktop.JPG)
 
-  Favourites page
+ **FAVOURITES PAGE**
+
   ![Favourites page - lighthouse desktop](media/testing/validators/lighthouse_favourites_desktop.JPG)
 
-  Contact page
+**CONTACT PAGE**
+
   ![Contact page - lighthouse desktop](media/testing/validators/lighthouse_contact_desktop.JPG)
 
-  Shopping basket page
+  **SHOPPING BASKET PAGE**
+
   ![Shopping basket - lighthouse desktop](media/testing/validators/lighthouse_shopping_basket_desktop.JPG)
 
-  Checkout page
+  **CHECKOUT PAGE**
+
   ![Checkout page - lighthouse desktop](media/testing/validators/lighthouse_checkout_desktop.JPG)
 </details>
 
@@ -427,12 +436,15 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
 <summary>Mobile lighthouse testing</summary>
 
 - While Lighthouse testing was quite high in desktop version, the performance during mobile testing was lacking. It is mostly due to render-blocking resources like jquery, bootstrap js and css. 
-I have originally got a very high score on Lighthouse under mobile performance, but it had dropped down and it's moving around 70-82 points only on Performance. 
 
-Home page - first testing
+- I have originally got a very high score on Lighthouse under mobile performance, but it had dropped down and it's moving around 70-87 points only on Performance. 
+
+ **HOME PAGE - first test**
+
 ![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile.JPG)
 
-Home page - following testing
+**HOME PAGE - following tests**
+
 ![Home page - lighthouse first mobile testing](media/testing/validators/lighthouse_mobile_second.JPG)
 </details>
 
