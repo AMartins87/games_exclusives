@@ -54,7 +54,6 @@
                     </a>
                 </p>
                 {% endif %}
-
                 <!-- If user logged in as admin, Edit game and Delete game links will show here -->
                 {% if request.user.is_superuser %}
                 <div class="row-lg-7">
@@ -121,11 +120,9 @@
     <!-- Review section -->
     <div class="row mt-n4">
         <div class="col-12 col-lg-8 offset-lg-2 text-center mb-5">
-       
             <!-- Reviews header -->
             <hr class="mb-1">
             <h3 class="review-title text-uppercase">Reviews</h3>
-
             <!-- Add review link if user logged in -->
             {% if user.is_authenticated %}
             <a href="{% url 'add_review' game.id %}" class="text-uppercase">Add review</a>

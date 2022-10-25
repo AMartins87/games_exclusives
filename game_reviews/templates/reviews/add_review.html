@@ -13,7 +13,6 @@
 {% block content %}
 <div class="overlay"></div>
 <div class="container">
-
     <!-- Title section -->
     <div class="row header">
         <div class="col-12 col-md-6 text-center">
@@ -26,23 +25,17 @@
             <h5 class="col text-center mt-3">{{ game }}</h5>
             <hr class="mb-1">
         </div>
-
     </div>
-
     <!-- Adds Game Review Form -->
     <div class="row">
         <div class="col-12 col-md-8 text-center">
             <form method="POST" action="{% url 'add_review' game.id %}" class="form mb-2"
                 enctype="multipart/form-data">
                 {% csrf_token %}
-
                 <!-- Iterates through fields and renders using crispy forms -->
                 {% for field in form %}
-
                 {{ field | as_crispy_field }}
-
                 {% endfor %}
-
                 <!-- Submit or cancel -->
                 <div class="text-right">
                     <a class="btn btn-back text-uppercase" href="{% url 'game_detail' game.id %}">
@@ -58,5 +51,4 @@
 
 {% block postloadjs %}
 {{ block.super }}
-
 {% endblock %}

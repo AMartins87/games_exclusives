@@ -22,13 +22,13 @@
                 <hr>
             </div>
         </div>
-        
         <div class="row">
             <div class="col">
+                <!-- If anything in the basket, summary will show -->
                 {% if basket_items %}
                     <div class="d-block d-md-none">
                         <div class="row">
-                            <!-- If anything in the basket, summary will show -->
+                            <!-- If anything in the basket, total will show -->
                             <div class="col">
                                 {% include "basket/basket-total.html" %}
                             </div>

@@ -45,6 +45,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
 }
 
+/*...............................................Background image on home page  */ 
+
 .hero-container {
 	background-image: url('https://res.cloudinary.com/games-exclusives/image/upload/v1665743443/media/homepage_background.webp');
     background-size: cover;
@@ -52,6 +54,8 @@ h1, h2, h3, h4, h5, h6 {
     height: 75vh;
 	position: relative;
 }
+
+/*...............................................Home page cover text */
 
 .hero-info {
     text-shadow: white 1px 0 10px;
@@ -80,6 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*...............................................Buttons, anchors, icons  */ 
+
 .shop-now-btn {
     position: absolute;
     margin: 0;
@@ -121,7 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-outline-black {
     background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
+    color: black !important;
     border: 1px solid black;
 }
 
@@ -171,6 +176,7 @@ a:hover {
 }
 
 /*...............................................Scroll arrow in a circle */
+
 .btt-button {
     position: fixed;
     height: 42px;
@@ -185,23 +191,6 @@ a:hover {
 
 /*...............................................Forms */
 
-/* .form-group {
-    margin-top: 1rem;
-}
-
-.form-group label {
-    font-weight: bold;
-}
-
-.form-control {
-    padding: 0.25rem 0.55rem;
-
-} */
-
-.profile{
-    font-size: medium;
-}
-
 .form-add {
     margin: 0 auto;
 }
@@ -210,6 +199,7 @@ a:hover {
 
 .profile {
     text-transform: uppercase;
+    font-size: medium;
 }
 
 .profile-header {
@@ -227,6 +217,7 @@ a.category-badge > span.badge:hover {
 }
 
 /*...............................................Game Detail page */
+
 .game-image {
     display: flex;
     justify-content: center;
@@ -431,8 +422,6 @@ a.social i {
 }
 
 /*...............................................Media Queries */
-
-/* Extra large screens ≥1200px up to 992px */
 
 /* Hides favourites from base.html as it becomes */
 /* part of mobile top nav on smaller screens */
