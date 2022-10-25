@@ -44,7 +44,7 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
 
 #### **DATABASE SCHEMA**
 
-- Database schema was created with [LucidChart app](Lucid.app)
+- Database schema was created with [**LUCIDCHART APP**](Lucid.app)
 
     ![Database schema](media/wireframes/database_schema.JPG)
 
@@ -66,63 +66,77 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
 
     ![Delivery banner, top navbar and main navigation](media/features/top_nav_main_nav.JPG)
 
+---
 **TOP NAVBAR OF A USER WHO IS NOT LOGGED IN:** Register | Login
     
 ![Top navbar - not logged in](media/features/Top_nav_drop_account_not_logged.JPG)
 
+---
 **TOP NAVBAR WHEN LOGGED IN AS A STANDARD USER:** My Profile | Logout
 
 ![Top navbar - logged in](media/features/Top_nav_drop_account_user.JPG)
 
+---
 **TOP NAVBAR WHEN LOGGED IN AS AN ADMIN:** Admin Dashboard | Game Management | My Profile | Logout
 
 ![Top navbar - admin logged in](media/features/Top_nav_drop_account_admin.JPG)
 
+---
 **MAIN NAVBAR WITH SEARCH BANNER ON LARGE SCREENS**
 
 ![Main navbar on large screens](media/features/main_nav_lg.JPG)
 
+---
 **MAIN NAVBAR WITH COLLAPSIBLE MENU ICON FOR SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens](media/features/Top_nav_bar_md_all.JPG)
 
+---
 **MAIN NAVBAR WITH COLLAPSED MENU FOR SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Medium and small navbar collapsed](media/features/main_nav_md_sm.JPG)
 
+---
 **MAIN NAVBAR - GAMES DROPDOWN MENU ON LARGE SCREENS:** By Category | By Name | By Price 
 
 ![Main navbar on large screens - games menu](media/features/menu_drop_games.JPG)
 
+---
 **MAIN NAVBAR -  GAMES DROPDOWN MENU ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - games menu](media/features/main_nav_md_sm_games.JPG)
 
+---
 **MAIN NAVBAR- ALL GAMES DROPDOWN MENU ON LARGE SCREENS:** All Games | PlayStation | Xbox | Nintendo | PC Classics
 
 ![Main navbar on large screens - all games menu](media/features/menu_drop_all_games.JPG)
 
-
+---
 **MAIN NAVBAR - ALL GAMES DROPDOWN MENU  ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - all games menu](media/features/main_nav_md_sm_all_games.JPG)
 
+---
 **MAIN NAVBAR - SPECIAL OFFERS DROPDOWN MENU ON LARGE SCREENS:** Clearance 
 
 ![Main navbar on large screens - special offers menu](media/features/menu_drop_clearance.JPG)
 
+---
 **MAIN NAVBAR - SPECIAL OFFERS DROPDOWN MENU ON SCREENS WITH A WIDTH OF 991px OR LESS**
 
 ![Main navbar on medium and small screens - special offers menu](media/features/main_nav_md_sm_clearance.JPG)
 
+---
 **HOME PAGE WITH A WELCOME TEXT AREA AND *SHOW NOW* BUTTON**
 
 ![Home page](media/features/hero_img_text_btn.JPG)
 
+---
 **MAILCHIMP - SUBSCRIPTION SECTION**
 
 ![Mailchimp subscription section](media/features/MC_subscribe_window_lg.JPG)
 
+---
 **FOOTER ON LARGE SCREENS**
 - Social media links for Facebook, Instagram and a link for a contact page
 - Policy Privacy link
@@ -130,40 +144,49 @@ Documentation like README, TESTING and DEPLOYMENT md files and preview of my bus
 
 ![Footer on large screens](media/features/Footer_lg.JPG)
 
+---
 **FOOTER ON MEDIUM AND SMALL SCREENS WITH A WIDTH OF 767px OR LESS**
 ![Footer on medium and small screens](media/features/Footer_sm.JPG)
 
+---
 ## **GAMES**
  
 All **Games** pages display all listed games with preview of an image, their name, price, category and add to favourites button with heart icon
 
 ![All Games image](media/features/games_lg.JPG)
 
+---
 ### **GAMES BY CATEGORY** 
 #### **PLAYSTATION**
 
 ![PlayStation Games image](media/features/games_ps_lg.JPG)
 
+---
 #### **XBOX**
 
 ![Xbox Games image](media/features/games_xbox_lg.JPG)
 
+---
 #### **NINTENDO**
 
 ![Nintendo Games image](media/features/games_nintendo_lg.JPG)
 
+---
 #### **PC CLASSICS**
 
 ![PC Classics Games image](media/features/games_pc_lg.JPG)
 
+---
 #### **SPECIAL OFFERS: CLEARANCE**
 
 ![Clearance Games image](media/features/games_clearance_lg.JPG)
 
+---
 ### **ADD A GAME PAGE and EDIT A GAME PAGE**
 
 ![Add game and edit game page image](media/features/add_edit_game_sbs_view.jpg)
 
+---
 ### **MY PROFILE PAGE**
 - Shows shopper's profile page with their delivery information and button to submit any changes made to their details
 - Order history with linked order numbers which will take them to their order confirmation page
@@ -171,11 +194,13 @@ All **Games** pages display all listed games with preview of an image, their nam
 
 ![My Profile page on large screens](media/features/profile_lg.JPG)
 
+---
 ### **FAVOURITES PAGE**
 - Shows shoppers' favourites games they saved while browsing the site. Page also contains a **Browse Games** button which will take them to a Games page
 
 ![Favourites page on large screens](media/features/favourites_lg.JPG)
 
+---
 ### **CONTACT PAGE**
 - Shoppers can contact the site administrator by filling in the simple form on the screen where they are required to give their **name**, **email address**, and then type in their **message**.
 
@@ -187,46 +212,57 @@ All wireframes were created using Balsamiq
 
 <details><summary>View wireframe images here</summary>
 
+---
 **HOME PAGE**
 
 ![Home Page](media/wireframes/home.JPG)
 
+---
 **GAMES PAGE**
 
 ![All Games](media/wireframes/games.JPG)
 
+---
 **GAME DETAIL PAGE**
 
 ![Game page with description and reviews](media/wireframes/game_detail.JPG)
 
+---
 **EDIT GAME PAGE**
 
 ![Edit Game page](media/wireframes/edit_game.JPG)
 
+---
 **ADD GAME PAGE**
 
 ![Add Game page](media/wireframes/add_game.JPG)
 
+---
 **REGISTRATION PAGE**
 
 ![Registration](media/wireframes/register.JPG)
 
+---
 **LOGIN PAGE**
 
 ![Login Page](media/wireframes/login.JPG)
 
+---
 **LOGOUT PAGE**
 
 ![Logout Page](media/wireframes/logout.JPG)
 
+---
 **PROFILE PAGE**
 
 ![Profile page](media/wireframes/profile.JPG)
 
+---
 **FAVOURITES PAGE**
 
 ![Favourites page](media/wireframes/favourites.JPG)
 
+---
 **CONTACT PAGE**
 
 ![Contact Page](media/wireframes/contact.JPG)
@@ -274,6 +310,8 @@ Full testing document can be found [**HERE**](TESTING.md)
 # **BUGS**
 
 - I had issues with installing fixtures with both categories and games fixtures. After a review I found I had a typo in category model, and my games fixtures contained double quotation marks within double quotation marks in the games' description. Once I changed these to single quote marks all was loading correctly. 
+
+- When deploying the application to Heroku, I had experienced *zoneinfo* error -> issue resolved with help of **Tutor Support** - documented in [**Deployment file**](DEPLOYMENT.md)
 
 --- 
 # **DEPLOYMENT**

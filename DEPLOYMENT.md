@@ -24,7 +24,7 @@ The web applications itself is deployed to **Heroku** with static and media file
 8. Selected **API keys** in the **Developers** section and copied my published and secret stripe keys.
 9. Stored these in Gitpod > Settings > Variables > Environment Variables
 
-![Gitpod Environmental Variables](media/deployment/gitpod_variables.JPG)
+    ![Gitpod Environmental Variables](media/deployment/gitpod_variables.JPG)
 
 ---
 
