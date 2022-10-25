@@ -318,6 +318,12 @@ All of the listed tests were performed on desktop PC, Dell laptop, iPhone 8, iPh
     - Once clicked on the **delete** link, game gets deleted immediately and a notification toast pops up in the top right corner
 
         ![Game deleted toast](media/testing/user-stories/game_deleted_toast.JPG)
+
+- Additional testing was done to avoid any security issues - I have copied a [**Edit game**](https://games-exclusives.herokuapp.com/games/edit/6/) link and pasted it into a different browser, which resulted in the site asking me to login
+
+    - When logged in as standard user, an error toast message popped up in the top right corner telling me, only store owners could access the editing page 
+
+        ![Store owner access only](media/testing//user-stories/store_owner_access.JPG)
 ---
 
 [Back to top](#)
