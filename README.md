@@ -313,6 +313,11 @@ Full testing document can be found [**HERE**](TESTING.md)
 
 - When deploying the application to Heroku, I had experienced *zoneinfo* error -> issue resolved with help of **Tutor Support** - documented in [**Deployment file**](DEPLOYMENT.md)
 
+- In the final bout of testing, I thought I stopped received all emails, i.e. email verification, contact email confirmation, order confirmation and password reset email. As no settings were changed since the last tests, I have contated **Tutor Support** and Oisin and I couldn't find any issue in my setup. All emails send to anyone with **gmail** address were received within seconds. Other users with different email providers didn't receive their emails immediately, they only received them after an hour or more.
+Here is a proof that emails are send to and received by other providers than gmail, however they might arrive with delay. All of my previous user tests with send email functionality were done with both - **gmail** and **outlook** emails.
+   
+   ![Delayed email](media/deployment/errors/email_delay_testing.png)
+
 --- 
 # **DEPLOYMENT**
 
